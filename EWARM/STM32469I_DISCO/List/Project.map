@@ -1,0 +1,1186 @@
+###############################################################################
+#
+# IAR ELF Linker V7.80.4.12462/W32 for ARM                19/Apr/2017  15:46:21
+# Copyright 2007-2017 IAR Systems AB.
+#
+#    Output file  =  
+#        D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Exe\Project.out
+#    Map file     =  
+#        D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\List\Project.map
+#    Command line =  
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\cc936.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\cs43l22.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\diskio.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\ff.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\ff_gen_drv.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\ft6x06.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jaricom.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcapimin.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcapistd.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcarith.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jccoefct.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jccolor.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcdctmgr.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jchuff.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcinit.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcmainct.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcmarker.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcmaster.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcomapi.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcparam.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcprepct.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jcsample.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jctrans.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdapimin.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdapistd.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdarith.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdatadst.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdatasrc.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdcoefct.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdcolor.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jddctmgr.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdhuff.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdinput.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdmainct.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdmarker.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdmaster.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdmerge.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdpostct.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdsample.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jdtrans.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jerror.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jfdctflt.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jfdctfst.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jfdctint.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jidctflt.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jidctfst.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jidctint.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jmemmgr.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jmemnobs.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jquant1.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jquant2.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\jutils.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\main.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\otm8009a.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\sd_diskio.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\startup_stm32f469xx.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery_audio.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery_eeprom.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery_lcd.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery_qspi.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery_sd.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery_sdram.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32469i_discovery_ts.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_cortex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_dma.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_dma2d.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_dma_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_dsi.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_flash.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_flash_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_gpio.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_hcd.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_i2c.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_i2s.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_i2s_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_ltdc.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_ltdc_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_msp.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_pwr.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_pwr_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_qspi.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_rcc.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_rcc_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_rtc.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_rtc_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_sai.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_sai_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_sd.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_sdram.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_spi.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_sram.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_tim.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_tim_ex.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_uart.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_usart.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_hal_wwdg.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_it.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_ll_fmc.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_ll_fsmc.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_ll_sdmmc.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\stm32f4xx_ll_usb.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\system_stm32f4xx.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\user_display.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\user_jpeg.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\user_jpegCover.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\user_menu.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\user_ram.o"
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Obj\user_task.o" --redirect
+#        _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall -o
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\Exe\Project.out" --map
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\STM32469I_DISCO\List\Project.map" --config
+#        "D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates
+#        V1.5\EWARM\stm32f469xx_flash.icf" --semihosting --entry
+#        __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Error[Li005]: no definition for "AUDIO_PLAYER_Init" [referenced from D:\en.stm3
+          2cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Template
+          s
+          V1.5\EWARM\STM32469I_DISCO\Obj\main.o]
+Error[Li005]: no definition for "AUDIO_PLAYER_Start" [referenced from D:\en.stm
+          32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templat
+          es
+          V1.5\EWARM\STM32469I_DISCO\Obj\user_menu.o]
+Error[Li005]: no definition for "AUDIO_PLAYER_Process" [referenced from D:\en.s
+          tm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templ
+          ates
+          V1.5\EWARM\STM32469I_DISCO\Obj\user_menu.o]
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__Heap_Handler                = DLMalloc
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x081fffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2004ffff] { rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section             Kind        Address     Size  Object
+  -------             ----        -------     ----  ------
+"A0":                                        0x1b4
+  .intvec             ro code  0x08000000    0x1b4  startup_stm32f469xx.o [1]
+                             - 0x080001b4    0x1b4
+
+"P1":                                      0x37f5c
+  .rodata             const    0x080001b4  0x15844  cc936.o [1]
+  .text               ro code  0x080159f8  0x154f8  cc936.o [1]
+  .rodata             const    0x0802aef0   0x39e4  stm32469i_discovery_lcd.o [1]
+  .text               ro code  0x0802e8d4   0x14f4  dlmalloc.o [3]
+  .text               ro code  0x0802fdc8      0x6  abort.o [3]
+  .text               ro code  0x0802fdd0     0x2c  xgetmemchunk.o [3]
+  .text               ro code  0x0802fdfc     0x14  exit.o [6]
+  .text               ro code  0x0802fe10   0x1180  ff.o [1]
+  .text               ro code  0x08030f90     0x66  ABImemset.o [5]
+  .text               ro code  0x08030ff8     0x74  diskio.o [1]
+  .text               ro code  0x0803106c    0xe42  stm32f4xx_hal_sd.o [1]
+  .text               ro code  0x08031eb0     0x76  ABImemcpy_unaligned.o [5]
+  .text               ro code  0x08031f28     0xb4  stm32f4xx_ll_sdmmc.o [1]
+  .text               ro code  0x08031fdc     0x18  stm32f4xx_hal.o [1]
+  .text               ro code  0x08031ff4      0xc  stm32f4xx_hal.o [1]
+  .text               ro code  0x08032000    0x81c  stm32469i_discovery_lcd.o [1]
+  .text               ro code  0x0803281c     0xb0  stm32469i_discovery_lcd.o [1]
+  .text               ro code  0x080328cc    0x548  stm32f4xx_hal_dsi.o [1]
+  .text               ro code  0x08032e14    0x530  stm32f4xx_hal_rcc_ex.o [1]
+  .text               ro code  0x08033344     0x5a  stm32f4xx_hal_ltdc_ex.o [1]
+  .text               ro code  0x080333a0    0x24a  stm32f4xx_hal_ltdc.o [1]
+  .text               ro code  0x080335ec    0x2dc  stm32469i_discovery_sdram.o [1]
+  .text               ro code  0x080338c8    0x556  otm8009a.o [1]
+  .text               ro code  0x08033e20    0x222  stm32f4xx_hal_gpio.o [1]
+  .text               ro code  0x08034044    0x2ae  stm32f4xx_hal_dma2d.o [1]
+  .text               ro code  0x080342f4     0xc8  stm32f4xx_hal_cortex.o [1]
+  .text               ro code  0x080343bc      0x2  stm32f4xx_hal_dsi.o [1]
+  .text               ro code  0x080343c0     0x98  stm32f4xx_hal_sdram.o [1]
+  .text               ro code  0x08034458    0x3b0  stm32f4xx_hal_dma.o [1]
+  .text               ro code  0x08034808    0x2de  stm32469i_discovery.o [1]
+  .text               ro code  0x08034ae8    0x14c  stm32f4xx_ll_fmc.o [1]
+  .text               ro code  0x08034c34    0x7ce  stm32f4xx_hal_i2c.o [1]
+  .text               ro code  0x08035404    0x1d8  stm32f4xx_hal_rcc.o [1]
+  .text               ro code  0x080355dc      0x2  stm32f4xx_hal_i2c.o [1]
+  .text               ro code  0x080355e0     0x28  stm32f4xx_hal.o [1]
+  .text               ro code  0x08035608    0x7c4  xprintfsmall.o [3]
+  .text               ro code  0x08035dcc     0x20  xmbtowc.o [3]
+  .text               ro code  0x08035dec     0x16  strchr.o [5]
+  .text               ro code  0x08035e04     0x36  strlen.o [5]
+  .text               ro code  0x08035e3c     0x58  memchr.o [5]
+  .text               ro code  0x08035e94      0xa  xmbcurmax.o [3]
+  .text               ro code  0x08035e9e     0x1a  xwctomb.o [3]
+  .text               ro code  0x08035eb8     0x14  setlocale.o [3]
+  .text               ro code  0x08035ecc     0x60  xencoding_sb.o [3]
+  .text               ro code  0x08035f2c      0x2  xtls.o [3]
+  .text               ro code  0x08035f30    0x536  stm32f4xx_hal_qspi.o [1]
+  .text               ro code  0x08036466      0x2  stm32f4xx_hal_qspi.o [1]
+  .text               ro code  0x08036468    0x306  stm32f4xx_hal_uart.o [1]
+  .text               ro code  0x08036770     0x78  stm32f4xx_hal_msp.o [1]
+  .text               ro code  0x080367e8    0x2e8  stm32469i_discovery_qspi.o [1]
+  .text               ro code  0x08036ad0    0x270  user_task.o [1]
+  .text               ro code  0x08036d40     0x44  ff_gen_drv.o [1]
+  .text               ro code  0x08036d84     0x24  printf.o [3]
+  .text               ro code  0x08036da8     0x44  strcpy_unaligned.o [5]
+  .text               ro code  0x08036dec     0x2e  strstr.o [3]
+  .text               ro code  0x08036e1c    0x240  stm32469i_discovery_sd.o [1]
+  .text               ro code  0x0803705c     0x40  stm32469i_discovery_sd.o [1]
+  .text               ro code  0x0803709c    0x22c  main.o [1]
+  .text               ro code  0x080372c8     0x36  stm32f4xx_hal.o [1]
+  .text               ro code  0x08037300     0x74  stm32f4xx_hal_pwr_ex.o [1]
+  .text               ro code  0x08037374    0x11c  user_display.o [1]
+  .text               ro code  0x08037490    0x1b4  stm32469i_discovery_ts.o [1]
+  .text               ro code  0x08037644    0x228  user_menu.o [1]
+  .text               ro code  0x0803786c    0x16c  ft6x06.o [1]
+  .text               ro code  0x080379d8     0x38  stm32469i_discovery_audio.o [1]
+  .text               ro code  0x08037a10     0xa0  stm32f4xx_hal_sai.o [1]
+  .text               ro code  0x08037ab0    0x160  stm32f4xx_it.o [1]
+  .text               ro code  0x08037c10     0x10  stm32f4xx_hal.o [1]
+  .text               ro code  0x08037c20     0xa4  sd_diskio.o [1]
+  .text               ro code  0x08037cc4     0x78  lz77_init_single.o [5]
+  .text               ro code  0x08037d3c     0x50  system_stm32f4xx.o [1]
+  .text               ro code  0x08037d8c     0x40  zero_init3.o [5]
+  .text               ro code  0x08037dcc     0x28  data_init.o [5]
+  .text               ro code  0x08037df4     0x22  fpinit_M.o [4]
+  .iar.init_table     const    0x08037e18     0x20  - Linker created -
+  .text               ro code  0x08037e38     0x1a  cmain.o [5]
+  .text               ro code  0x08037e52      0x4  low_level_init.o [3]
+  .text               ro code  0x08037e56      0x4  exit.o [3]
+  .text               ro code  0x08037e5c      0xa  cexit.o [5]
+  .text               ro code  0x08037e66     0x16  xprout.o [3]
+  .text               ro code  0x08037e7c      0xc  putchar.o [3]
+  .rodata             const    0x08037e88     0x14  sd_diskio.o [1]
+  .text               ro code  0x08037e9c     0x10  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037eac      0xc  cstartup_M.o [5]
+  .text               ro code  0x08037eb8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ebc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ec0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ec4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ec8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ecc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ed0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ed4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ed8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037edc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ee0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ee4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ee8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037eec      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ef0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ef4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ef8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037efc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f00      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f04      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f08      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f0c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f10      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f14      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f18      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f1c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f20      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f24      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f28      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f2c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f30      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f34      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f38      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f3c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f40      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f44      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f48      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f4c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f50      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f54      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f58      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f5c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f60      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f64      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f68      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f6c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f70      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f74      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f78      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f7c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f80      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f84      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f88      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f8c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f90      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f94      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f98      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037f9c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fa0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fa4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fa8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fac      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fb0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fb4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fb8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fbc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fc0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fc4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fc8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fcc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fd0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fd4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fd8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fdc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fe0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fe4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fe8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037fec      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ff0      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ff4      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ff8      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08037ffc      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08038000      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08038004      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08038008      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x0803800c      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08038010      0x4  startup_stm32f469xx.o [1]
+  .text               ro code  0x08038014      0x4  startup_stm32f469xx.o [1]
+  .rodata             const    0x08038018      0x0  zero_init3.o [5]
+  .rodata             const    0x08038018      0x0  lz77_init_single.o [5]
+  Initializer bytes   const    0x08038018     0xf8  <for P2-1>
+                             - 0x08038110  0x37f5c
+
+"P2", part 1 of 3:                          0x22ce
+  P2-1                         0x20000000   0x22ce  <Init block>
+    .data             inited   0x20000000     0x28  ft6x06.o [1]
+    .data             inited   0x20000028     0x20  stm32469i_discovery.o [1]
+    .data             inited   0x20000048      0x4  stm32469i_discovery.o [1]
+    .data             inited   0x2000004c     0x84  stm32469i_discovery_lcd.o [1]
+    .data             inited   0x200000d0      0x8  stm32469i_discovery_lcd.o [1]
+    .data             inited   0x200000d8      0x8  stm32469i_discovery_lcd.o [1]
+    .data             inited   0x200000e0      0x8  stm32469i_discovery_lcd.o [1]
+    .data             inited   0x200000e8     0x64  stm32469i_discovery_sdram.o [1]
+    .data             inited   0x2000014c      0x4  system_stm32f4xx.o [1]
+    .data             inited   0x20000150   0x20c8  user_task.o [1]
+    .data             inited   0x20002218     0x40  xfiles.o [3]
+    __DLIB_PERTHREAD  inited   0x20002258     0x74  setlocale.o [3]
+    .data             inited   0x200022cc      0x1  main.o [1]
+    .data             inited   0x200022cd      0x1  sd_diskio.o [1]
+                             - 0x200022ce   0x22ce
+
+"P2", part 2 of 3:                         0x12000
+  CSTACK                       0x200022d0   0x2000  <Block>
+    CSTACK            uninit   0x200022d0   0x2000  <Block tail>
+  HEAP                         0x200042d0  0x10000  <Block>
+    HEAP              uninit   0x200042d0  0x10000  <Block tail>
+                             - 0x200142d0  0x12000
+
+"P2", part 3 of 3:                          0x1b50
+  .bss                zero     0x200142d0   0x1314  user_ram.o [1]
+  .bss                zero     0x200155e4    0x1d8  dlmalloc.o [3]
+  .bss                zero     0x200157bc     0xe4  ff.o [1]
+  .bss                zero     0x200158a0     0xc0  stm32469i_discovery_sd.o [1]
+  .bss                zero     0x20015960     0xb8  stm32469i_discovery_sd.o [1]
+  .bss                zero     0x20015a18     0xa8  stm32469i_discovery_lcd.o [1]
+  .bss                zero     0x20015ac0     0x88  stm32469i_discovery_audio.o [1]
+  .bss                zero     0x20015b48     0x6c  stm32469i_discovery_lcd.o [1]
+  .bss                zero     0x20015bb4     0x60  stm32469i_discovery_sdram.o [1]
+  .bss                zero     0x20015c14     0x54  stm32469i_discovery.o [1]
+  .bss                zero     0x20015c68     0x50  xfiles.o [3]
+  .bss                zero     0x20015cb8     0x44  stm32469i_discovery_audio.o [1]
+  .bss                zero     0x20015cfc     0x44  stm32469i_discovery_qspi.o [1]
+  .bss                zero     0x20015d40     0x40  main.o [1]
+  .bss                zero     0x20015d80     0x40  stm32469i_discovery_lcd.o [1]
+  .bss                zero     0x20015dc0     0x18  stm32469i_discovery_ts.o [1]
+  .bss                zero     0x20015dd8     0x18  dlmalloc.o [3]
+  .bss                zero     0x20015df0      0xc  ff_gen_drv.o [1]
+  .bss                zero     0x20015dfc      0x8  ff.o [1]
+  .bss                zero     0x20015e04      0x8  user_menu.o [1]
+  .bss                zero     0x20015e0c      0x4  ft6x06.o [1]
+  .bss                zero     0x20015e10      0x4  stm32469i_discovery_audio.o [1]
+  .bss                zero     0x20015e14      0x4  stm32f4xx_hal.o [1]
+  .bss                zero     0x20015e18      0x4  xgetmemchunk.o [3]
+  .bss                zero     0x20015e1c      0x2  ft6x06.o [1]
+  .bss                zero     0x20015e1e      0x2  user_ram.o [1]
+                             - 0x20015e20   0x1b50
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x1b50:
+          0x200142d0  0x1b50
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0xf8 (2% of destination):
+          0x08038018    0xf8
+    1 destination range, total size 0x22ce:
+          0x20000000  0x22ce
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                       ro code  ro data  rw data
+    ------                       -------  -------  -------
+D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates V1.5\EWARM\STM32469I_DISCO\Obj: [1]
+    cc936.o                       87 288   88 132
+    diskio.o                         116
+    ff.o                           4 480               236
+    ff_gen_drv.o                      68                12
+    ft6x06.o                         364        1       46
+    main.o                           556                65
+    otm8009a.o                     1 366
+    sd_diskio.o                      164       21        1
+    startup_stm32f469xx.o            804
+    stm32469i_discovery.o            734        1      120
+    stm32469i_discovery_audio.o       56               208
+    stm32469i_discovery_lcd.o      2 252   14 824      496
+    stm32469i_discovery_qspi.o       744                68
+    stm32469i_discovery_sd.o         640               376
+    stm32469i_discovery_sdram.o      732        3      196
+    stm32469i_discovery_ts.o         436                24
+    stm32f4xx_hal.o                  146                 4
+    stm32f4xx_hal_cortex.o           200
+    stm32f4xx_hal_dma.o              944
+    stm32f4xx_hal_dma2d.o            686
+    stm32f4xx_hal_dsi.o            1 354
+    stm32f4xx_hal_gpio.o             546
+    stm32f4xx_hal_i2c.o            2 000
+    stm32f4xx_hal_ltdc.o             586
+    stm32f4xx_hal_ltdc_ex.o           90
+    stm32f4xx_hal_msp.o              120
+    stm32f4xx_hal_pwr_ex.o           116
+    stm32f4xx_hal_qspi.o           1 336
+    stm32f4xx_hal_rcc.o              472
+    stm32f4xx_hal_rcc_ex.o         1 328
+    stm32f4xx_hal_sai.o              160
+    stm32f4xx_hal_sd.o             3 650
+    stm32f4xx_hal_sdram.o            152
+    stm32f4xx_hal_uart.o             774
+    stm32f4xx_it.o                   352
+    stm32f4xx_ll_fmc.o               332
+    stm32f4xx_ll_sdmmc.o             180
+    system_stm32f4xx.o                80                 4
+    user_display.o                   284
+    user_menu.o                      552                 8
+    user_ram.o                                       4 886
+    user_task.o                      624      233    8 392
+    ------------------------------------------------------
+    Total:                       117 864  103 215   15 142
+
+command line: [2]
+    ------------------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    abort.o                            6
+    dlmalloc.o                     5 364               496
+    exit.o                             4
+    low_level_init.o                   4
+    printf.o                          36
+    putchar.o                         12
+    setlocale.o                       20        3      116
+    strstr.o                          46
+    xencoding_sb.o                    96
+    xfiles.o                                    2      144
+    xgetmemchunk.o                    44                 4
+    xmbcurmax.o                       10
+    xmbtowc.o                         32
+    xprintfsmall.o                 1 988
+    xprout.o                          22
+    xtls.o                             2
+    xwctomb.o                         26
+    ------------------------------------------------------
+    Total:                         7 712        5      760
+
+m7M_tls.a: [4]
+    fpinit_M.o                        34
+    ------------------------------------------------------
+    Total:                            34
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o            118
+    ABImemset.o                      102
+    cexit.o                           10
+    cmain.o                           26
+    cstartup_M.o                      12
+    data_init.o                       40
+    lz77_init_single.o               120
+    memchr.o                          88
+    strchr.o                          22
+    strcpy_unaligned.o                68
+    strlen.o                          54
+    zero_init3.o                      64
+    ------------------------------------------------------
+    Total:                           724
+
+shb_l.a: [6]
+    exit.o                            20
+    ------------------------------------------------------
+    Total:                            20
+
+    Gaps                              40        2
+    Linker created                             32   73 728
+----------------------------------------------------------
+    Grand Total:                 126 394  103 254   89 630
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address     Size  Type      Object
+-----                      -------     ----  ----      ------
+.iar.init_table$$Base   0x08037e18            --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08037e38            --   Gb  - Linker created -
+?main                   0x08037e39           Code  Gb  cmain.o [5]
+APBAHBPrescTable        0x08035578     0x10  Data  Gb  stm32f4xx_hal_rcc.o [1]
+AUDIO_ChangeSelectMode  0x08037761     0x3c  Code  Lc  user_menu.o [1]
+AUDIO_ShowWavFiles      0x08036b2f     0x28  Code  Gb  user_task.o [1]
+ActiveLayer             0x200000c4      0x4  Data  Lc  stm32469i_discovery_lcd.o [1]
+AppliState              0x200022cc      0x1  Data  Gb  main.o [1]
+AudioDemo               0x20015e08      0x4  Data  Gb  user_menu.o [1]
+AudioState              0x20015e04      0x1  Data  Gb  user_menu.o [1]
+BSP_AUDIO_OUT_Stop      0x080379d9     0x30  Code  Gb  stm32469i_discovery_audio.o [1]
+BSP_LCD_Clear           0x0803228b     0x26  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_ClearStringLine
+                        0x080322b1     0x38  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_DisplayChar     0x080322e9     0x30  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_DisplayOn       0x080325db      0xa  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_DisplayStringAt
+                        0x08032319     0xa4  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_DrawLine        0x080323bd     0xac  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_DrawPixel       0x08032623     0x1e  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_FillPolygon     0x080324b1    0x120  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_FillRect        0x08032469     0x48  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_GetXSize        0x080321dd      0x8  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_GetYSize        0x080321e5      0x8  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_Init            0x08032001      0x2  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_InitEx          0x08032003    0x17c  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_InitEx::PeriphClkInitStruct
+                        0x2000004c     0x3c  Data  Lc  stm32469i_discovery_lcd.o [1]
+BSP_LCD_LayerDefaultInit
+                        0x080321ed     0x66  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_MspInit         0x0803281d     0xb0  Code  Wk  stm32469i_discovery_lcd.o [1]
+BSP_LCD_Reset           0x0803217f     0x5e  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_SelectLayer     0x08032253      0x8  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_SetBackColor    0x0803226b     0x10  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_SetFont         0x0803227b      0x8  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LCD_SetTextColor    0x0803225b     0x10  Code  Gb  stm32469i_discovery_lcd.o [1]
+BSP_LED_Init            0x08034809     0x8a  Code  Gb  stm32469i_discovery.o [1]
+BSP_LED_Toggle          0x08034893     0x18  Code  Gb  stm32469i_discovery.o [1]
+BSP_PB_Init             0x080348ab     0x74  Code  Gb  stm32469i_discovery.o [1]
+BSP_QSPI_GetStatus      0x080368d1     0x56  Code  Gb  stm32469i_discovery_qspi.o [1]
+BSP_QSPI_Init           0x080367e9     0xd6  Code  Gb  stm32469i_discovery_qspi.o [1]
+BSP_QSPI_MspInit        0x08036a01     0xd0  Code  Wk  stm32469i_discovery_qspi.o [1]
+BSP_SDRAM_DeInit::sdramstatus
+                        0x200000e9      0x1  Data  Lc  stm32469i_discovery_sdram.o [1]
+BSP_SDRAM_Init          0x080335ed     0x6c  Code  Gb  stm32469i_discovery_sdram.o [1]
+BSP_SDRAM_Init::sdramstatus
+                        0x200000e8      0x1  Data  Lc  stm32469i_discovery_sdram.o [1]
+BSP_SDRAM_Initialization_sequence
+                        0x08033661     0x78  Code  Gb  stm32469i_discovery_sdram.o [1]
+BSP_SDRAM_MspInit       0x080336fd    0x1cc  Code  Wk  stm32469i_discovery_sdram.o [1]
+BSP_SDRAM_MspInit::dma_handle
+                        0x20015bb4     0x60  Data  Lc  stm32469i_discovery_sdram.o [1]
+BSP_SD_Detect_MspInit   0x0803705d     0x40  Code  Wk  stm32469i_discovery_sd.o [1]
+BSP_SD_GetCardInfo      0x08036ec5      0x8  Code  Gb  stm32469i_discovery_sd.o [1]
+BSP_SD_GetStatus        0x08036ebf      0x6  Code  Gb  stm32469i_discovery_sd.o [1]
+BSP_SD_Init             0x08036e1d     0x54  Code  Gb  stm32469i_discovery_sd.o [1]
+BSP_SD_IsDetected       0x08036e71     0x20  Code  Gb  stm32469i_discovery_sd.o [1]
+BSP_SD_MspInit          0x08036ed9    0x184  Code  Wk  stm32469i_discovery_sd.o [1]
+BSP_SD_MspInit::dma_rx_handle
+                        0x200158a0     0x60  Data  Lc  stm32469i_discovery_sd.o [1]
+BSP_SD_MspInit::dma_tx_handle
+                        0x20015900     0x60  Data  Lc  stm32469i_discovery_sd.o [1]
+BSP_SD_ReadBlocks       0x08036e91      0xe  Code  Gb  stm32469i_discovery_sd.o [1]
+BSP_SD_WriteBlocks      0x08036e9f      0xc  Code  Gb  stm32469i_discovery_sd.o [1]
+BSP_TS_GetState         0x080374d9    0x110  Code  Gb  stm32469i_discovery_ts.o [1]
+BSP_TS_GetState::_x     0x20015dc8      0x8  Data  Lc  stm32469i_discovery_ts.o [1]
+BSP_TS_GetState::_y     0x20015dd0      0x8  Data  Lc  stm32469i_discovery_ts.o [1]
+BSP_TS_Get_GestureId    0x080375e9     0x52  Code  Gb  stm32469i_discovery_ts.o [1]
+BSP_TS_Init             0x08037491     0x46  Code  Gb  stm32469i_discovery_ts.o [1]
+BUTTON_IRQn             0x08034ae4      0x2  Data  Gb  stm32469i_discovery.o [1]
+BUTTON_PIN              0x08034ae0      0x2  Data  Gb  stm32469i_discovery.o [1]
+BUTTON_PORT             0x20000048      0x4  Data  Gb  stm32469i_discovery.o [1]
+BusFault_Handler        0x08037ae3      0xc  Code  Gb  stm32f4xx_it.o [1]
+CSTACK$$Base            0x200022d0            --   Gb  - Linker created -
+CSTACK$$Limit           0x200042d0            --   Gb  - Linker created -
+Command                 0x2000013c     0x10  Data  Lc  stm32469i_discovery_sdram.o [1]
+DMA1_Stream2_IRQHandler
+                        0x08037b59      0x8  Code  Gb  stm32f4xx_it.o [1]
+DMA2D_SetConfig         0x08034265     0x8c  Code  Lc  stm32f4xx_hal_dma2d.o [1]
+DMA2_Stream3_IRQHandler
+                        0x08037b51      0x8  Code  Gb  stm32f4xx_it.o [1]
+DMA_CalcBaseAndBitshift
+                        0x080347d9     0x26  Code  Lc  stm32f4xx_hal_dma.o [1]
+DMA_CalcBaseAndBitshift::flagBitshiftOffset
+                        0x08034800      0x8  Data  Lc  stm32f4xx_hal_dma.o [1]
+DSI_ConfigPacketHeader  0x080328cd     0x12  Code  Lc  stm32f4xx_hal_dsi.o [1]
+DSI_IO_WriteCmd         0x080325f3     0x30  Code  Gb  stm32469i_discovery_lcd.o [1]
+DebugMon_Handler        0x08037b0d      0xc  Code  Gb  stm32f4xx_it.o [1]
+DrawChar                0x08032655     0xb0  Code  Gb  stm32469i_discovery_lcd.o [1]
+DrawProp                0x200000a4     0x18  Data  Lc  stm32469i_discovery_lcd.o [1]
+EXTI0_IRQHandler        0x08037b29     0x14  Code  Gb  stm32f4xx_it.o [1]
+EXTI2_IRQHandler        0x08037b3d     0x14  Code  Gb  stm32f4xx_it.o [1]
+Error_Handler           0x0803723d     0x1a  Code  Gb  main.o [1]
+FATFS_Init              0x08036aef     0x12  Code  Gb  user_task.o [1]
+FATFS_LinkDriver        0x08036d7b      0x4  Code  Gb  ff_gen_drv.o [1]
+FATFS_LinkDriverEx      0x08036d41     0x3a  Code  Gb  ff_gen_drv.o [1]
+FMC_SDRAM_Init          0x08034ae9     0x74  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FMC_SDRAM_ProgramRefreshRate
+                        0x08034c29      0xc  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FMC_SDRAM_SendCommand   0x08034bdd     0x4c  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FMC_SDRAM_Timing_Init   0x08034b5d     0x7a  Code  Gb  stm32f4xx_ll_fmc.o [1]
+FatFs                   0x20015e00      0x4  Data  Lc  ff.o [1]
+FileList                0x200142d0   0x1314  Data  Gb  user_ram.o [1]
+Files                   0x200157bc     0x18  Data  Lc  ff.o [1]
+FillTriangle            0x0803270b     0xa2  Code  Lc  stm32469i_discovery_lcd.o [1]
+Font12                  0x200000e0      0x8  Data  Gb  stm32469i_discovery_lcd.o [1]
+Font12_Table            0x0802e460    0x474  Data  Gb  stm32469i_discovery_lcd.o [1]
+Font16                  0x200000d8      0x8  Data  Gb  stm32469i_discovery_lcd.o [1]
+Font16_Table            0x0802d880    0xbe0  Data  Gb  stm32469i_discovery_lcd.o [1]
+Font20                  0x200000d0      0x8  Data  Gb  stm32469i_discovery_lcd.o [1]
+Font20_Table            0x0802c9a8    0xed8  Data  Gb  stm32469i_discovery_lcd.o [1]
+Font24                  0x200000c8      0x8  Data  Gb  stm32469i_discovery_lcd.o [1]
+Font24_Table            0x0802aef0   0x1ab8  Data  Gb  stm32469i_discovery_lcd.o [1]
+Fsid                    0x20015dfc      0x2  Data  Lc  ff.o [1]
+GPIO_PIN                0x20000028     0x10  Data  Gb  stm32469i_discovery.o [1]
+GPIO_PORT               0x20000038     0x10  Data  Gb  stm32469i_discovery.o [1]
+HAL_DMA2D_ConfigLayer   0x080341c5     0x9a  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_Init          0x08034045     0x54  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_MspInit       0x080342f1      0x2  Code  Wk  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_PollForTransfer
+                        0x080340d9     0xce  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA2D_Start         0x08034099     0x18  Code  Gb  stm32f4xx_hal_dma2d.o [1]
+HAL_DMA_Abort           0x08034591     0x6e  Code  Gb  stm32f4xx_hal_dma.o [1]
+HAL_DMA_DeInit          0x0803453f     0x52  Code  Gb  stm32f4xx_hal_dma.o [1]
+HAL_DMA_IRQHandler      0x0803461b    0x18c  Code  Gb  stm32f4xx_hal_dma.o [1]
+HAL_DMA_Init            0x08034459     0xe6  Code  Gb  stm32f4xx_hal_dma.o [1]
+HAL_DSI_ConfigPhyTimer  0x08032c61     0x5e  Code  Gb  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_ConfigVideoMode
+                        0x08032a77    0x1da  Code  Gb  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_DeInit          0x08032a17     0x56  Code  Gb  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_Init            0x080328df    0x138  Code  Gb  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_LongWrite       0x08032d49     0x9e  Code  Gb  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_MspDeInit       0x080343bd      0x2  Code  Wk  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_MspInit         0x08032e13      0x2  Code  Wk  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_ShortWrite      0x08032cf5     0x54  Code  Gb  stm32f4xx_hal_dsi.o [1]
+HAL_DSI_Start           0x08032cc7     0x26  Code  Gb  stm32f4xx_hal_dsi.o [1]
+HAL_Delay               0x08031fdd     0x18  Code  Wk  stm32f4xx_hal.o [1]
+HAL_GPIO_EXTI_Callback  0x08034041      0x2  Code  Wk  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_EXTI_IRQHandler
+                        0x08033ff5     0x10  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_Init           0x08033e21    0x1b8  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_ReadPin        0x08033fd9      0xc  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_TogglePin      0x08033fed      0x8  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GPIO_WritePin       0x08033fe5      0x8  Code  Gb  stm32f4xx_hal_gpio.o [1]
+HAL_GetTick             0x08031ff5      0xc  Code  Wk  stm32f4xx_hal.o [1]
+HAL_I2C_DeInit          0x08034cf9     0x26  Code  Gb  stm32f4xx_hal_i2c.o [1]
+HAL_I2C_GetState        0x0803509d      0x6  Code  Gb  stm32f4xx_hal_i2c.o [1]
+HAL_I2C_Init            0x08034c35     0xc4  Code  Gb  stm32f4xx_hal_i2c.o [1]
+HAL_I2C_Mem_Read        0x08034e5d    0x176  Code  Gb  stm32f4xx_hal_i2c.o [1]
+HAL_I2C_Mem_Write       0x08034d45     0xe2  Code  Gb  stm32f4xx_hal_i2c.o [1]
+HAL_I2C_MspDeInit       0x080355dd      0x2  Code  Wk  stm32f4xx_hal_i2c.o [1]
+HAL_I2C_MspInit         0x08035401      0x2  Code  Wk  stm32f4xx_hal_i2c.o [1]
+HAL_IncTick             0x08037c11     0x10  Code  Wk  stm32f4xx_hal.o [1]
+HAL_Init                0x080372c9     0x30  Code  Gb  stm32f4xx_hal.o [1]
+HAL_InitTick            0x080355e1     0x28  Code  Wk  stm32f4xx_hal.o [1]
+HAL_LTDC_ConfigLayer    0x08033491     0x1c  Code  Gb  stm32f4xx_hal_ltdc.o [1]
+HAL_LTDC_Init           0x080333a1     0xf0  Code  Gb  stm32f4xx_hal_ltdc.o [1]
+HAL_LTDC_MspInit        0x080335e9      0x2  Code  Wk  stm32f4xx_hal_ltdc.o [1]
+HAL_LTDC_StructInitFromVideoConfig
+                        0x08033345     0x5a  Code  Gb  stm32f4xx_hal_ltdc_ex.o [1]
+HAL_MspInit             0x080372fd      0x2  Code  Wk  stm32f4xx_hal.o [1]
+HAL_NVIC_EnableIRQ      0x08034363     0x18  Code  Gb  stm32f4xx_hal_cortex.o [1]
+HAL_NVIC_SetPriority    0x08034329     0x3a  Code  Gb  stm32f4xx_hal_cortex.o [1]
+HAL_NVIC_SetPriorityGrouping
+                        0x0803430f     0x1a  Code  Gb  stm32f4xx_hal_cortex.o [1]
+HAL_PWREx_EnableOverDrive
+                        0x08037301     0x44  Code  Gb  stm32f4xx_hal_pwr_ex.o [1]
+HAL_QSPI_Abort          0x08036289     0x6a  Code  Gb  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_AutoPolling    0x080361d5     0x9a  Code  Gb  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_Command        0x0803600f     0x6a  Code  Gb  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_DeInit         0x08035fdd     0x32  Code  Gb  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_Init           0x08035f31     0xac  Code  Gb  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_MspDeInit      0x08036467      0x2  Code  Wk  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_MspInit        0x08036465      0x2  Code  Wk  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_Receive        0x08036117     0x9e  Code  Gb  stm32f4xx_hal_qspi.o [1]
+HAL_QSPI_Transmit       0x08036083     0x94  Code  Gb  stm32f4xx_hal_qspi.o [1]
+HAL_RCCEx_PeriphCLKConfig
+                        0x08032e15    0x26c  Code  Gb  stm32f4xx_hal_rcc_ex.o [1]
+HAL_RCC_ClockConfig     0x08035405    0x12c  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK1Freq    0x0803553f     0x12  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK2Freq    0x08035551     0x10  Code  Gb  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                        0x08035589     0x54  Code  Wk  stm32f4xx_hal_rcc.o [1]
+HAL_RCC_OscConfig       0x08033091    0x27e  Code  Gb  stm32f4xx_hal_rcc_ex.o [1]
+HAL_SAI_DMAStop         0x08037a11     0x34  Code  Gb  stm32f4xx_hal_sai.o [1]
+HAL_SDRAM_Init          0x080343c1     0x3a  Code  Gb  stm32f4xx_hal_sdram.o [1]
+HAL_SDRAM_MspInit       0x08034457      0x2  Code  Wk  stm32f4xx_hal_sdram.o [1]
+HAL_SDRAM_ProgramRefreshRate
+                        0x08034423     0x16  Code  Gb  stm32f4xx_hal_sdram.o [1]
+HAL_SDRAM_SendCommand   0x080343fb     0x28  Code  Gb  stm32f4xx_hal_sdram.o [1]
+HAL_SD_GetStatus        0x0803185b     0x36  Code  Gb  stm32f4xx_hal_sd.o [1]
+HAL_SD_Get_CardInfo     0x08031423    0x2ce  Code  Gb  stm32f4xx_hal_sd.o [1]
+HAL_SD_Init             0x0803106d     0x96  Code  Gb  stm32f4xx_hal_sd.o [1]
+HAL_SD_MspInit          0x08031ead      0x2  Code  Wk  stm32f4xx_hal_sd.o [1]
+HAL_SD_ReadBlocks       0x0803110d    0x14a  Code  Gb  stm32f4xx_hal_sd.o [1]
+HAL_SD_StopTransfer     0x0803180d     0x1c  Code  Gb  stm32f4xx_hal_sd.o [1]
+HAL_SD_WideBusOperation_Config
+                        0x080316f1     0xfc  Code  Gb  stm32f4xx_hal_sd.o [1]
+HAL_SD_WriteBlocks      0x0803126b    0x1a6  Code  Gb  stm32f4xx_hal_sd.o [1]
+HAL_SYSTICK_Config      0x0803437b     0x28  Code  Gb  stm32f4xx_hal_cortex.o [1]
+HAL_UART_Init           0x08036469     0x28  Code  Gb  stm32f4xx_hal_uart.o [1]
+HAL_UART_MspInit        0x08036771     0x4e  Code  Gb  stm32f4xx_hal_msp.o [1]
+HAL_UART_Transmit       0x080364d7     0xa0  Code  Gb  stm32f4xx_hal_uart.o [1]
+HEAP$$Base              0x200042d0            --   Gb  - Linker created -
+HEAP$$Limit             0x200142d0            --   Gb  - Linker created -
+HardFault_Handler       0x08037abd     0x1a  Code  Gb  stm32f4xx_it.o [1]
+I2C1_Error              0x08034a2b      0xe  Code  Lc  stm32469i_discovery.o [1]
+I2C1_Init               0x0803492b     0x90  Code  Lc  stm32469i_discovery.o [1]
+I2C1_ReadMultiple       0x080349fb     0x18  Code  Lc  stm32469i_discovery.o [1]
+I2C_Address             0x20015dc1      0x1  Data  Lc  stm32469i_discovery_ts.o [1]
+I2C_IsAcknowledgeFailed
+                        0x080353d9     0x28  Code  Lc  stm32f4xx_hal_i2c.o [1]
+I2C_RequestMemoryRead   0x08035147     0xb8  Code  Lc  stm32f4xx_hal_i2c.o [1]
+I2C_RequestMemoryWrite  0x080350b1     0x7a  Code  Lc  stm32f4xx_hal_i2c.o [1]
+I2C_WaitOnBTFFlagUntilTimeout
+                        0x08035331     0x32  Code  Lc  stm32f4xx_hal_i2c.o [1]
+I2C_WaitOnFlagUntilTimeout
+                        0x08035225     0x5e  Code  Lc  stm32f4xx_hal_i2c.o [1]
+I2C_WaitOnMasterAddressFlagUntilTimeout
+                        0x08035283     0x6c  Code  Lc  stm32f4xx_hal_i2c.o [1]
+I2C_WaitOnRXNEFlagUntilTimeout
+                        0x0803537f     0x3e  Code  Lc  stm32f4xx_hal_i2c.o [1]
+I2C_WaitOnTXEFlagUntilTimeout
+                        0x080352ff     0x32  Code  Lc  stm32f4xx_hal_i2c.o [1]
+LCD_ClearTextZone       0x080377a5     0x12  Code  Lc  user_menu.o [1]
+LCD_DisplayPlayButton   0x08037445     0x32  Code  Gb  user_display.o [1]
+LCD_SetFooter           0x080373c3     0x5c  Code  Gb  user_display.o [1]
+LCD_SetHeader           0x08037375     0x4e  Code  Gb  user_display.o [1]
+LED_All_Init            0x08036ad1     0x1e  Code  Gb  user_task.o [1]
+LL_FillBuffer           0x080327ad     0x54  Code  Lc  stm32469i_discovery_lcd.o [1]
+LTDC_SetConfig          0x080334e3     0xfa  Code  Lc  stm32f4xx_hal_ltdc.o [1]
+LfnBuf                  0x200157d4     0xcc  Data  Lc  ff.o [1]
+LfnOfs                  0x08030690     0x10  Data  Lc  ff.o [1]
+LoadInt                 0x08035a39     0x4c  Code  Lc  xprintfsmall.o [3]
+MemManage_Handler       0x08037ad7      0xc  Code  Gb  stm32f4xx_it.o [1]
+Menu_prase              0x08037645    0x11c  Code  Gb  user_menu.o [1]
+MountFat32FileSystem    0x08036b01     0x2e  Code  Gb  user_task.o [1]
+NMI_Handler             0x08037ab1      0xc  Code  Gb  stm32f4xx_it.o [1]
+NumObs                  0x20015e1e      0x2  Data  Gb  user_ram.o [1]
+OTM8009A_IO_Delay       0x08034ad9      0x4  Code  Gb  stm32469i_discovery.o [1]
+OTM8009A_Init           0x080338c9    0x336  Code  Gb  otm8009a.o [1]
+PendSV_Handler          0x08037b19      0xc  Code  Gb  stm32f4xx_it.o [1]
+QSPIHandle              0x20015cfc     0x44  Data  Gb  stm32469i_discovery_qspi.o [1]
+QSPI_AutoPollingMemReady
+                        0x080369b1     0x4e  Code  Lc  stm32469i_discovery_qspi.o [1]
+QSPI_Config             0x0803634b     0xf2  Code  Lc  stm32f4xx_hal_qspi.o [1]
+QSPI_WaitFlagStateUntilTimeout
+                        0x08036305     0x46  Code  Lc  stm32f4xx_hal_qspi.o [1]
+QSPI_WriteEnable        0x0803694d     0x64  Code  Lc  stm32469i_discovery_qspi.o [1]
+Region$$Table$$Base     0x08037e18            --   Gb  - Linker created -
+Region$$Table$$Limit    0x08037e38            --   Gb  - Linker created -
+SAI_Disable             0x08037a67     0x44  Code  Lc  stm32f4xx_hal_sai.o [1]
+SDFatFs                 0x20000154   0x1030  Data  Gb  user_task.o [1]
+SDIO_DataConfig         0x08031fa9     0x24  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_GetCommandResponse
+                        0x08031f8f      0x6  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_GetPowerState      0x08031f65      0x8  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_GetResponse        0x08031f95     0x14  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_Init               0x08031f29     0x26  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_PowerState_ON      0x08031f5b      0x4  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_ReadFIFO           0x08031f4f      0x2  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_SendCommand        0x08031f6d     0x22  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SDIO_WriteFIFO          0x08031f51      0xa  Code  Gb  stm32f4xx_ll_sdmmc.o [1]
+SD_CmdResp1Error        0x08031b4d     0xce  Code  Lc  stm32f4xx_hal_sd.o [1]
+SD_CmdResp2Error        0x08031c1b     0x30  Code  Lc  stm32f4xx_hal_sd.o [1]
+SD_Driver               0x08037e88     0x14  Data  Gb  sd_diskio.o [1]
+SD_Error_Handler        0x08036c85     0x1c  Code  Gb  user_task.o [1]
+SD_FindSCR              0x08031c4b    0x100  Code  Lc  stm32f4xx_hal_sd.o [1]
+SD_Initialize_Cards     0x080318a7    0x10a  Code  Lc  stm32f4xx_hal_sd.o [1]
+SD_IsCardProgramming    0x08031d5d    0x136  Code  Lc  stm32f4xx_hal_sd.o [1]
+SD_Path                 0x200021b0      0x4  Data  Gb  user_task.o [1]
+SD_PowerON              0x080319bf    0x172  Code  Lc  stm32f4xx_hal_sd.o [1]
+SD_initialize           0x08037c21      0xe  Code  Gb  sd_diskio.o [1]
+SD_ioctl                0x08037c79     0x48  Code  Gb  sd_diskio.o [1]
+SD_read                 0x08037c49      0xc  Code  Gb  sd_diskio.o [1]
+SD_status               0x08037c2f      0xc  Code  Gb  sd_diskio.o [1]
+SD_write                0x08037c55      0xa  Code  Gb  sd_diskio.o [1]
+SVC_Handler             0x08037b01      0xc  Code  Gb  stm32f4xx_it.o [1]
+Scan_MusicFile          0x08036b57     0xdc  Code  Gb  user_task.o [1]
+ShortRegData1           0x08033d5c      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData10          0x08033d80      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData11          0x08033d84      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData12          0x08033d88      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData13          0x08033d8c      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData14          0x08033d90      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData15          0x08033d94      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData16          0x08033d98      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData17          0x08033d9c      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData18          0x08033da0      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData19          0x08033da4      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData2           0x08033d60      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData20          0x08033da8      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData21          0x08033dac      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData22          0x08033db0      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData23          0x08033db4      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData24          0x08033db8      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData25          0x08033dbc      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData26          0x08033dc0      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData27          0x08033dc4      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData28          0x08033dc8      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData29          0x08033dcc      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData3           0x08033d64      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData30          0x08033dd0      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData31          0x08033dd4      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData32          0x08033dd8      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData33          0x08033ddc      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData34          0x08033de0      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData35          0x08033de4      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData36          0x08033de8      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData37          0x08033dec      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData38          0x08033df0      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData39          0x08033df4      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData4           0x08033d68      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData40          0x08033df8      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData41          0x08033dfc      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData42          0x08033e00      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData43          0x08033e04      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData44          0x08033e08      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData45          0x08033e0c      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData46          0x08033e10      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData47          0x08033e14      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData48          0x08033e18      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData49          0x08033e1c      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData5           0x08033d6c      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData6           0x08033d70      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData7           0x08033d74      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData8           0x08033d78      0x2  Data  Gb  otm8009a.o [1]
+ShortRegData9           0x08033d7c      0x2  Data  Gb  otm8009a.o [1]
+Stat                    0x200022cd      0x1  Data  Lc  sd_diskio.o [1]
+SysTick_Handler         0x08037b25      0x4  Code  Gb  stm32f4xx_it.o [1]
+SystemCoreClock         0x2000014c      0x4  Data  Gb  system_stm32f4xx.o [1]
+SystemInit              0x08037d3d     0x3a  Code  Gb  system_stm32f4xx.o [1]
+TS_IO_Init              0x08034a39      0x2  Code  Gb  stm32469i_discovery.o [1]
+TS_IO_Read              0x08034a89     0x1c  Code  Gb  stm32469i_discovery.o [1]
+TS_IO_ReadMultiple      0x08034acb      0x8  Code  Gb  stm32469i_discovery.o [1]
+TS_IO_Write             0x08034a3b     0x2a  Code  Gb  stm32469i_discovery.o [1]
+Timing                  0x20000120     0x1c  Data  Lc  stm32469i_discovery_sdram.o [1]
+UART_SetConfig          0x080365f1    0x13a  Code  Lc  stm32f4xx_hal_uart.o [1]
+UART_WaitOnFlagUntilTimeout
+                        0x0803659b     0x56  Code  Lc  stm32f4xx_hal_uart.o [1]
+USART3_UART_Init        0x080371eb     0x2e  Code  Gb  main.o [1]
+UsageFault_Handler      0x08037af5      0xc  Code  Gb  stm32f4xx_it.o [1]
+_EncodingSb_Mbtowc      0x08035ee7     0x30  Code  Gb  xencoding_sb.o [3]
+_EncodingSb_Mbtowc::initial
+                        0x08035f24      0x8  Data  Lc  xencoding_sb.o [3]
+_EncodingSb_Wctomb      0x08035ecd     0x1a  Code  Gb  xencoding_sb.o [3]
+_EncodingSb_Wctomb::initial
+                        0x08035f1c      0x8  Data  Lc  xencoding_sb.o [3]
+_IsdstStr               0x2000225c      0x4  Data  Gb  setlocale.o [3]
+_LitobSmall             0x08035cb7     0xce  Code  Lc  xprintfsmall.o [3]
+_LocaleEncoding         0x08035eb9      0xe  Code  Gb  setlocale.o [3]
+_LocaleReturnString     0x2000227c     0x50  Data  Lc  setlocale.o [3]
+_Locale_Profile         0x20002260     0x1c  Data  Gb  setlocale.o [3]
+_Mbtowc                 0x08035dcd     0x20  Code  Gb  xmbtowc.o [3]
+_PrintfSmall            0x08035609    0x430  Code  Gb  xprintfsmall.o [3]
+_Prout                  0x08037e67     0x16  Code  Gb  xprout.o [3]
+_PutcharsSmall          0x08035d85     0x2e  Code  Lc  xprintfsmall.o [3]
+_PutstrSmall            0x08035a85    0x228  Code  Lc  xprintfsmall.o [3]
+_TzoneStr               0x20002258      0x4  Data  Gb  setlocale.o [3]
+_Wctomb                 0x08035e9f     0x1a  Code  Gb  xwctomb.o [3]
+__NVIC_SetPriority      0x080342f5     0x1a  Code  Lc  stm32f4xx_hal_cortex.o [1]
+__aeabi_memset          0x08030f91           Code  Gb  ABImemset.o [5]
+__cmain                 0x08037e39           Code  Gb  cmain.o [5]
+__data_GetMemChunk      0x0802fdd1     0x2c  Code  Gb  xgetmemchunk.o [3]
+__data_GetMemChunk::start
+                        0x20015e18      0x4  Data  Lc  xgetmemchunk.o [3]
+__exit                  0x0802fdfd     0x14  Code  Gb  exit.o [6]
+__iar_Mbcurmax          0x08035e95      0xa  Code  Gb  xmbcurmax.o [3]
+__iar_Memchr            0x08035e3d           Code  Gb  memchr.o [5]
+__iar_Memset            0x08030f91           Code  Gb  ABImemset.o [5]
+__iar_Memset_word       0x08030f99           Code  Gb  ABImemset.o [5]
+__iar_Stdout            0x20002218     0x40  Data  Gb  xfiles.o [3]
+__iar_Strchr            0x08035ded           Code  Gb  strchr.o [5]
+__iar_Strstr            0x08036ded     0x2e  Code  Gb  strstr.o [3]
+__iar_data_init3        0x08037dcd     0x28  Code  Gb  data_init.o [5]
+__iar_dlfree            0x0802f8a7    0x51a  Code  Gb  dlmalloc.o [3]
+__iar_dlib_perthread_access
+                        0x08035f2d      0x2  Code  Gb  xtls.o [3]
+__iar_dlmalloc          0x0802f5f1    0x2aa  Code  Gb  dlmalloc.o [3]
+__iar_init_vfp          0x08037df5           Code  Gb  fpinit_M.o [4]
+__iar_lz77_init_single3
+                        0x08037cc5     0x78  Code  Gb  lz77_init_single.o [5]
+__iar_program_start     0x08037ead           Code  Gb  cstartup_M.o [5]
+__iar_unaligned___aeabi_memcpy
+                        0x08031eb1           Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x08031ed1           Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x08031ed1           Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned_strcpy  0x08036da9           Code  Gb  strcpy_unaligned.o [5]
+__iar_zero_init3        0x08037d8d     0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x08037e53      0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000           Data  Gb  startup_stm32f469xx.o [1]
+_call_main              0x08037e45           Code  Gb  cmain.o [5]
+_exit                   0x08037e5d           Code  Gb  cexit.o [5]
+_gm_                    0x200155e4    0x1d8  Data  Lc  dlmalloc.o [3]
+_main                   0x08037e4f           Code  Gb  cmain.o [5]
+abort                   0x0802fdc9      0x6  Code  Gb  abort.o [3]
+audio_drv               0x20015e10      0x4  Data  Gb  stm32469i_discovery_audio.o [1]
+check_fs                0x08030a77     0x6c  Code  Lc  ff.o [1]
+chk_chr                 0x0802fe1f     0x12  Code  Lc  ff.o [1]
+clear_lock              0x0802fee1     0x1c  Code  Lc  ff.o [1]
+clust2sect              0x0802ff97     0x22  Code  Gb  ff.o [1]
+create_chain            0x080301a7     0xb6  Code  Lc  ff.o [1]
+create_name             0x0803077b    0x232  Code  Lc  ff.o [1]
+dec_lock                0x0802feab     0x36  Code  Lc  ff.o [1]
+dir_find                0x0803044f    0x13c  Code  Lc  ff.o [1]
+dir_next                0x080302fb    0x116  Code  Lc  ff.o [1]
+dir_read                0x0803058b    0x104  Code  Lc  ff.o [1]
+dir_sdi                 0x0803025d     0x9e  Code  Lc  ff.o [1]
+disk                    0x20015df0      0xc  Data  Gb  ff_gen_drv.o [1]
+disk_initialize         0x0803100b     0x1e  Code  Gb  diskio.o [1]
+disk_ioctl              0x08031051     0x18  Code  Gb  diskio.o [1]
+disk_read               0x08031029      0xc  Code  Gb  diskio.o [1]
+disk_status             0x08030ff9     0x12  Code  Gb  diskio.o [1]
+disk_write              0x08031035      0xc  Code  Gb  diskio.o [1]
+exit                    0x08037e57      0x4  Code  Gb  exit.o [3]
+f_closedir              0x08030ef3     0x26  Code  Gb  ff.o [1]
+f_mount                 0x08030e03     0x5a  Code  Gb  ff.o [1]
+f_opendir               0x08030e5d     0x8e  Code  Gb  ff.o [1]
+f_readdir               0x08030f19     0x5a  Code  Gb  ff.o [1]
+ff_convert              0x080159f9     0x48  Code  Gb  cc936.o [1]
+ff_wtoupper             0x0802aec9     0x1e  Code  Gb  cc936.o [1]
+ff_wtoupper::tbl_lower  0x08015638    0x1e0  Data  Lc  cc936.o [1]
+ff_wtoupper::tbl_upper  0x08015818    0x1e0  Data  Lc  cc936.o [1]
+fil                     0x20001184   0x102c  Data  Gb  user_task.o [1]
+find_volume             0x08030ae3    0x2e0  Code  Lc  ff.o [1]
+follow_path             0x080309cf     0x6a  Code  Lc  ff.o [1]
+fputc                   0x08037219     0x12  Code  Gb  main.o [1]
+ft6x06                  0x20015e1c      0x2  Data  Gb  ft6x06.o [1]
+ft6x06_GetInstance      0x080379b7     0x1a  Code  Lc  ft6x06.o [1]
+ft6x06_Init             0x0803786d     0x24  Code  Gb  ft6x06.o [1]
+ft6x06_ReadID           0x08037893     0x14  Code  Gb  ft6x06.o [1]
+ft6x06_Reset            0x08037891      0x2  Code  Gb  ft6x06.o [1]
+ft6x06_TS_ClearIT       0x08037947      0x2  Code  Gb  ft6x06.o [1]
+ft6x06_TS_DetectTouch   0x080378a9     0x38  Code  Gb  ft6x06.o [1]
+ft6x06_TS_DisableIT     0x08037939      0x2  Code  Gb  ft6x06.o [1]
+ft6x06_TS_EnableIT      0x08037935      0x4  Code  Gb  ft6x06.o [1]
+ft6x06_TS_GetGestureID  0x08037949     0x1c  Code  Gb  ft6x06.o [1]
+ft6x06_TS_GetTouchInfo  0x0803796f     0x48  Code  Gb  ft6x06.o [1]
+ft6x06_TS_GetXY         0x080378e1     0x54  Code  Gb  ft6x06.o [1]
+ft6x06_TS_ITStatus      0x08037943      0x4  Code  Gb  ft6x06.o [1]
+ft6x06_TS_Start         0x080378a7      0x2  Code  Gb  ft6x06.o [1]
+ft6x06_handle           0x20015e0c      0x4  Data  Lc  ft6x06.o [1]
+ft6x06_ts_drv           0x20000000     0x28  Data  Gb  ft6x06.o [1]
+get_fat                 0x0802ffb9     0xcc  Code  Gb  ff.o [1]
+get_fileinfo            0x080306ab     0xd0  Code  Lc  ff.o [1]
+get_ldnumber            0x08030a39     0x3e  Code  Lc  ff.o [1]
+haudio_in_i2s           0x20015cb8     0x44  Data  Gb  stm32469i_discovery_audio.o [1]
+haudio_out_sai          0x20015ac0     0x88  Data  Gb  stm32469i_discovery_audio.o [1]
+hdma2d_eval             0x20015d80     0x40  Data  Gb  stm32469i_discovery_lcd.o [1]
+hdsi_eval               0x20000088     0x1c  Data  Gb  stm32469i_discovery_lcd.o [1]
+hdsivideo_handle        0x20015b48     0x6c  Data  Lc  stm32469i_discovery_lcd.o [1]
+heval_I2c1              0x20015c14     0x54  Data  Lc  stm32469i_discovery.o [1]
+hltdc_eval              0x20015a18     0xa8  Data  Gb  stm32469i_discovery_lcd.o [1]
+huart3                  0x20015d40     0x40  Data  Gb  main.o [1]
+inc_lock                0x0802fe31     0x7a  Code  Lc  ff.o [1]
+init_mparams            0x0802e8f1     0x32  Code  Lc  dlmalloc.o [3]
+init_top                0x0802e923     0x34  Code  Lc  dlmalloc.o [3]
+lcdRegData1             0x08033c14      0x4  Data  Gb  otm8009a.o [1]
+lcdRegData10            0x08033c74      0xc  Data  Gb  otm8009a.o [1]
+lcdRegData11            0x08033c80      0xc  Data  Gb  otm8009a.o [1]
+lcdRegData12            0x08033c8c     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData13            0x08033c9c     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData14            0x08033cac      0xc  Data  Gb  otm8009a.o [1]
+lcdRegData15            0x08033cb8     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData16            0x08033cc8     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData17            0x08033cd8      0xc  Data  Gb  otm8009a.o [1]
+lcdRegData18            0x08033ce4      0xc  Data  Gb  otm8009a.o [1]
+lcdRegData19            0x08033cf0      0xc  Data  Gb  otm8009a.o [1]
+lcdRegData2             0x08033c18      0x4  Data  Gb  otm8009a.o [1]
+lcdRegData20            0x08033cfc     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData21            0x08033d0c     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData22            0x08033d1c      0xc  Data  Gb  otm8009a.o [1]
+lcdRegData23            0x08033d28     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData24            0x08033d38     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData25            0x08033d48      0x4  Data  Gb  otm8009a.o [1]
+lcdRegData27            0x08033d4c      0x8  Data  Gb  otm8009a.o [1]
+lcdRegData28            0x08033d54      0x8  Data  Gb  otm8009a.o [1]
+lcdRegData3             0x08033c1c     0x14  Data  Gb  otm8009a.o [1]
+lcdRegData4             0x08033c30     0x14  Data  Gb  otm8009a.o [1]
+lcdRegData5             0x08033c44      0x4  Data  Gb  otm8009a.o [1]
+lcdRegData6             0x08033c48      0x4  Data  Gb  otm8009a.o [1]
+lcdRegData7             0x08033c4c      0x8  Data  Gb  otm8009a.o [1]
+lcdRegData8             0x08033c54     0x10  Data  Gb  otm8009a.o [1]
+lcdRegData9             0x08033c64     0x10  Data  Gb  otm8009a.o [1]
+lcd_x_size              0x200000bc      0x4  Data  Gb  stm32469i_discovery_lcd.o [1]
+lcd_y_size              0x200000c0      0x4  Data  Gb  stm32469i_discovery_lcd.o [1]
+ld_clust                0x08030411     0x22  Code  Lc  ff.o [1]
+lfn                     0x200021b4     0x64  Data  Lc  user_task.o [1]
+main                    0x0803709d    0x14e  Code  Gb  main.o [1]
+mem_set                 0x0802fe11      0xe  Code  Lc  ff.o [1]
+memchr                  0x08035e3d           Code  Gb  memchr.o [5]
+move_window             0x0802ff5d     0x3a  Code  Lc  ff.o [1]
+mparams                 0x20015dd8     0x18  Data  Lc  dlmalloc.o [3]
+obuf                    0x20015c68     0x50  Data  Lc  xfiles.o [3]
+oem2uni                 0x08015a44  0x15484  Data  Lc  cc936.o [1]
+prepend_alloc           0x0802e957    0x372  Code  Lc  dlmalloc.o [3]
+printf                  0x08036d85     0x24  Code  Gb  printf.o [3]
+put_fat                 0x0803009b    0x100  Code  Gb  ff.o [1]
+putchar                 0x08037e7d      0xc  Code  Gb  putchar.o [3]
+retSD                   0x20000150      0x1  Data  Gb  user_task.o [1]
+sdramHandle             0x200000ec     0x34  Data  Lc  stm32469i_discovery_sdram.o [1]
+segment_holding         0x0802e8d5     0x1c  Code  Lc  dlmalloc.o [3]
+show_filename           0x08036c4f     0x28  Code  Gb  user_task.o [1]
+strchr                  0x08035ded           Code  Gb  strchr.o [5]
+strlen                  0x08035e05           Code  Gb  strlen.o [5]
+sum_sfn                 0x08030433     0x1c  Code  Lc  ff.o [1]
+sync_window             0x0802ff01     0x50  Code  Lc  ff.o [1]
+sys_alloc               0x0802ecc9    0x388  Code  Lc  dlmalloc.o [3]
+tmalloc_large           0x0802f05d    0x380  Code  Lc  dlmalloc.o [3]
+tmalloc_small           0x0802f3dd    0x206  Code  Lc  dlmalloc.o [3]
+ts_driver               0x20015dc4      0x4  Data  Lc  stm32469i_discovery_ts.o [1]
+ts_orientation          0x20015dc0      0x1  Data  Lc  stm32469i_discovery_ts.o [1]
+uSdCardInfo             0x200159c0     0x58  Data  Lc  stm32469i_discovery_sd.o [1]
+uSdHandle               0x20015960     0x60  Data  Lc  stm32469i_discovery_sd.o [1]
+uni2oem                 0x080001b4  0x15484  Data  Lc  cc936.o [1]
+uwTick                  0x20015e14      0x4  Data  Gb  stm32f4xx_hal.o [1]
+validate                0x08030dd1     0x32  Code  Lc  ff.o [1]
+
+
+[1] = D:\en.stm32cubef4\STM32Cube_FW_F4_V1.14.0\Projects\STM32469I-Discovery\Templates V1.5\EWARM\STM32469I_DISCO\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  126 394 bytes of readonly  code memory
+  103 254 bytes of readonly  data memory
+   89 630 bytes of readwrite data memory
+
+Errors: 3
+Warnings: none

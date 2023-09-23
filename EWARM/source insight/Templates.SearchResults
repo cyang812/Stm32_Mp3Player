@@ -1,0 +1,11 @@
+---- fil Matches (15 in 2 files) ----
+Ff.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\middlewares\third_party\fatfs\src):	FIL *fil = (FIL*)obj;	/* Assuming offset of .fs and .id in the FIL/DIR structure is identical */
+Ff.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\middlewares\third_party\fatfs\src):	if (!fil || !fil->fs || !fil->fs->fs_type || fil->fs->id != fil->id || (disk_status(fil->fs->drv) & STA_NOINIT))
+Ff.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\middlewares\third_party\fatfs\src):	ENTER_FF(fil->fs);		/* Lock file system */
+User_task.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\projects\stm32469i-discovery\templates\src):    FIL fil;
+User_task.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\projects\stm32469i-discovery\templates\src):    ret = f_open(&fil, "mytest.txt", FA_READ | FA_WRITE | FA_CREATE_ALWAYS);
+User_task.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\projects\stm32469i-discovery\templates\src):    f_printf(&fil, "%s\n", "[USB]write txt OK!0123456789");
+User_task.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\projects\stm32469i-discovery\templates\src):    f_close(&fil);
+User_task.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\projects\stm32469i-discovery\templates\src):	    fr = f_open(&fil, "message.txt", FA_READ);
+User_task.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\projects\stm32469i-discovery\templates\src):	    while (f_gets(line, sizeof line, &fil))
+User_task.c (d:\en.stm32cubef4\stm32cube_fw_f4_v1.14.0\projects\stm32469i-discovery\templates\src):	    f_close(&fil);
