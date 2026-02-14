@@ -1,0 +1,86 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: D:\github\Stm32_Mp3Player\Old_STM32469I_DISCO.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x080001b5
+    Flags: EF_ARM_HASENTRY (0x05000002)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Conforms to Base float procedure-call standard
+
+    Built with
+    Component: ARM Compiler 5.05 update 1 (build 106) Tool: armasm [4d0efa]
+    Component: ARM Compiler 5.05 update 1 (build 106) Tool: armlink [4d0efa]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 2
+    Section header entries: 8
+
+    Program header offset: 623740 (0x0009847c)
+    Section header offset: 623804 (0x000984bc)
+
+    Section header string table index: 7
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 566312 bytes (353656 bytes in file)
+    Virtual address: 0x08000000 (Alignment 8)
+
+
+====================================
+
+** Program header #1 (PT_LOAD) [PF_W + PF_R]
+    Size : 358400 bytes (0 bytes in file)
+    Virtual address: 0xc0400000 (Alignment 4)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 353248 bytes (alignment 8)
+    Address: 0x08000000
+
+
+** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 408 bytes (alignment 4)
+    Address: 0x20000000
+
+
+** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 212240 bytes (alignment 8)
+    Address: 0x20000338
+
+
+** Section #4 'ER$$.ARM.__AT_0xC0400000' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 358400 bytes
+    Address: 0xc0400000
+
+
+** Section #5 '.note' (SHT_NOTE)
+    Size   : 32 bytes (alignment 4)
+
+
+** Section #6 '.comment' (SHT_PROGBITS)
+    Size   : 269928 bytes
+
+
+** Section #7 '.shstrtab' (SHT_STRTAB)
+    Size   : 72 bytes
+
+

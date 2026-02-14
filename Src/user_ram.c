@@ -16,14 +16,13 @@ uint8_t rtcDate[20];
 
 uint8_t LRC_Ram[4096];
 
-// 外部sram
-#define SDRAM_BANK_ADDR   ((uint32_t)0xC0000000)
-#define SDRAM_JPEG_SIZE   NumByte2ShowJpeg //1024000 // 1024KB //204800 // 200KB
-#define SDRAM_JPEG_WRITE_ADDR  SDRAM_DEVICE_SIZE/2 //((uint32_t)0x400000)
-unsigned char Jpeg_Cover_Ram[SDRAM_JPEG_SIZE] __attribute__((at(SDRAM_BANK_ADDR + SDRAM_JPEG_WRITE_ADDR)))={0};
+// 锟解部sram
+#define SDRAM_BANK_ADDR ((uint32_t)0xC0000000)
+#define SDRAM_JPEG_SIZE NumByte2ShowJpeg			// 1024000 // 1024KB //204800 // 200KB
+#define SDRAM_JPEG_WRITE_ADDR SDRAM_DEVICE_SIZE / 2 //((uint32_t)0x400000)
+unsigned char Jpeg_Cover_Ram[SDRAM_JPEG_SIZE] __attribute__((section(".sdram_jpeg")));
 
-//unsigned char Jpeg_Cover_Ram[NumByte2ShowJpeg]={0};  //内部sram
-
+// unsigned char Jpeg_Cover_Ram[NumByte2ShowJpeg]={0};  //锟节诧拷sram
 
 // System
 uint8_t *GlobalPtr;
@@ -34,7 +33,6 @@ __IO uint8_t PA9_Status; // detect usb connect
 __IO uint8_t bUSB_Connect;
 __IO uint8_t bFirstDisplay_USB_Connect;
 __IO uint8_t bUSB_DisConnect_Enable = false;
-
 
 // Display
 __IO uint8_t bSystemsecond;
@@ -47,15 +45,14 @@ __IO uint8_t bFirstDisplayMusicTime;
 __IO uint8_t bFirstDisplayMusicInfo;
 __IO uint8_t bFirstDisplayRTCTime;
 
-
 // Music Unicode Size
 __IO uint8_t UnicodeCharSize;
 
-void Flash2Ram(unsigned char *src,unsigned char *dsrc)
+void Flash2Ram(unsigned char *src, unsigned char *dsrc)
 {
-	memcpy(dsrc,src,5764);
-	printf("Jpeg_Cover_Ram[0]:%d\n",Jpeg_Cover_Ram[0]);
-	printf("Jpeg_Cover_Ram[1]:%d\n",Jpeg_Cover_Ram[1]);
-	printf("Jpeg_Cover_Ram[5762]:%d\n",Jpeg_Cover_Ram[5762]);
-	printf("Jpeg_Cover_Ram[5763]:%d\n",Jpeg_Cover_Ram[5763]);
+	memcpy(dsrc, src, 5764);
+	printf("Jpeg_Cover_Ram[0]:%d\n", Jpeg_Cover_Ram[0]);
+	printf("Jpeg_Cover_Ram[1]:%d\n", Jpeg_Cover_Ram[1]);
+	printf("Jpeg_Cover_Ram[5762]:%d\n", Jpeg_Cover_Ram[5762]);
+	printf("Jpeg_Cover_Ram[5763]:%d\n", Jpeg_Cover_Ram[5763]);
 }

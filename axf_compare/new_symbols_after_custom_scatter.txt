@@ -1,0 +1,2091 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: .\MDK-ARM\STM32469I_DISCO\New_STM32469I_DISCO.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x080001b5
+    Flags: EF_ARM_HASENTRY (0x05000002)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Conforms to Base float procedure-call standard
+
+    Built with
+    Component: Arm Compiler for Embedded 6.24 Tool: armasm [5f371400]
+    Component: Arm Compiler for Embedded 6.24 Tool: armlink [5f371500]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 15
+
+    Program header offset: 1471616 (0x00167480)
+    Section header offset: 1471648 (0x001674a0)
+
+    Section header string table index: 14
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 989888 bytes (423608 bytes in file)
+    Virtual address: 0x08000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 423260 bytes (alignment 8)
+    Address: 0x08000000
+
+
+** Section #2 'RW_IRAM2' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 344 bytes (alignment 8)
+    Address: 0xc0000000
+
+
+** Section #3 'RW_IRAM2' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 566104 bytes (alignment 8)
+    Address: 0xc0000208
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 34790 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 37504 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 351328 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 262792 bytes
+
+
+** Section #8 '.debug_ranges' (SHT_PROGBITS)
+    Size   : 12152 bytes
+
+
+** Section #9 '.debug_str' (SHT_PROGBITS)
+    Size   : 287962 bytes
+
+
+** Section #10 '.symtab' (SHT_SYMTAB)
+    Size   : 29856 bytes (alignment 4)
+    String table #11 '.strtab'
+    Last local symbol no. 954
+
+    Symbol table .symtab (1865 symbols, 954 local)
+
+      #  Symbol Name                Value      Bind  Sec  Type  Vis  Size
+    ========================================================================
+
+      1  $d.realdata                0x08000000   Lc    1   --   De 
+      2  $t                         0x080001b4   Lc    1   --   De 
+      3  $d                         0x080001c0   Lc    1   --   De 
+      4  $t                         0x080001c8   Lc    1   --   De 
+      5  $d                         0x080001e4   Lc    1   --   De 
+      6  $t                         0x080001ec   Lc    1   --   De 
+      7  $d                         0x08000a08   Lc    1   --   De 
+      8  $t                         0x08000a0c   Lc    1   --   De 
+      9  $d                         0x08001116   Lc    1   --   De 
+     10  $t                         0x08001120   Lc    1   --   De 
+     11  $d                         0x08001540   Lc    1   --   De 
+     12  $t                         0x0800155e   Lc    1   --   De 
+     13  $d                         0x08003476   Lc    1   --   De 
+     14  $t                         0x0800347a   Lc    1   --   De 
+     15  $d                         0x08004702   Lc    1   --   De 
+     16  $t                         0x08004706   Lc    1   --   De 
+     17  $d                         0x08004768   Lc    1   --   De 
+     18  $t                         0x0800476c   Lc    1   --   De 
+     19  $d                         0x08010dbc   Lc    1   --   De 
+     20  $t                         0x08010dc0   Lc    1   --   De 
+     21  $d                         0x08012948   Lc    1   --   De 
+     22  $t                         0x080129fe   Lc    1   --   De 
+     23  $d                         0x08014596   Lc    1   --   De 
+     24  $t                         0x0801459a   Lc    1   --   De 
+     25  $d                         0x0801550e   Lc    1   --   De 
+     26  $t                         0x08015516   Lc    1   --   De 
+     27  $d                         0x08015576   Lc    1   --   De 
+     28  $t                         0x0801557c   Lc    1   --   De 
+     29  $d                         0x08016578   Lc    1   --   De 
+     30  $t                         0x08016582   Lc    1   --   De 
+     31  $d                         0x0801a14e   Lc    1   --   De 
+     32  $t                         0x0801a152   Lc    1   --   De 
+     33  $d                         0x0801a4f4   Lc    1   --   De 
+     34  $t                         0x0801a4f8   Lc    1   --   De 
+     35  $d                         0x08020eb0   Lc    1   --   De 
+     36  $t                         0x08020ede   Lc    1   --   De 
+     37  $d                         0x080242ee   Lc    1   --   De 
+     38  $t                         0x080242f4   Lc    1   --   De 
+     39  $d                         0x0802437a   Lc    1   --   De 
+     40  $t                         0x08024386   Lc    1   --   De 
+     41  $d                         0x08024bd0   Lc    1   --   De 
+     42  $t                         0x08024bd4   Lc    1   --   De 
+     43  $d                         0x08024e84   Lc    1   --   De 
+     44  $t                         0x08024e98   Lc    1   --   De 
+     45  $d                         0x080284d4   Lc    1   --   De 
+     46  $t                         0x080286d0   Lc    1   --   De 
+     47  $d                         0x08029ec8   Lc    1   --   De 
+     48  $t                         0x08029ed0   Lc    1   --   De 
+     49  $d                         0x0802a6a2   Lc    1   --   De 
+     50  $t                         0x0802a704   Lc    1   --   De 
+     51  $d                         0x0802e23a   Lc    1   --   De 
+     52  $t                         0x0802e244   Lc    1   --   De 
+     53  $d                         0x0802e266   Lc    1   --   De 
+     54  $t                         0x0802e26c   Lc    1   --   De 
+     55  $d                         0x0802e3fa   Lc    1   --   De 
+     56  $t                         0x0802e410   Lc    1   --   De 
+     57  $d                         0x0802e80a   Lc    1   --   De 
+     58  $t                         0x0802e838   Lc    1   --   De 
+     59  $d                         0x0802eae0   Lc    1   --   De 
+     60  $t                         0x0802eaec   Lc    1   --   De 
+     61  $d                         0x0802eb94   Lc    1   --   De 
+     62  $t                         0x0802eb98   Lc    1   --   De 
+     63  $d                         0x0802ebf4   Lc    1   --   De 
+     64  $d.realdata                0x0802ec04   Lc    1   --   De 
+     65  $d.realdata                0xc0000000   Lc    2   --   De 
+     66  stm32f4xx_hal.c            0x00000000   Lc  Abs  File  De 
+     67  stm32f4xx_hal_adc.c        0x00000000   Lc  Abs  File  De 
+     68  stm32f4xx_hal_adc_ex.c     0x00000000   Lc  Abs  File  De 
+     69  stm32f4xx_hal_can.c        0x00000000   Lc  Abs  File  De 
+     70  stm32f4xx_hal_cec.c        0x00000000   Lc  Abs  File  De 
+     71  stm32f4xx_hal_cortex.c     0x00000000   Lc  Abs  File  De 
+     72  __NVIC_SetPriorityGrouping 0x08018479   Lc    1  Code  De   0x3c
+     73  __NVIC_GetPriorityGrouping 0x08018425   Lc    1  Code  De   0x10
+     74  __NVIC_SetPriority         0x08018435   Lc    1  Code  De   0x42
+     75  NVIC_EncodePriority        0x0801143d   Lc    1  Code  De   0x6c
+     76  __NVIC_EnableIRQ           0x080183f5   Lc    1  Code  De   0x30
+     77  SysTick_Config             0x08014b01   Lc    1  Code  De   0x52
+     78  stm32f4xx_hal_crc.c        0x00000000   Lc  Abs  File  De 
+     79  stm32f4xx_hal_cryp.c       0x00000000   Lc  Abs  File  De 
+     80  stm32f4xx_hal_cryp_ex.c    0x00000000   Lc  Abs  File  De 
+     81  stm32f4xx_hal_dac.c        0x00000000   Lc  Abs  File  De 
+     82  stm32f4xx_hal_dac_ex.c     0x00000000   Lc  Abs  File  De 
+     83  stm32f4xx_hal_dcmi.c       0x00000000   Lc  Abs  File  De 
+     84  stm32f4xx_hal_dcmi_ex.c    0x00000000   Lc  Abs  File  De 
+     85  stm32f4xx_hal_dfsdm.c      0x00000000   Lc  Abs  File  De 
+     86  stm32f4xx_hal_dma.c        0x00000000   Lc  Abs  File  De 
+     87  DMA_CheckFifoParam         0x080046dd   Lc    1  Code  De   0x10e
+     88  DMA_CalcBaseAndBitshift    0x08004685   Lc    1  Code  De   0x56
+     89  DMA_SetConfig              0x080047ed   Lc    1  Code  De   0x50
+     90  DMA_CalcBaseAndBitshift.flagBitshiftOffset
+                                    0x0802ec9c   Lc    1  Data  De   0x8
+     91  stm32f4xx_hal_dma_ex.c     0x00000000   Lc  Abs  File  De 
+     92  stm32f4xx_hal_dma2d.c      0x00000000   Lc  Abs  File  De 
+     93  DMA2D_SetConfig            0x080044fd   Lc    1  Code  De   0x164
+     94  stm32f4xx_hal_dsi.c        0x00000000   Lc  Abs  File  De 
+     95  DSI_ConfigPacketHeader     0x0800483d   Lc    1  Code  De   0x2a
+     96  stm32f4xx_hal_eth.c        0x00000000   Lc  Abs  File  De 
+     97  stm32f4xx_hal_flash.c      0x00000000   Lc  Abs  File  De 
+     98  stm32f4xx_hal_flash_ex.c   0x00000000   Lc  Abs  File  De 
+     99  stm32f4xx_hal_flash_ramfunc.c
+                                    0x00000000   Lc  Abs  File  De 
+    100  stm32f4xx_hal_fmpi2c.c     0x00000000   Lc  Abs  File  De 
+    101  stm32f4xx_hal_fmpi2c_ex.c  0x00000000   Lc  Abs  File  De 
+    102  stm32f4xx_hal_gpio.c       0x00000000   Lc  Abs  File  De 
+    103  stm32f4xx_hal_hash.c       0x00000000   Lc  Abs  File  De 
+    104  stm32f4xx_hal_hash_ex.c    0x00000000   Lc  Abs  File  De 
+    105  stm32f4xx_hal_hcd.c        0x00000000   Lc  Abs  File  De 
+    106  stm32f4xx_hal_i2c.c        0x00000000   Lc  Abs  File  De 
+    107  I2C_WaitOnFlagUntilTimeout 0x0800ea1d   Lc    1  Code  De   0xba
+    108  I2C_WaitOnTXEFlagUntilTimeout
+                                    0x0800ec85   Lc    1  Code  De   0x8e
+    109  I2C_WaitOnBTFFlagUntilTimeout
+                                    0x0800e98d   Lc    1  Code  De   0x90
+    110  I2C_WaitOnRXNEFlagUntilTimeout
+                                    0x0800ebd1   Lc    1  Code  De   0xb2
+    111  I2C_RequestMemoryWrite     0x0800e84d   Lc    1  Code  De   0x140
+    112  I2C_RequestMemoryRead      0x0800e665   Lc    1  Code  De   0x1e8
+    113  I2C_WaitOnMasterAddressFlagUntilTimeout
+                                    0x0800ead9   Lc    1  Code  De   0xf6
+    114  I2C_IsAcknowledgeFailed    0x0800e609   Lc    1  Code  De   0x5a
+    115  stm32f4xx_hal_i2c_ex.c     0x00000000   Lc  Abs  File  De 
+    116  stm32f4xx_hal_i2s.c        0x00000000   Lc  Abs  File  De 
+    117  stm32f4xx_hal_i2s_ex.c     0x00000000   Lc  Abs  File  De 
+    118  stm32f4xx_hal_irda.c       0x00000000   Lc  Abs  File  De 
+    119  stm32f4xx_hal_iwdg.c       0x00000000   Lc  Abs  File  De 
+    120  stm32f4xx_hal_lptim.c      0x00000000   Lc  Abs  File  De 
+    121  stm32f4xx_hal_ltdc.c       0x00000000   Lc  Abs  File  De 
+    122  LTDC_SetConfig             0x0800fe4d   Lc    1  Code  De   0x276
+    123  stm32f4xx_hal_ltdc_ex.c    0x00000000   Lc  Abs  File  De 
+    124  stm32f4xx_hal_nand.c       0x00000000   Lc  Abs  File  De 
+    125  stm32f4xx_hal_nor.c        0x00000000   Lc  Abs  File  De 
+    126  stm32f4xx_hal_pccard.c     0x00000000   Lc  Abs  File  De 
+    127  stm32f4xx_hal_pcd.c        0x00000000   Lc  Abs  File  De 
+    128  PCD_WriteEmptyTxFifo       0x08011a1d   Lc    1  Code  De   0x10c
+    129  stm32f4xx_hal_pcd_ex.c     0x00000000   Lc  Abs  File  De 
+    130  stm32f4xx_hal_pwr.c        0x00000000   Lc  Abs  File  De 
+    131  stm32f4xx_hal_pwr_ex.c     0x00000000   Lc  Abs  File  De 
+    132  stm32f4xx_hal_qspi.c       0x00000000   Lc  Abs  File  De 
+    133  QSPI_WaitFlagStateUntilTimeout
+                                    0x08012041   Lc    1  Code  De   0x7a
+    134  QSPI_Config                0x08011bed   Lc    1  Code  De   0x300
+    135  stm32f4xx_hal_rcc.c        0x00000000   Lc  Abs  File  De 
+    136  stm32f4xx_hal_rcc_ex.c     0x00000000   Lc  Abs  File  De 
+    137  stm32f4xx_hal_rng.c        0x00000000   Lc  Abs  File  De 
+    138  stm32f4xx_hal_rtc.c        0x00000000   Lc  Abs  File  De 
+    139  stm32f4xx_hal_rtc_ex.c     0x00000000   Lc  Abs  File  De 
+    140  stm32f4xx_hal_sai.c        0x00000000   Lc  Abs  File  De 
+    141  SAI_Disable                0x08012489   Lc    1  Code  De   0x84
+    142  SAI_InterruptFlag          0x08012665   Lc    1  Code  De   0x72
+    143  SAI_DMATxHalfCplt          0x08012471   Lc    1  Code  De   0x16
+    144  SAI_DMATxCplt              0x0801241d   Lc    1  Code  De   0x54
+    145  SAI_DMAError               0x080123bd   Lc    1  Code  De   0x60
+    146  stm32f4xx_hal_sai_ex.c     0x00000000   Lc  Abs  File  De 
+    147  stm32f4xx_hal_sd.c         0x00000000   Lc  Abs  File  De 
+    148  SD_PowerON                 0x080140a1   Lc    1  Code  De   0x1d4
+    149  SD_Initialize_Cards        0x08013cd9   Lc    1  Code  De   0x17c
+    150  SD_Select_Deselect         0x08014275   Lc    1  Code  De   0x44
+    151  SD_CmdResp1Error           0x08013515   Lc    1  Code  De   0x244
+    152  SD_IsCardProgramming       0x08013e55   Lc    1  Code  De   0x24a
+    153  SD_DMA_RxCplt              0x08013a11   Lc    1  Code  De   0x30
+    154  SD_DMA_RxError             0x08013a41   Lc    1  Code  De   0x18
+    155  SD_DMA_TxCplt              0x08013a59   Lc    1  Code  De   0x30
+    156  SD_DMA_TxError             0x08013a89   Lc    1  Code  De   0x18
+    157  SD_WideBus_Enable          0x0801442d   Lc    1  Code  De   0xee
+    158  SD_WideBus_Disable         0x0801433d   Lc    1  Code  De   0xee
+    159  SD_FindSCR                 0x08013ac1   Lc    1  Code  De   0x1e4
+    160  SD_GetState                0x08013ca5   Lc    1  Code  De   0x32
+    161  SD_SendStatus              0x080142b9   Lc    1  Code  De   0x84
+    162  SD_CmdResp2Error           0x08013759   Lc    1  Code  De   0x84
+    163  SD_CmdResp6Error           0x0801383d   Lc    1  Code  De   0x110
+    164  SD_CmdError                0x08013491   Lc    1  Code  De   0x82
+    165  SD_CmdResp7Error           0x0801394d   Lc    1  Code  De   0xc4
+    166  SD_CmdResp3Error           0x080137dd   Lc    1  Code  De   0x5e
+    167  stm32f4xx_hal_sdram.c      0x00000000   Lc  Abs  File  De 
+    168  stm32f4xx_hal_smartcard.c  0x00000000   Lc  Abs  File  De 
+    169  stm32f4xx_hal_spdifrx.c    0x00000000   Lc  Abs  File  De 
+    170  stm32f4xx_hal_spi.c        0x00000000   Lc  Abs  File  De 
+    171  stm32f4xx_hal_sram.c       0x00000000   Lc  Abs  File  De 
+    172  stm32f4xx_hal_tim.c        0x00000000   Lc  Abs  File  De 
+    173  stm32f4xx_hal_tim_ex.c     0x00000000   Lc  Abs  File  De 
+    174  stm32f4xx_hal_uart.c       0x00000000   Lc  Abs  File  De 
+    175  UART_SetConfig             0x08014e2d   Lc    1  Code  De   0x430
+    176  UART_WaitOnFlagUntilTimeout
+                                    0x0801525d   Lc    1  Code  De   0x9c
+    177  stm32f4xx_hal_usart.c      0x00000000   Lc  Abs  File  De 
+    178  stm32f4xx_hal_wwdg.c       0x00000000   Lc  Abs  File  De 
+    179  stm32f4xx_ll_fmc.c         0x00000000   Lc  Abs  File  De 
+    180  stm32f4xx_ll_fsmc.c        0x00000000   Lc  Abs  File  De 
+    181  stm32f4xx_ll_sdmmc.c       0x00000000   Lc  Abs  File  De 
+    182  stm32f4xx_ll_usb.c         0x00000000   Lc  Abs  File  De 
+    183  USB_CoreReset              0x08016a39   Lc    1  Code  De   0x80
+    184  startup_stm32f469xx.s      0x00000000   Lc  Abs  File  De 
+    185  STACK                      0xc0088560   Lc    3  Sect  De   0x2000
+    186  HEAP                       0xc0076560   Lc    3  Sect  De   0x12000
+    187  RESET                      0x08000000   Lc    1  Sect  De   0x1b4
+    188  .text                      0x080001c8   Lc    1  Sect  De   0x24
+    189  $v0                        0x080001c8   Lc    1   --   De 
+    190  stm32469i_discovery.c      0x00000000   Lc  Abs  File  De 
+    191  I2C2_Init                  0x0800e411   Lc    1  Code  De   0x56
+    192  I2C2_WriteMultiple         0x0800e599   Lc    1  Code  De   0x6e
+    193  I2C2_ReadMultiple          0x0800e529   Lc    1  Code  De   0x6e
+    194  I2C1_Init                  0x0800e1ad   Lc    1  Code  De   0x56
+    195  I2C1_ReadMultiple          0x0800e329   Lc    1  Code  De   0x6e
+    196  I2C1_Write                 0x0800e399   Lc    1  Code  De   0x5a
+    197  I2C1_Read                  0x0800e2c9   Lc    1  Code  De   0x5e
+    198  I2C2_MspInit               0x0800e469   Lc    1  Code  De   0xbe
+    199  I2C2_Error                 0x0800e3f5   Lc    1  Code  De   0x1c
+    200  I2C1_MspInit               0x0800e205   Lc    1  Code  De   0xc2
+    201  I2C1_Error                 0x0800e191   Lc    1  Code  De   0x1c
+    202  heval_I2c2                 0xc0068950   Lc    3  Data  De   0x54
+    203  heval_I2c1                 0xc00688fc   Lc    3  Data  De   0x54
+    204  stm32469i_discovery_audio.c
+                                    0x00000000   Lc  Abs  File  De 
+    205  SAIx_DeInit                0x080126d9   Lc    1  Code  De   0x24
+    206  SAIx_Init                  0x080126fd   Lc    1  Code  De   0x9c
+    207  AUDIO_CODEC_Reset          0x080013e1   Lc    1  Code  De   0x34
+    208  BSP_AUDIO_OUT_MspInit.hdma_sai_tx
+                                    0xc000021c   Lc    3  Data  De   0x60
+    209  stm32469i_discovery_eeprom.c
+                                    0x00000000   Lc  Abs  File  De 
+    210  stm32469i_discovery_lcd.c  0x00000000   Lc  Abs  File  De 
+    211  LL_FillBuffer              0x0800fdc9   Lc    1  Code  De   0x84
+    212  DrawChar                   0x0800555d   Lc    1  Code  De   0x172
+    213  FillTriangle               0x08005ab5   Lc    1  Code  De   0x232
+    214  BSP_LCD_InitEx.PeriphClkInitStruct
+                                    0xc000027c   Lc    3  Data  De   0x3c
+    215  hdsivideo_handle           0xc0068890   Lc    3  Data  De   0x6c
+    216  ActiveLayer                0xc0000214   Lc    3  Data  De   0x4
+    217  DrawProp                   0xc0002410   Lc    3  Data  De   0x18
+    218  stm32469i_discovery_qspi.c 0x00000000   Lc  Abs  File  De 
+    219  QSPI_ResetMemory           0x08011fc5   Lc    1  Code  De   0x7a
+    220  QSPI_DummyCyclesCfg        0x08011eed   Lc    1  Code  De   0xd6
+    221  QSPI_WriteEnable           0x080120bd   Lc    1  Code  De   0x84
+    222  QSPI_AutoPollingMemReady   0x08011b89   Lc    1  Code  De   0x64
+    223  stm32469i_discovery_sd.c   0x00000000   Lc  Abs  File  De 
+    224  uSdHandle                  0xc00764f8   Lc    3  Data  De   0x60
+    225  uSdCardInfo                0xc00764a0   Lc    3  Data  De   0x58
+    226  BSP_SD_MspInit.dma_rx_handle
+                                    0xc0000318   Lc    3  Data  De   0x60
+    227  BSP_SD_MspInit.dma_tx_handle
+                                    0xc0000378   Lc    3  Data  De   0x60
+    228  stm32469i_discovery_sdram.c
+                                    0x00000000   Lc  Abs  File  De 
+    229  BSP_SDRAM_Init.sdramstatus 0xc000000d   Lc    2  Data  De   0x1
+    230  sdramHandle                0xc00761d8   Lc    3  Data  De   0x34
+    231  Timing                     0xc00674c4   Lc    3  Data  De   0x1c
+    232  Command                    0xc00023f0   Lc    3  Data  De   0x10
+    233  BSP_SDRAM_MspInit.dma_handle
+                                    0xc00002b8   Lc    3  Data  De   0x60
+    234  stm32469i_discovery_ts.c   0x00000000   Lc  Abs  File  De 
+    235  I2C_Address                0xc0009a94   Lc    3  Data  De   0x1
+    236  ts_driver                  0xc0076494   Lc    3  Data  De   0x4
+    237  ts_orientation             0xc0076498   Lc    3  Data  De   0x1
+    238  BSP_TS_GetState._x         0xc00003d8   Lc    3  Data  De   0x8
+    239  BSP_TS_GetState._y         0xc00003e0   Lc    3  Data  De   0x8
+    240  stm32f4xx_it.c             0x00000000   Lc  Abs  File  De 
+    241  .L.str.9                   0x0804d338   Lc    1  Data  De   0x14
+    242  .L.str                     0x0804d34c   Lc    1  Data  De   0xb
+    243  .L.str.7                   0x0804d357   Lc    1  Data  De   0xe
+    244  .L.str.5                   0x0804d365   Lc    1  Data  De   0xb
+    245  .L.str.2                   0x0804d370   Lc    1  Data  De   0x10
+    246  .L.str.6                   0x0804d380   Lc    1  Data  De   0x10
+    247  .L.str.4                   0x0804d390   Lc    1  Data  De   0x12
+    248  .L.str.3                   0x0804d3a2   Lc    1  Data  De   0x10
+    249  .L.str.1                   0x0804d3b2   Lc    1  Data  De   0x11
+    250  .L.str.8                   0x0804d3c3   Lc    1  Data  De   0x10
+    251  stm32f4xx_hal_msp.c        0x00000000   Lc  Abs  File  De 
+    252  main.c                     0x00000000   Lc  Abs  File  De 
+    253  SystemClock_Config         0x08014b61   Lc    1  Code  De   0xd8
+    254  EXTI9_IRQHandler_Config    0x08005701   Lc    1  Code  De   0x5c
+    255  System_1stask              0x08014ca9   Lc    1  Code  De   0x50
+    256  .L.str                     0x0804d3d3   Lc    1  Data  De   0x21
+    257  .L.str.1                   0x0804d3f4   Lc    1  Data  De   0xf
+    258  Timing20ms                 0xc00674e4   Lc    3  Data  De   0x4
+    259  Timing500ms                0xc00674e8   Lc    3  Data  De   0x4
+    260  user_display.c             0x00000000   Lc  Abs  File  De 
+    261  .L.str.10                  0x0804d403   Lc    1  Data  De   0x19
+    262  .L.str                     0x0804d41c   Lc    1  Data  De   0x10
+    263  .L.str.6                   0x0804d42c   Lc    1  Data  De   0x11
+    264  .L.str.3                   0x0804d43d   Lc    1  Data  De   0x14
+    265  .L.str.4                   0x0804d451   Lc    1  Data  De   0x3b
+    266  .L.str.9                   0x0804d48c   Lc    1  Data  De   0xd
+    267  .L.str.7                   0x0804d499   Lc    1  Data  De   0xa
+    268  .L.str.8                   0x0804d4a3   Lc    1  Data  De   0xa
+    269  .L.str.2                   0x0804d4ad   Lc    1  Data  De   0xa
+    270  .L.str.1                   0x0804d4b7   Lc    1  Data  De   0xe
+    271  LCD_DisplayMusicTimeRate.time_second
+                                    0xc006129c   Lc    3  Data  De   0x4
+    272  LCD_DisplayMusicTimeRate.lrc_time_idx
+                                    0xc0061298   Lc    3  Data  De   0x4
+    273  LCD_DisplayMusicName.unicode_idx
+                                    0xc0061295   Lc    3  Data  De   0x1
+    274  .L.str.5                   0x0804d836   Lc    1  Data  De   0xa
+    275  user_menu.c                0x00000000   Lc  Abs  File  De 
+    276  AUDIO_ChangeSelectMode     0x08001415   Lc    1  Code  De   0x5a
+    277  LCD_ClearTextZone          0x0800f4cd   Lc    1  Code  De   0x36
+    278  .L.str.3                   0x0804d4c5   Lc    1  Data  De   0x26
+    279  .L.str.7                   0x0804d4eb   Lc    1  Data  De   0xf
+    280  .L.str.8                   0x0804d4fa   Lc    1  Data  De   0xf
+    281  .L.str                     0x0804d509   Lc    1  Data  De   0x1e
+    282  .L.str.1                   0x0804d527   Lc    1  Data  De   0x11
+    283  .L.str.2                   0x0804d538   Lc    1  Data  De   0x14
+    284  .L.str.6                   0x0804d54c   Lc    1  Data  De   0x12
+    285  .L.str.4                   0x0804d55e   Lc    1  Data  De   0x6
+    286  .L.str.5                   0x0804d564   Lc    1  Data  De   0x6
+    287  user_ram.c                 0x00000000   Lc  Abs  File  De 
+    288  user_task.c                0x00000000   Lc  Abs  File  De 
+    289  .L.str.6                   0x0804d56a   Lc    1  Data  De   0x10
+    290  .L.str.1                   0x0804d574   Lc    1  Data  De   0x4
+    291  .L.str.5                   0x0804d57a   Lc    1  Data  De   0x16
+    292  .L.str.11                  0x0804d590   Lc    1  Data  De   0xc
+    293  .L.str                     0x0804d5c7   Lc    1  Data  De   0xa
+    294  .L.str.31                  0x0804d5d1   Lc    1  Data  De   0x2a
+    295  .L.str.12                  0x0804d5e3   Lc    1  Data  De   0xb
+    296  .L.str.13                  0x0804d5ee   Lc    1  Data  De   0x12
+    297  .L.str.34                  0x0804d5fb   Lc    1  Data  De   0x16
+    298  .L.str.14                  0x0804d600   Lc    1  Data  De   0xb
+    299  .L.str.15                  0x0804d60b   Lc    1  Data  De   0x10
+    300  .L.str.33                  0x0804d611   Lc    1  Data  De   0x16
+    301  .L.str.16                  0x0804d61b   Lc    1  Data  De   0x10
+    302  .L.str.17                  0x0804d62b   Lc    1  Data  De   0x11
+    303  .L.str.18                  0x0804d63c   Lc    1  Data  De   0x11
+    304  .L.str.19                  0x0804d64d   Lc    1  Data  De   0xb
+    305  .L.str.20                  0x0804d658   Lc    1  Data  De   0xb
+    306  .L.str.23                  0x0804d65f   Lc    1  Data  De   0xf
+    307  .L.str.21                  0x0804d663   Lc    1  Data  De   0x8
+    308  .L.str.22                  0x0804d66b   Lc    1  Data  De   0x3
+    309  .L.str.24                  0x0804d66e   Lc    1  Data  De   0x1c
+    310  .L.str.32                  0x0804d68a   Lc    1  Data  De   0x2e
+    311  .L.str.25                  0x0804d699   Lc    1  Data  De   0xb
+    312  .L.str.26                  0x0804d6a4   Lc    1  Data  De   0xb
+    313  .L.str.27                  0x0804d6af   Lc    1  Data  De   0x5
+    314  .L.str.28                  0x0804d6b4   Lc    1  Data  De   0x5
+    315  .L.str.29                  0x0804d6b9   Lc    1  Data  De   0x7
+    316  .L.str.9                   0x0804d6e8   Lc    1  Data  De   0x4
+    317  .L.str.30                  0x0804d6f1   Lc    1  Data  De   0x9
+    318  .L.str.8                   0x0804d708   Lc    1  Data  De   0x4
+    319  .L.str.4                   0x0804d717   Lc    1  Data  De   0x9
+    320  .L.str.2                   0x0804d728   Lc    1  Data  De   0xb
+    321  .L.str.3                   0x0804d733   Lc    1  Data  De   0x15
+    322  .L.str.35                  0x0804d74d   Lc    1  Data  De   0xc
+    323  .L.str.7                   0x0804d753   Lc    1  Data  De   0x4
+    324  .L.str.36                  0x0804d759   Lc    1  Data  De   0xb
+    325  .L.str.37                  0x0804d764   Lc    1  Data  De   0x2
+    326  .L.str.38                  0x0804d766   Lc    1  Data  De   0x4
+    327  .L.str.39                  0x0804d76a   Lc    1  Data  De   0x4
+    328  .L.str.40                  0x0804d76e   Lc    1  Data  De   0x5
+    329  lfn                        0xc006a13c   Lc    3  Data  De   0x64
+    330  .L.str.10                  0x0804dde5   Lc    1  Data  De   0x4
+    331  stlogo.c                   0x00000000   Lc  Abs  File  De 
+    332  user_mp3player.c           0x00000000   Lc  Abs  File  De 
+    333  .L.str.8                   0x0804d688   Lc    1  Data  De   0x2
+    334  .L.str.1                   0x0804d75b   Lc    1  Data  De   0x8
+    335  .L.str.3                   0x0804d763   Lc    1  Data  De   0x19
+    336  .L.str.5                   0x0804d77c   Lc    1  Data  De   0x1c
+    337  .L.str.2                   0x0804d798   Lc    1  Data  De   0xf
+    338  .L.str.4                   0x0804d7a7   Lc    1  Data  De   0x11
+    339  .L.str.12                  0x0804d7d6   Lc    1  Data  De   0x11
+    340  .L.str.11                  0x0804d7e7   Lc    1  Data  De   0xe
+    341  .L.str.10                  0x0804d7f5   Lc    1  Data  De   0xe
+    342  .L.str.9                   0x0804d80e   Lc    1  Data  De   0x1b
+    343  .L.str.13                  0x0804d814   Lc    1  Data  De   0xb
+    344  .L.str.14                  0x0804d81f   Lc    1  Data  De   0x8
+    345  .L.str.15                  0x0804d827   Lc    1  Data  De   0x1e
+    346  .L.str                     0x0804d831   Lc    1  Data  De   0x4
+    347  .L.str.6                   0x0804d835   Lc    1  Data  De   0xb
+    348  .L.str.7                   0x0804e987   Lc    1  Data  De   0x3
+    349  user_MusicPlayer.c         0x00000000   Lc  Abs  File  De 
+    350  .L.str.4                   0x0804d7a7   Lc    1  Data  De   0x11
+    351  .L.str.18                  0x0804d835   Lc    1  Data  De   0xb
+    352  GetFileInfo                0x08006199   Lc    1  Code  De   0x1c4
+    353  AUDIO_PlaybackDisplayButtons
+                                    0x08001ad5   Lc    1  Code  De   0xd8
+    354  PlayerInit                 0x08011b3d   Lc    1  Code  De   0x4a
+    355  AUDIO_AcquireTouchButtons  0x08001179   Lc    1  Code  De   0x266
+    356  FilePos                    0xc0009a26   Lc    3  Data  De   0x2
+    357  .L.str.19                  0x0804d840   Lc    1  Data  De   0x12
+    358  .L.str                     0x0804d852   Lc    1  Data  De   0x18
+    359  .L.str.2                   0x0804d86a   Lc    1  Data  De   0x18
+    360  .L.str.16                  0x0804d882   Lc    1  Data  De   0x13
+    361  .L.str.17                  0x0804d895   Lc    1  Data  De   0x13
+    362  .L.str.5                   0x0804d8a8   Lc    1  Data  De   0x1b
+    363  .L.str.13                  0x0804d8c3   Lc    1  Data  De   0x10
+    364  .L.str.1                   0x0804d8d3   Lc    1  Data  De   0x25
+    365  .L.str.10                  0x0804d8f8   Lc    1  Data  De   0x1f
+    366  .L.str.9                   0x0804d917   Lc    1  Data  De   0x1e
+    367  .L.str.6                   0x0804d935   Lc    1  Data  De   0x1d
+    368  .L.str.8                   0x0804d952   Lc    1  Data  De   0x21
+    369  .L.str.7                   0x0804d973   Lc    1  Data  De   0x1d
+    370  .L.str.15                  0x0804d990   Lc    1  Data  De   0x11
+    371  .L.str.14                  0x0804d9a1   Lc    1  Data  De   0x13
+    372  .L.str.11                  0x0804d9b4   Lc    1  Data  De   0xf
+    373  .L.str.3                   0x0804d9c3   Lc    1  Data  De   0x1e
+    374  .L.str.21                  0x0804d9e1   Lc    1  Data  De   0x2
+    375  .L.str.20                  0x0804d9e3   Lc    1  Data  De   0x2
+    376  .L.str.12                  0x0804d9e5   Lc    1  Data  De   0xa
+    377  PreviousPoints             0xc000006c   Lc    2  Data  De   0xc
+    378  NextPoints                 0xc0000060   Lc    2  Data  De   0xc
+    379  AUDIO_AcquireTouchButtons.TS_State
+                                    0xc0000208   Lc    3  Data  De   0xa
+    380  user_jpeg.c                0x00000000   Lc  Abs  File  De 
+    381  .L.str.10                  0x0804d9e5   Lc    1  Data  De   0xa
+    382  Jpeg_CallbackFunction      0x0800f3d1   Lc    1  Code  De   0xca
+    383  .L.str.13                  0x0804d9ef   Lc    1  Data  De   0x1c
+    384  .L.str.1                   0x0804da0b   Lc    1  Data  De   0x1b
+    385  .L.str.2                   0x0804da26   Lc    1  Data  De   0x1b
+    386  .L.str.3                   0x0804da41   Lc    1  Data  De   0x1b
+    387  .L.str.4                   0x0804da5c   Lc    1  Data  De   0x1b
+    388  .L.str.5                   0x0804da77   Lc    1  Data  De   0x1b
+    389  .L.str.6                   0x0804da92   Lc    1  Data  De   0x1b
+    390  .L.str.7                   0x0804daad   Lc    1  Data  De   0x1b
+    391  .L.str.19                  0x0804dac8   Lc    1  Data  De   0x2a
+    392  .L.str.12                  0x0804daf2   Lc    1  Data  De   0x25
+    393  .L.str.14                  0x0804db36   Lc    1  Data  De   0x2c
+    394  .L.str.16                  0x0804db62   Lc    1  Data  De   0x3a
+    395  .L.str.22                  0x0804dbb6   Lc    1  Data  De   0x12
+    396  .L.str.23                  0x0804dbc8   Lc    1  Data  De   0x15
+    397  .L.str.9                   0x0804dbdd   Lc    1  Data  De   0x14
+    398  .L.str.8                   0x0804dbf1   Lc    1  Data  De   0x12
+    399  .L.str                     0x0804dc03   Lc    1  Data  De   0x14
+    400  .L.str.20                  0x0804dc17   Lc    1  Data  De   0x10
+    401  .L.str.11                  0x0804dc33   Lc    1  Data  De   0xe
+    402  .L.str.17                  0x0804dc41   Lc    1  Data  De   0x17
+    403  .L.str.21                  0x0804dc58   Lc    1  Data  De   0x19
+    404  .L.str.25                  0x0804dc67   Lc    1  Data  De   0xc
+    405  .L.str.18                  0x0804dc71   Lc    1  Data  De   0x18
+    406  .L.str.26                  0x0804dc73   Lc    1  Data  De   0xd
+    407  .L.str.27                  0x0804dc80   Lc    1  Data  De   0x1f
+    408  .L.str.15                  0x0804dc89   Lc    1  Data  De   0x5
+    409  .L.str.24                  0x0804dc9b   Lc    1  Data  De   0x14
+    410  .L.str.28                  0x0804dc9f   Lc    1  Data  De   0x1a
+    411  user_jpegCover.c           0x00000000   Lc  Abs  File  De 
+    412  user_SpecialFont.c         0x00000000   Lc  Abs  File  De 
+    413  usbd_conf.c                0x00000000   Lc  Abs  File  De 
+    414  usbd_desc.c                0x00000000   Lc  Abs  File  De 
+    415  Get_SerialNum              0x080066a5   Lc    1  Code  De   0x5c
+    416  IntToUnicode               0x0800f355   Lc    1  Code  De   0x7a
+    417  .L.str.4                   0x0804dcaf   Lc    1  Data  De   0xe
+    418  .L.str.1                   0x0804dcbd   Lc    1  Data  De   0x18
+    419  .L.str                     0x0804dcd5   Lc    1  Data  De   0x18
+    420  .L.str.3                   0x0804dced   Lc    1  Data  De   0xb
+    421  .L.str.2                   0x0804dcf8   Lc    1  Data  De   0x13
+    422  usbd_storage.c             0x00000000   Lc  Abs  File  De 
+    423  STORAGE_IsReady.prev_status
+                                    0xc00674bc   Lc    3  Data  De   0x1
+    424  user_sdram.c               0x00000000   Lc  Abs  File  De 
+    425  user_init.c                0x00000000   Lc  Abs  File  De 
+    426  .L.str.3                   0x0804d688   Lc    1  Data  De   0x2
+    427  .L.str                     0x0804dd0b   Lc    1  Data  De   0x8
+    428  .L.str.1                   0x0804dd13   Lc    1  Data  De   0x9
+    429  .L.str.2                   0x0804dd1c   Lc    1  Data  De   0xa
+    430  .L.str.4                   0x0804dd26   Lc    1  Data  De   0xa
+    431  .L.str.5                   0x0804dd30   Lc    1  Data  De   0xa
+    432  .L.str.6                   0x0804dd3a   Lc    1  Data  De   0xa
+    433  user_lrc.c                 0x00000000   Lc  Abs  File  De 
+    434  .L.str.2                   0x0804d9e5   Lc    1  Data  De   0xa
+    435  .L.str.6                   0x0804dc33   Lc    1  Data  De   0xe
+    436  .L.str.9                   0x0804dd44   Lc    1  Data  De   0x19
+    437  .L.str.10                  0x0804dd5d   Lc    1  Data  De   0x13
+    438  .L.str.11                  0x0804dd70   Lc    1  Data  De   0x19
+    439  .L.str.7                   0x0804dd89   Lc    1  Data  De   0x24
+    440  .L.str.1                   0x0804ddad   Lc    1  Data  De   0xb
+    441  .L.str.5                   0x0804ddb8   Lc    1  Data  De   0x1c
+    442  .L.str.12                  0x0804ddd4   Lc    1  Data  De   0x10
+    443  .L.str.3                   0x0804dde4   Lc    1  Data  De   0x5
+    444  .L.str.4                   0x0804dde9   Lc    1  Data  De   0x5
+    445  .L.str                     0x0804ddee   Lc    1  Data  De   0xb
+    446  .L.str.8                   0x0804ddf9   Lc    1  Data  De   0xf
+    447  cs43l22.c                  0x00000000   Lc  Abs  File  De 
+    448  CODEC_IO_Write             0x08004451   Lc    1  Code  De   0x2c
+    449  Is_cs43l22_Stop            0xc0000040   Lc    2  Data  De   0x1
+    450  otm8009a.c                 0x00000000   Lc  Abs  File  De 
+    451  ft6x06.c                   0x00000000   Lc  Abs  File  De 
+    452  ft6x06_GetInstance         0x08020329   Lc    1  Code  De   0x5c
+    453  ft6x06_TS_Configure        0x08020409   Lc    1  Code  De   0x10
+    454  ft6x06_handle              0xc0068676   Lc    3  Data  De   0x3
+    455  system_stm32f4xx.c         0x00000000   Lc  Abs  File  De 
+    456  ff.c                       0x00000000   Lc  Abs  File  De 
+    457  move_window                0x08026a8d   Lc    1  Code  De   0x68
+    458  get_ldnumber               0x0802174d   Lc    1  Code  De   0xa8
+    459  find_volume                0x0801f7f1   Lc    1  Code  De   0x560
+    460  follow_path                0x0801ff89   Lc    1  Code  De   0xfc
+    461  dir_register               0x0801d145   Lc    1  Code  De   0x24a
+    462  ld_clust                   0x080262e1   Lc    1  Code  De   0x34
+    463  st_clust                   0x0802975d   Lc    1  Code  De   0x28
+    464  remove_chain               0x08028b31   Lc    1  Code  De   0xc4
+    465  validate                   0x0802b389   Lc    1  Code  De   0x74
+    466  clmt_clust                 0x08019259   Lc    1  Code  De   0x78
+    467  mem_cpy                    0x080268e1   Lc    1  Code  De   0x32
+    468  create_chain               0x080197a1   Lc    1  Code  De   0x16e
+    469  sync_fs                    0x0802ac41   Lc    1  Code  De   0x136
+    470  dir_sdi                    0x0801d391   Lc    1  Code  De   0x198
+    471  dir_read                   0x0801cfad   Lc    1  Code  De   0x198
+    472  get_fileinfo               0x08021405   Lc    1  Code  De   0x1b0
+    473  dir_next                   0x0801cd3d   Lc    1  Code  De   0x26e
+    474  sync_window                0x0802ad79   Lc    1  Code  De   0xac
+    475  mem_set                    0x08026915   Lc    1  Code  De   0x28
+    476  check_fs                   0x08019125   Lc    1  Code  De   0xba
+    477  create_name                0x08019ba1   Lc    1  Code  De   0x4d0
+    478  dir_find                   0x0801cb5d   Lc    1  Code  De   0x1de
+    479  chk_chr                    0x080191e1   Lc    1  Code  De   0x3c
+    480  cmp_lfn                    0x08019315   Lc    1  Code  De   0xda
+    481  sum_sfn                    0x0802ac01   Lc    1  Code  De   0x3e
+    482  mem_cmp                    0x0802688d   Lc    1  Code  De   0x52
+    483  gen_numname                0x08020595   Lc    1  Code  De   0x176
+    484  dir_alloc                  0x0801cab1   Lc    1  Code  De   0xac
+    485  fit_lfn                    0x0801feb5   Lc    1  Code  De   0xd4
+    486  pick_lfn                   0x08027405   Lc    1  Code  De   0xc0
+    487  FatFs                      0xc0002428   Lc    3  Data  De   0x4
+    488  LfnBuf                     0xc00622a0   Lc    3  Data  De   0xca
+    489  .L.str                     0x0804de08   Lc    1  Data  De   0xc
+    490  .L.str.1                   0x0804de14   Lc    1  Data  De   0x14
+    491  .L.str.2                   0x0804de28   Lc    1  Data  De   0x14
+    492  .L.str.4                   0x0804de3c   Lc    1  Data  De   0x7
+    493  .L.str.3                   0x0804de43   Lc    1  Data  De   0x9
+    494  Fsid                       0xc0009a8c   Lc    3  Data  De   0x2
+    495  LfnOfs                     0x08036733   Lc    1  Data  De   0xd
+    496  ff_gen_drv.c               0x00000000   Lc  Abs  File  De 
+    497  diskio.c                   0x00000000   Lc  Abs  File  De 
+    498  cc936.c                    0x00000000   Lc  Abs  File  De 
+    499  oem2uni                    0x08037b94   Lc    1  Data  De   0x15484
+    500  uni2oem                    0x0804f0ce   Lc    1  Data  De   0x15484
+    501  ff_wtoupper.tbl_lower      0x08036ab8   Lc    1  Data  De   0x1e0
+    502  ff_wtoupper.tbl_upper      0x08036c98   Lc    1  Data  De   0x1e0
+    503  sd_diskio.c                0x00000000   Lc  Abs  File  De 
+    504  Stat                       0xc00000a0   Lc    2  Data  De   0x1
+    505  bitstream.c                0x00000000   Lc  Abs  File  De 
+    506  RefillBitstreamCache       0x080122b5   Lc    1  Code  De   0xbe
+    507  buffers.c                  0x00000000   Lc  Abs  File  De 
+    508  dct32.c                    0x00000000   Lc  Abs  File  De 
+    509  dcttab                     0x080369a8   Lc    1  Data  De   0xc0
+    510  dequant.c                  0x00000000   Lc  Abs  File  De 
+    511  CLZ                        0x0800439d   Lc    1  Code  De   0x3c
+    512  dqchan.c                   0x00000000   Lc  Abs  File  De 
+    513  DequantBlock               0x080052b1   Lc    1  Code  De   0x2ac
+    514  CLZ                        0x080043d9   Lc    1  Code  De   0x3c
+    515  preTab                     0x0804d250   Lc    1  Data  De   0x16
+    516  pow43_14                   0x0804d150   Lc    1  Data  De   0x100
+    517  pow14                      0x0804d040   Lc    1  Data  De   0x10
+    518  pow43                      0x0804d090   Lc    1  Data  De   0xc0
+    519  poly43lo                   0x0804d02c   Lc    1  Data  De   0x14
+    520  poly43hi                   0x0804d018   Lc    1  Data  De   0x14
+    521  pow2frac                   0x0804d070   Lc    1  Data  De   0x20
+    522  pow2exp                    0x0804d050   Lc    1  Data  De   0x20
+    523  huffman.c                  0x00000000   Lc  Abs  File  De 
+    524  DecodeHuffmanPairs         0x080048cd   Lc    1  Code  De   0x64c
+    525  DecodeHuffmanQuads         0x08004f19   Lc    1  Code  De   0x2a6
+    526  hufftabs.c                 0x00000000   Lc  Abs  File  De 
+    527  imdct.c                    0x00000000   Lc  Abs  File  De 
+    528  AntiAlias                  0x08001bfd   Lc    1  Code  De   0x356
+    529  HybridTransform            0x0800df39   Lc    1  Code  De   0x256
+    530  IMDCT36                    0x0800eff9   Lc    1  Code  De   0x32c
+    531  IMDCT12x3                  0x0800ed15   Lc    1  Code  De   0x2e4
+    532  WinPrevious                0x080181f1   Lc    1  Code  De   0x202
+    533  CLZ                        0x08004415   Lc    1  Code  De   0x3c
+    534  idct9                      0x080226a5   Lc    1  Code  De   0x24a
+    535  FreqInvertRescale          0x08005ce9   Lc    1  Code  De   0x364
+    536  imdct12                    0x080228f1   Lc    1  Code  De   0x18a
+    537  c18                        0x08036978   Lc    1  Data  De   0x24
+    538  fastWin36                  0x08036a70   Lc    1  Data  De   0x48
+    539  c6                         0x0803699c   Lc    1  Data  De   0xc
+    540  mp3_play.c                 0x00000000   Lc  Abs  File  De 
+    541  mp3dec.c                   0x00000000   Lc  Abs  File  De 
+    542  MP3ClearBadFrame           0x0801032d   Lc    1  Code  De   0xa
+    543  MP3FindFreeSync            0x08010771   Lc    1  Code  De   0xa2
+    544  mp3tabs.c                  0x00000000   Lc  Abs  File  De 
+    545  scalfact.c                 0x00000000   Lc  Abs  File  De 
+    546  UnpackSFMPEG1              0x08017af9   Lc    1  Code  De   0x2c6
+    547  UnpackSFMPEG2              0x08017dc1   Lc    1  Code  De   0x41a
+    548  SFLenTab                   0x080367b4   Lc    1  Data  De   0x20
+    549  NRTab                      0x08036757   Lc    1  Data  De   0x48
+    550  stproc.c                   0x00000000   Lc  Abs  File  De 
+    551  subband.c                  0x00000000   Lc  Abs  File  De 
+    552  trigtabs.c                 0x00000000   Lc  Abs  File  De 
+    553  ..\Src\Mp3Lib\scr\arm\asmmisc.S
+                                    0x00000000   Lc  Abs  File  De 
+    554  .text                      0x080001ec   Lc    1  Sect  De   0x8
+    555  $v0                        0x080001ec   Lc    1   --   De 
+    556  ..\Src\Mp3Lib\scr\arm\asmpoly_thumb2.S
+                                    0x00000000   Lc  Abs  File  De 
+    557  .text                      0x080001f4   Lc    1  Sect  De   0x80e
+    558  $v0                        0x080001f4   Lc    1   --   De 
+    559  jaricom.c                  0x00000000   Lc  Abs  File  De 
+    560  jcapimin.c                 0x00000000   Lc  Abs  File  De 
+    561  jcapistd.c                 0x00000000   Lc  Abs  File  De 
+    562  jcarith.c                  0x00000000   Lc  Abs  File  De 
+    563  jccoefct.c                 0x00000000   Lc  Abs  File  De 
+    564  jccolor.c                  0x00000000   Lc  Abs  File  De 
+    565  jcdctmgr.c                 0x00000000   Lc  Abs  File  De 
+    566  jchuff.c                   0x00000000   Lc  Abs  File  De 
+    567  jcinit.c                   0x00000000   Lc  Abs  File  De 
+    568  jcmainct.c                 0x00000000   Lc  Abs  File  De 
+    569  jcmarker.c                 0x00000000   Lc  Abs  File  De 
+    570  jcmaster.c                 0x00000000   Lc  Abs  File  De 
+    571  jcomapi.c                  0x00000000   Lc  Abs  File  De 
+    572  jcparam.c                  0x00000000   Lc  Abs  File  De 
+    573  jcprepct.c                 0x00000000   Lc  Abs  File  De 
+    574  jcsample.c                 0x00000000   Lc  Abs  File  De 
+    575  jctrans.c                  0x00000000   Lc  Abs  File  De 
+    576  jdapimin.c                 0x00000000   Lc  Abs  File  De 
+    577  default_decompress_parms   0x0801c875   Lc    1  Code  De   0x23a
+    578  jdapistd.c                 0x00000000   Lc  Abs  File  De 
+    579  output_pass_setup          0x08026d89   Lc    1  Code  De   0xd8
+    580  jdarith.c                  0x00000000   Lc  Abs  File  De 
+    581  start_pass                 0x08029845   Lc    1  Code  De   0x40c
+    582  decode_mcu_DC_first        0x0801baad   Lc    1  Code  De   0x218
+    583  decode_mcu_AC_first        0x0801afe5   Lc    1  Code  De   0x1f6
+    584  decode_mcu_DC_refine       0x0801bf45   Lc    1  Code  De   0x88
+    585  decode_mcu_AC_refine       0x0801b4a1   Lc    1  Code  De   0x1c2
+    586  decode_mcu                 0x0801a6cd   Lc    1  Code  De   0x3a8
+    587  process_restart            0x08027ca1   Lc    1  Code  De   0x100
+    588  arith_decode               0x08018d21   Lc    1  Code  De   0x1b8
+    589  get_byte                   0x0802070d   Lc    1  Code  De   0x4a
+    590  jdatadst.c                 0x00000000   Lc  Abs  File  De 
+    591  jdatasrc.c                 0x00000000   Lc  Abs  File  De 
+    592  init_source                0x08022b55   Lc    1  Code  De   0x14
+    593  fill_input_buffer          0x0801efc5   Lc    1  Code  De   0x7e
+    594  skip_input_data            0x08029625   Lc    1  Code  De   0x52
+    595  term_source                0x0802ae25   Lc    1  Code  De   0x8
+    596  init_mem_source            0x08022b4d   Lc    1  Code  De   0x8
+    597  fill_mem_input_buffer      0x0801f155   Lc    1  Code  De   0x36
+    598  read_file                  0x08028451   Lc    1  Code  De   0x26
+    599  read_file.BytesReadfile    0xc0073fcc   Lc    3  Data  De   0x4
+    600  fill_mem_input_buffer.mybuffer
+                                    0x08036e78   Lc    1  Data  De   0x4
+    601  jdcoefct.c                 0x00000000   Lc  Abs  File  De 
+    602  start_input_pass           0x080297e5   Lc    1  Code  De   0x18
+    603  start_output_pass          0x08029835   Lc    1  Code  De   0x10
+    604  dummy_consume_data         0x0801d8a5   Lc    1  Code  De   0xa
+    605  decompress_onepass         0x0801c651   Lc    1  Code  De   0x222
+    606  start_iMCU_row             0x08029785   Lc    1  Code  De   0x5e
+    607  jdcolor.c                  0x00000000   Lc  Abs  File  De 
+    608  start_pass_dcolor          0x0802a169   Lc    1  Code  De   0x8
+    609  grayscale_convert          0x0802213d   Lc    1  Code  De   0x36
+    610  rgb_gray_convert           0x08028e2d   Lc    1  Code  De   0xc4
+    611  build_rgb_y_table          0x08018ed9   Lc    1  Code  De   0x74
+    612  ycc_rgb_convert            0x0802dff5   Lc    1  Code  De   0x106
+    613  build_ycc_rgb_table        0x08018f4d   Lc    1  Code  De   0xe4
+    614  gray_rgb_convert           0x080220c9   Lc    1  Code  De   0x74
+    615  rgb_convert                0x08028d91   Lc    1  Code  De   0x9a
+    616  ycck_cmyk_convert          0x0802e0fd   Lc    1  Code  De   0x128
+    617  null_convert               0x08026cb9   Lc    1  Code  De   0x98
+    618  jddctmgr.c                 0x00000000   Lc  Abs  File  De 
+    619  start_pass                 0x08029c51   Lc    1  Code  De   0x278
+    620  start_pass.aanscales       0x0804d2b8   Lc    1  Data  De   0x80
+    621  start_pass.aanscalefactor  0x0804d278   Lc    1  Data  De   0x40
+    622  jdhuff.c                   0x00000000   Lc  Abs  File  De 
+    623  start_pass_huff_decoder    0x0802a25d   Lc    1  Code  De   0x74e
+    624  decode_mcu_DC_first        0x0801bcc5   Lc    1  Code  De   0x280
+    625  decode_mcu_AC_first        0x0801b1dd   Lc    1  Code  De   0x2c4
+    626  decode_mcu_DC_refine       0x0801bfcd   Lc    1  Code  De   0x108
+    627  decode_mcu_AC_refine       0x0801b665   Lc    1  Code  De   0x448
+    628  jpeg_make_d_derived_tbl    0x08025921   Lc    1  Code  De   0x3f0
+    629  decode_mcu_sub             0x0801c0d5   Lc    1  Code  De   0x57c
+    630  decode_mcu                 0x0801aa75   Lc    1  Code  De   0x570
+    631  process_restart            0x08027da1   Lc    1  Code  De   0x98
+    632  jpeg_fill_bit_buffer       0x08024445   Lc    1  Code  De   0x158
+    633  jpeg_huff_decode           0x080246b9   Lc    1  Code  De   0x11e
+    634  jpeg_zigzag_order2         0x08037838   Lc    1  Data  De   0x10
+    635  jpeg_zigzag_order3         0x08037848   Lc    1  Data  De   0x24
+    636  jpeg_zigzag_order4         0x0803786c   Lc    1  Data  De   0x40
+    637  jpeg_zigzag_order5         0x080378ac   Lc    1  Data  De   0x64
+    638  jpeg_zigzag_order6         0x08037910   Lc    1  Data  De   0x90
+    639  jpeg_zigzag_order7         0x080379a0   Lc    1  Data  De   0xc4
+    640  jpeg_zigzag_order          0x08037738   Lc    1  Data  De   0x100
+    641  bmask                      0x08036938   Lc    1  Data  De   0x40
+    642  jdinput.c                  0x00000000   Lc  Abs  File  De 
+    643  consume_markers            0x0801968d   Lc    1  Code  De   0x112
+    644  reset_input_controller     0x08028d0d   Lc    1  Code  De   0x4a
+    645  start_input_pass           0x080297fd   Lc    1  Code  De   0x38
+    646  finish_input_pass          0x0801fd51   Lc    1  Code  De   0x18
+    647  initial_setup              0x08022b69   Lc    1  Code  De   0x58a
+    648  per_scan_setup             0x0802722d   Lc    1  Code  De   0x1d6
+    649  latch_quant_tables         0x08026235   Lc    1  Code  De   0xaa
+    650  jdmainct.c                 0x00000000   Lc  Abs  File  De 
+    651  start_pass_main            0x0802a9ad   Lc    1  Code  De   0x92
+    652  alloc_funny_pointers       0x08018941   Lc    1  Code  De   0xc0
+    653  process_data_context_main  0x08027a85   Lc    1  Code  De   0x164
+    654  make_funny_pointers        0x0802635d   Lc    1  Code  De   0x132
+    655  process_data_simple_main   0x08027c1d   Lc    1  Code  De   0x84
+    656  process_data_crank_post    0x08027be9   Lc    1  Code  De   0x34
+    657  set_bottom_pointers        0x08029251   Lc    1  Code  De   0xc8
+    658  set_wraparound_pointers    0x08029319   Lc    1  Code  De   0xe8
+    659  jdmarker.c                 0x00000000   Lc  Abs  File  De 
+    660  next_marker                0x08026b29   Lc    1  Code  De   0x17a
+    661  reset_marker_reader        0x08028d59   Lc    1  Code  De   0x36
+    662  read_markers               0x08028479   Lc    1  Code  De   0x41c
+    663  read_restart_marker        0x08028895   Lc    1  Code  De   0x94
+    664  skip_variable              0x08029679   Lc    1  Code  De   0xe4
+    665  get_interesting_appn       0x080215b5   Lc    1  Code  De   0x198
+    666  first_marker               0x0801fdd5   Lc    1  Code  De   0xde
+    667  get_soi                    0x08021c39   Lc    1  Code  De   0xc4
+    668  get_sof                    0x080217f5   Lc    1  Code  De   0x444
+    669  get_sos                    0x08021cfd   Lc    1  Code  De   0x3cc
+    670  get_dac                    0x08020759   Lc    1  Code  De   0x1fc
+    671  get_dht                    0x08020955   Lc    1  Code  De   0x36c
+    672  get_dqt                    0x08020cc1   Lc    1  Code  De   0x452
+    673  get_dri                    0x08021115   Lc    1  Code  De   0x15a
+    674  examine_app0               0x0801d925   Lc    1  Code  De   0x288
+    675  examine_app14              0x0801dbad   Lc    1  Code  De   0xd6
+    676  jdmaster.c                 0x00000000   Lc  Abs  File  De 
+    677  use_merged_upsample        0x0802b259   Lc    1  Code  De   0x130
+    678  prepare_for_output_pass    0x080277d1   Lc    1  Code  De   0x16e
+    679  finish_output_pass         0x0801fd69   Lc    1  Code  De   0x2e
+    680  master_selection           0x08026545   Lc    1  Code  De   0x1da
+    681  prepare_range_limit_table  0x08027941   Lc    1  Code  De   0x9e
+    682  jdmerge.c                  0x00000000   Lc  Abs  File  De 
+    683  start_pass_merged_upsample 0x0802aa41   Lc    1  Code  De   0x1e
+    684  merged_2v_upsample         0x08026991   Lc    1  Code  De   0xfc
+    685  h2v2_merged_upsample       0x0802239d   Lc    1  Code  De   0x25e
+    686  merged_1v_upsample         0x0802693d   Lc    1  Code  De   0x52
+    687  h2v1_merged_upsample       0x08022175   Lc    1  Code  De   0x1a2
+    688  build_ycc_rgb_table        0x08019031   Lc    1  Code  De   0xe4
+    689  jdpostct.c                 0x00000000   Lc  Abs  File  De 
+    690  start_pass_dpost           0x0802a171   Lc    1  Code  De   0xec
+    691  post_process_1pass         0x080274c5   Lc    1  Code  De   0x94
+    692  post_process_prepass       0x0802763d   Lc    1  Code  De   0xd6
+    693  post_process_2pass         0x08027559   Lc    1  Code  De   0xe2
+    694  jdsample.c                 0x00000000   Lc  Abs  File  De 
+    695  start_pass_upsample        0x0802aa61   Lc    1  Code  De   0x22
+    696  sep_upsample               0x0802911d   Lc    1  Code  De   0x134
+    697  noop_upsample              0x08026ca5   Lc    1  Code  De   0x14
+    698  fullsize_upsample          0x08020581   Lc    1  Code  De   0x14
+    699  h2v1_upsample              0x08022319   Lc    1  Code  De   0x82
+    700  h2v2_upsample              0x080225fd   Lc    1  Code  De   0xa6
+    701  int_upsample               0x080230f5   Lc    1  Code  De   0xe8
+    702  jdtrans.c                  0x00000000   Lc  Abs  File  De 
+    703  jerror.c                   0x00000000   Lc  Abs  File  De 
+    704  error_exit                 0x0801d90d   Lc    1  Code  De   0x18
+    705  emit_message               0x0801d8b1   Lc    1  Code  De   0x5a
+    706  output_message             0x08026d75   Lc    1  Code  De   0x14
+    707  format_message             0x08020085   Lc    1  Code  De   0x126
+    708  reset_error_mgr            0x08028cf5   Lc    1  Code  De   0x16
+    709  jfdctflt.c                 0x00000000   Lc  Abs  File  De 
+    710  jfdctfst.c                 0x00000000   Lc  Abs  File  De 
+    711  jfdctint.c                 0x00000000   Lc  Abs  File  De 
+    712  jidctflt.c                 0x00000000   Lc  Abs  File  De 
+    713  jidctfst.c                 0x00000000   Lc  Abs  File  De 
+    714  jidctint.c                 0x00000000   Lc  Abs  File  De 
+    715  jmemmgr.c                  0x00000000   Lc  Abs  File  De 
+    716  alloc_small                0x08018b99   Lc    1  Code  De   0x188
+    717  alloc_large                0x08018a01   Lc    1  Code  De   0xc0
+    718  alloc_sarray               0x08018ac1   Lc    1  Code  De   0xd8
+    719  alloc_barray               0x08018811   Lc    1  Code  De   0xde
+    720  request_virt_sarray        0x08028c75   Lc    1  Code  De   0x7e
+    721  request_virt_barray        0x08028bf5   Lc    1  Code  De   0x7e
+    722  realize_virt_arrays        0x08028929   Lc    1  Code  De   0x206
+    723  access_virt_sarray         0x08018665   Lc    1  Code  De   0x1ac
+    724  access_virt_barray         0x080184b5   Lc    1  Code  De   0x1ae
+    725  free_pool                  0x080201d5   Lc    1  Code  De   0x152
+    726  self_destruct              0x080290dd   Lc    1  Code  De   0x40
+    727  out_of_memory              0x08026d51   Lc    1  Code  De   0x24
+    728  do_sarray_io               0x0801d781   Lc    1  Code  De   0x122
+    729  do_barray_io               0x0801d65d   Lc    1  Code  De   0x124
+    730  first_pool_slop            0x08036e7c   Lc    1  Data  De   0x8
+    731  extra_pool_slop            0x08036a68   Lc    1  Data  De   0x8
+    732  jquant1.c                  0x00000000   Lc  Abs  File  De 
+    733  start_pass_1_quant         0x08029ed1   Lc    1  Code  De   0x12a
+    734  finish_pass_1_quant        0x0801fdcd   Lc    1  Code  De   0x8
+    735  new_color_map_1_quant      0x08026af5   Lc    1  Code  De   0x1a
+    736  create_colormap            0x08019a51   Lc    1  Code  De   0x150
+    737  create_colorindex          0x08019911   Lc    1  Code  De   0x13e
+    738  alloc_fs_workspace         0x080188f1   Lc    1  Code  De   0x50
+    739  color_quantize3            0x0801949d   Lc    1  Code  De   0xb4
+    740  color_quantize             0x080193f1   Lc    1  Code  De   0xaa
+    741  quantize3_ord_dither       0x08028075   Lc    1  Code  De   0x11a
+    742  quantize_ord_dither        0x08028351   Lc    1  Code  De   0xfe
+    743  create_odither_tables      0x0801a071   Lc    1  Code  De   0x94
+    744  quantize_fs_dither         0x08028191   Lc    1  Code  De   0x1c0
+    745  make_odither_array         0x08026491   Lc    1  Code  De   0xb2
+    746  select_ncolors             0x08028f99   Lc    1  Code  De   0x142
+    747  output_value               0x08026e61   Lc    1  Code  De   0x22
+    748  largest_input_value        0x08026211   Lc    1  Code  De   0x22
+    749  base_dither_matrix         0x08036836   Lc    1  Data  De   0x100
+    750  select_ncolors.RGB_order   0x0804d268   Lc    1  Data  De   0xc
+    751  jquant2.c                  0x00000000   Lc  Abs  File  De 
+    752  start_pass_2_quant         0x08029ffd   Lc    1  Code  De   0x16a
+    753  new_color_map_2_quant      0x08026b11   Lc    1  Code  De   0x16
+    754  init_error_limit           0x08022a7d   Lc    1  Code  De   0xd0
+    755  prescan_quantize           0x080279e1   Lc    1  Code  De   0xa2
+    756  finish_pass1               0x0801fd99   Lc    1  Code  De   0x2c
+    757  pass2_fs_dither            0x08026e85   Lc    1  Code  De   0x2de
+    758  pass2_no_dither            0x08027165   Lc    1  Code  De   0xc6
+    759  finish_pass2               0x0801fdc5   Lc    1  Code  De   0x8
+    760  select_colors              0x08028ef1   Lc    1  Code  De   0xa6
+    761  update_box                 0x0802ae2d   Lc    1  Code  De   0x42a
+    762  median_cut                 0x08026721   Lc    1  Code  De   0x16a
+    763  compute_color              0x08019551   Lc    1  Code  De   0x13c
+    764  find_biggest_color_pop     0x0801f329   Lc    1  Code  De   0x56
+    765  find_biggest_volume        0x0801f381   Lc    1  Code  De   0x4c
+    766  fill_inverse_cmap          0x0801f045   Lc    1  Code  De   0x10e
+    767  find_nearby_colors         0x0801f3cd   Lc    1  Code  De   0x422
+    768  find_best_colors           0x0801f18d   Lc    1  Code  De   0x19c
+    769  jutils.c                   0x00000000   Lc  Abs  File  De 
+    770  jmemnobs.c                 0x00000000   Lc  Abs  File  De 
+    771  usbd_core.c                0x00000000   Lc  Abs  File  De 
+    772  .L.str.2                   0x0804d688   Lc    1  Data  De   0x2
+    773  .L.str                     0x0804f09b   Lc    1  Data  De   0x8
+    774  .L.str.1                   0x0804f0a3   Lc    1  Data  De   0x16
+    775  .L.str.3                   0x0804f0b9   Lc    1  Data  De   0x15
+    776  usbd_ctlreq.c              0x00000000   Lc  Abs  File  De 
+    777  USBD_GetDescriptor         0x080154f1   Lc    1  Code  De   0x1ae
+    778  USBD_SetAddress            0x08016325   Lc    1  Code  De   0x82
+    779  USBD_SetConfig             0x080163e9   Lc    1  Code  De   0x128
+    780  USBD_GetConfig             0x0801548d   Lc    1  Code  De   0x64
+    781  USBD_GetStatus             0x080156d1   Lc    1  Code  De   0x4e
+    782  USBD_SetFeature            0x08016511   Lc    1  Code  De   0x32
+    783  USBD_ClrFeature            0x08015359   Lc    1  Code  De   0x4c
+    784  USBD_GetLen                0x080156a1   Lc    1  Code  De   0x2e
+    785  USBD_SetConfig.cfgidx      0xc0067710   Lc    3  Data  De   0x1
+    786  usbd_ioreq.c               0x00000000   Lc  Abs  File  De 
+    787  usbd_msc.c                 0x00000000   Lc  Abs  File  De 
+    788  usbd_msc_bot.c             0x00000000   Lc  Abs  File  De 
+    789  MSC_BOT_CBW_Decode         0x0801097d   Lc    1  Code  De   0x112
+    790  MSC_BOT_Abort              0x08010921   Lc    1  Code  De   0x5c
+    791  MSC_BOT_SendData           0x08010c89   Lc    1  Code  De   0x6c
+    792  usbd_msc_data.c            0x00000000   Lc  Abs  File  De 
+    793  usbd_msc_scsi.c            0x00000000   Lc  Abs  File  De 
+    794  SCSI_TestUnitReady         0x080130c1   Lc    1  Code  De   0x78
+    795  SCSI_RequestSense          0x08012f71   Lc    1  Code  De   0xce
+    796  SCSI_Inquiry               0x080127ed   Lc    1  Code  De   0x9a
+    797  SCSI_StartStopUnit         0x080130a5   Lc    1  Code  De   0x1c
+    798  SCSI_ModeSense6            0x080128d9   Lc    1  Code  De   0x50
+    799  SCSI_ModeSense10           0x08012889   Lc    1  Code  De   0x50
+    800  SCSI_ReadFormatCapacity    0x08012ea5   Lc    1  Code  De   0xca
+    801  SCSI_ReadCapacity10        0x08012e01   Lc    1  Code  De   0xa2
+    802  SCSI_Read10                0x08012ce1   Lc    1  Code  De   0x11e
+    803  SCSI_Write10               0x080131a9   Lc    1  Code  De   0x180
+    804  SCSI_Verify10              0x08013139   Lc    1  Code  De   0x6e
+    805  SCSI_CheckAddressRange     0x08012799   Lc    1  Code  De   0x52
+    806  SCSI_ProcessRead           0x08012af5   Lc    1  Code  De   0xde
+    807  SCSI_ProcessWrite          0x08012bd5   Lc    1  Code  De   0x10a
+    808  ..\src\pdm_filter.c        0x00000000   Lc  Abs  File  De 
+    809  ../mathlib/cos.c           0x00000000   Lc  Abs  File  De 
+    810  ../mathlib/sqrt.c          0x00000000   Lc  Abs  File  De 
+    811  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    812  .ARM.Collect$$$$00000000   0x080001b4   Lc    1  Sect  De 
+    813  dc.s                       0x00000000   Lc  Abs  File  De 
+    814  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    815  .text                      0x08000a04   Lc    1  Sect  De 
+    816  .constdata                 0x0802ec04   Lc    1  Sect  De   0x81
+    817  .constdata                 0x0802ec88   Lc    1  Sect  De   0x4
+    818  table                      0x0802ec88   Lc    1  Data  De   0x4
+    819  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    820  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    821  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    822  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    823  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    824  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    825  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    826  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    827  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    828  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    829  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    830  ../clib/microlib/ctype/ctype.c
+                                    0x00000000   Lc  Abs  File  De 
+    831  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    832  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    833  .text                      0x08000a0c   Lc    1  Sect  De 
+    834  ../clib/microlib/string/memset.c
+                                    0x00000000   Lc  Abs  File  De 
+    835  .text                      0x08000a4c   Lc    1  Sect  De 
+    836  ../clib/microlib/string/strcat.c
+                                    0x00000000   Lc  Abs  File  De 
+    837  .text                      0x08000a70   Lc    1  Sect  De 
+    838  ../clib/microlib/string/strstr.c
+                                    0x00000000   Lc  Abs  File  De 
+    839  .text                      0x08000a88   Lc    1  Sect  De 
+    840  ../clib/microlib/string/strchr.c
+                                    0x00000000   Lc  Abs  File  De 
+    841  .text                      0x08000aac   Lc    1  Sect  De 
+    842  ../clib/microlib/string/strlen.c
+                                    0x00000000   Lc  Abs  File  De 
+    843  .text                      0x08000ac0   Lc    1  Sect  De 
+    844  ../clib/microlib/string/strcmp.c
+                                    0x00000000   Lc  Abs  File  De 
+    845  .text                      0x08000ace   Lc    1  Sect  De 
+    846  ../clib/microlib/string/memcmp.c
+                                    0x00000000   Lc  Abs  File  De 
+    847  .text                      0x08000aea   Lc    1  Sect  De 
+    848  ../clib/microlib/string/strcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    849  .text                      0x08000b04   Lc    1  Sect  De 
+    850  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    851  ../clib/microlib/string/memcpy.c
+                                    0x00000000   Lc  Abs  File  De 
+    852  ../clib/microlib/printf/printf.c
+                                    0x00000000   Lc  Abs  File  De 
+    853  i.__0printf                0x0802e224   Lc    1  Sect  De 
+    854  i.__0sprintf               0x0802e244   Lc    1  Sect  De 
+    855  i._fp_digits               0x0802e28c   Lc    1  Sect  De 
+    856  _fp_digits                 0x0802e28d   Lc    1  Code  De   0x16e
+    857  i._printf_core             0x0802e410   Lc    1  Sect  De 
+    858  _printf_core               0x0802e411   Lc    1  Code  De   0x6d0
+    859  i._printf_post_padding     0x0802eaec   Lc    1  Sect  De 
+    860  _printf_post_padding       0x0802eaed   Lc    1  Code  De   0x24
+    861  i._printf_pre_padding      0x0802eb10   Lc    1  Sect  De 
+    862  _printf_pre_padding        0x0802eb11   Lc    1  Code  De   0x2e
+    863  i._sputc                   0x0802eb3e   Lc    1  Sect  De 
+    864  _sputc                     0x0802eb3f   Lc    1  Code  De   0xa
+    865  ../clib/microlib/malloc/malloc.c
+                                    0x00000000   Lc  Abs  File  De 
+    866  i.free                     0x0802eb48   Lc    1  Sect  De 
+    867  i.malloc                   0x0802eb98   Lc    1  Sect  De 
+    868  ../clib/microlib/malloc/malloc.c
+                                    0x00000000   Lc  Abs  File  De 
+    869  ../clib/microlib/malloc/malloc.c
+                                    0x00000000   Lc  Abs  File  De 
+    870  ../clib/microlib/malloc/malloc.c
+                                    0x00000000   Lc  Abs  File  De 
+    871  ../fplib/microlib/fpmul.c  0x00000000   Lc  Abs  File  De 
+    872  ../fplib/microlib/fpscalb.c
+                                    0x00000000   Lc  Abs  File  De 
+    873  ../fplib/microlib/fpadd.c  0x00000000   Lc  Abs  File  De 
+    874  .text                      0x08000b16   Lc    1  Sect  De 
+    875  ../fplib/microlib/fpmul.c  0x00000000   Lc  Abs  File  De 
+    876  .text                      0x08000c64   Lc    1  Sect  De 
+    877  ../fplib/microlib/fpdiv.c  0x00000000   Lc  Abs  File  De 
+    878  .text                      0x08000d48   Lc    1  Sect  De 
+    879  ../fplib/microlib/fpscalb.c
+                                    0x00000000   Lc  Abs  File  De 
+    880  ../fplib/microlib/fpflt.c  0x00000000   Lc  Abs  File  De 
+    881  ../fplib/microlib/fpflt.c  0x00000000   Lc  Abs  File  De 
+    882  .text                      0x08000e26   Lc    1  Sect  De 
+    883  ../fplib/microlib/fpfix.c  0x00000000   Lc  Abs  File  De 
+    884  ../fplib/microlib/f2d.c    0x00000000   Lc  Abs  File  De 
+    885  ../fplib/microlib/d2f.c    0x00000000   Lc  Abs  File  De 
+    886  .text                      0x08000e40   Lc    1  Sect  De 
+    887  cfrcmple.s                 0x00000000   Lc  Abs  File  De 
+    888  ../mathlib/cos_i.c         0x00000000   Lc  Abs  File  De 
+    889  ../mathlib/dunder.c        0x00000000   Lc  Abs  File  De 
+    890  ../mathlib/rred.c          0x00000000   Lc  Abs  File  De 
+    891  ../mathlib/sin_i.c         0x00000000   Lc  Abs  File  De 
+    892  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    893  .ARM.Collect$$$$00000001   0x080001b4   Lc    1  Sect  De   0x4
+    894  .ARM.Collect$$$$00002712   0x080001c4   Lc    1  Sect  De   0x4
+    895  __lit__00000000            0x080001c4   Lc    1  Data  De   0x4
+    896  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    897  .ARM.Collect$$$$00000004   0x080001b8   Lc    1  Sect  De   0x4
+    898  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    899  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    900  .ARM.Collect$$$$00000008   0x080001bc   Lc    1  Sect  De 
+    901  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    902  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    903  .ARM.Collect$$$$0000000A   0x080001bc   Lc    1  Sect  De 
+    904  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    905  .ARM.Collect$$$$0000000B   0x080001bc   Lc    1  Sect  De   0x8
+    906  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    907  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    908  .ARM.Collect$$$$0000000D   0x080001c4   Lc    1  Sect  De 
+    909  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    910  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    911  .ARM.Collect$$$$0000000F   0x080001c4   Lc    1  Sect  De 
+    912  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+    913  ../clib/microlib/stdio/streams.c
+                                    0x00000000   Lc  Abs  File  De 
+    914  .data                      0xc0000000   Lc    2  Sect  De   0x4
+    915  ../clib/division.s         0x00000000   Lc  Abs  File  De 
+    916  ../clib/microlib/division.c
+                                    0x00000000   Lc  Abs  File  De 
+    917  .text                      0x08000e78   Lc    1  Sect  De 
+    918  ../clib/microlib/division.c
+                                    0x00000000   Lc  Abs  File  De 
+    919  .text                      0x08000ea4   Lc    1  Sect  De 
+    920  ../clib/microlib/longlong.c
+                                    0x00000000   Lc  Abs  File  De 
+    921  .text                      0x08000f06   Lc    1  Sect  De 
+    922  ../clib/microlib/longlong.c
+                                    0x00000000   Lc  Abs  File  De 
+    923  .text                      0x08000f24   Lc    1  Sect  De 
+    924  ../clib/microlib/longlong.c
+                                    0x00000000   Lc  Abs  File  De 
+    925  .text                      0x08000f44   Lc    1  Sect  De 
+    926  ../clib/microlib/malloc/mvars.c
+                                    0x00000000   Lc  Abs  File  De 
+    927  .data                      0xc0000004   Lc    2  Sect  De   0x4
+    928  .data                      0xc0000008   Lc    2  Sect  De   0x4
+    929  ../clib/microlib/errno.c   0x00000000   Lc  Abs  File  De 
+    930  ../clib/microlib/stubs.s   0x00000000   Lc  Abs  File  De 
+    931  .text                      0x08000f68   Lc    1  Sect  De 
+    932  ../fplib/microlib/fpepilogue.c
+                                    0x00000000   Lc  Abs  File  De 
+    933  .text                      0x08000f68   Lc    1  Sect  De 
+    934  ../fplib/microlib/fpepilogue.c
+                                    0x00000000   Lc  Abs  File  De 
+    935  .text                      0x08000fd6   Lc    1  Sect  De 
+    936  ../fplib/microlib/fpneg.c  0x00000000   Lc  Abs  File  De 
+    937  ../fplib/microlib/fpsqrt.c 0x00000000   Lc  Abs  File  De 
+    938  ../fplib/microlib/fpfix.c  0x00000000   Lc  Abs  File  De 
+    939  .text                      0x08001090   Lc    1  Sect  De 
+    940  cdrcmple.s                 0x00000000   Lc  Abs  File  De 
+    941  .text                      0x080010c0   Lc    1  Sect  De   0x30
+    942  ../mathlib/fabs.c          0x00000000   Lc  Abs  File  De 
+    943  ../mathlib/fpclassify.c    0x00000000   Lc  Abs  File  De 
+    944  ../mathlib/poly.c          0x00000000   Lc  Abs  File  De 
+    945  init.s                     0x00000000   Lc  Abs  File  De 
+    946  .text                      0x080010f0   Lc    1  Sect  De   0x30
+    947  ../fplib/microlib/fpflt.c  0x00000000   Lc  Abs  File  De 
+    948  ../fplib/microlib/fpfix.c  0x00000000   Lc  Abs  File  De 
+    949  handlers.s                 0x00000000   Lc  Abs  File  De 
+    950  i.__scatterload_copy       0x0802e26c   Lc    1  Sect  De   0xe
+    951  i.__scatterload_null       0x0802e27a   Lc    1  Sect  De   0x2
+    952  i.__scatterload_zeroinit   0x0802e27c   Lc    1  Sect  De   0xe
+    953  ../clib/../cmprslib/zerorunl2.c
+                                    0x00000000   Lc  Abs  File  De 
+    954  .text                      0x08001120   Lc    1  Sect  De 
+    955  BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$IEEEX$EBA8$MICROLIB$REQ8$PRES8$EABIv2
+                                    0x00000000   Gb  Abs   --   Hi 
+    956  __Vectors_Size             0x000001b4   Gb  Abs   --   Hi 
+    957  __Vectors                  0x08000000   Gb    1  Data  Hi   0x4
+    958  __Vectors_End              0x080001b4   Gb    1  Data  Hi 
+    959  __main                     0x080001b5   Gb    1  Code  Hi 
+    960  _main_stk                  0x080001b5   Gb    1  Code  Hi 
+    961  _main_scatterload          0x080001b9   Gb    1  Code  Hi 
+    962  __main_after_scatterload   0x080001bd   Gb    1  Code  Hi 
+    963  _main_clock                0x080001bd   Gb    1  Code  Hi 
+    964  _main_cpp_init             0x080001bd   Gb    1  Code  Hi 
+    965  _main_init                 0x080001bd   Gb    1  Code  Hi 
+    966  __rt_final_cpp             0x080001c5   Gb    1  Code  Hi 
+    967  __rt_final_exit            0x080001c5   Gb    1  Code  Hi 
+    968  Reset_Handler              0x080001c9   Wk    1  Code  Hi   0x8
+    969  ADC_IRQHandler             0x080001e3   Wk    1  Code  Hi 
+    970  CAN1_RX0_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    971  CAN1_RX1_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    972  CAN1_SCE_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    973  CAN1_TX_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    974  CAN2_RX0_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    975  CAN2_RX1_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    976  CAN2_SCE_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    977  CAN2_TX_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    978  DCMI_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    979  DMA1_Stream0_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    980  DMA1_Stream1_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    981  DMA1_Stream3_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    982  DMA1_Stream4_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    983  DMA1_Stream5_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    984  DMA1_Stream6_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    985  DMA1_Stream7_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    986  DMA2D_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    987  DMA2_Stream0_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    988  DMA2_Stream2_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    989  DMA2_Stream4_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    990  DMA2_Stream5_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    991  DMA2_Stream7_IRQHandler    0x080001e3   Wk    1  Code  Hi 
+    992  DSI_IRQHandler             0x080001e3   Wk    1  Code  Hi 
+    993  ETH_IRQHandler             0x080001e3   Wk    1  Code  Hi 
+    994  ETH_WKUP_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    995  EXTI15_10_IRQHandler       0x080001e3   Wk    1  Code  Hi 
+    996  EXTI1_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    997  EXTI3_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    998  EXTI4_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    999  EXTI9_5_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1000  FLASH_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    1001  FMC_IRQHandler             0x080001e3   Wk    1  Code  Hi 
+    1002  FPU_IRQHandler             0x080001e3   Wk    1  Code  Hi 
+    1003  HASH_RNG_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    1004  I2C1_ER_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1005  I2C1_EV_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1006  I2C2_ER_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1007  I2C2_EV_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1008  I2C3_ER_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1009  I2C3_EV_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1010  LTDC_ER_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1011  LTDC_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1012  OTG_FS_WKUP_IRQHandler     0x080001e3   Wk    1  Code  Hi 
+    1013  OTG_HS_EP1_IN_IRQHandler   0x080001e3   Wk    1  Code  Hi 
+    1014  OTG_HS_EP1_OUT_IRQHandler  0x080001e3   Wk    1  Code  Hi 
+    1015  OTG_HS_IRQHandler          0x080001e3   Wk    1  Code  Hi 
+    1016  OTG_HS_WKUP_IRQHandler     0x080001e3   Wk    1  Code  Hi 
+    1017  PVD_IRQHandler             0x080001e3   Wk    1  Code  Hi 
+    1018  QUADSPI_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1019  RCC_IRQHandler             0x080001e3   Wk    1  Code  Hi 
+    1020  RTC_Alarm_IRQHandler       0x080001e3   Wk    1  Code  Hi 
+    1021  RTC_WKUP_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    1022  SAI1_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1023  SPI1_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1024  SPI2_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1025  SPI3_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1026  SPI4_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1027  SPI5_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1028  SPI6_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1029  TAMP_STAMP_IRQHandler      0x080001e3   Wk    1  Code  Hi 
+    1030  TIM1_BRK_TIM9_IRQHandler   0x080001e3   Wk    1  Code  Hi 
+    1031  TIM1_CC_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1032  TIM1_TRG_COM_TIM11_IRQHandler
+                                    0x080001e3   Wk    1  Code  Hi 
+    1033  TIM1_UP_TIM10_IRQHandler   0x080001e3   Wk    1  Code  Hi 
+    1034  TIM2_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1035  TIM3_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1036  TIM4_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1037  TIM5_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1038  TIM6_DAC_IRQHandler        0x080001e3   Wk    1  Code  Hi 
+    1039  TIM7_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1040  TIM8_BRK_TIM12_IRQHandler  0x080001e3   Wk    1  Code  Hi 
+    1041  TIM8_CC_IRQHandler         0x080001e3   Wk    1  Code  Hi 
+    1042  TIM8_TRG_COM_TIM14_IRQHandler
+                                    0x080001e3   Wk    1  Code  Hi 
+    1043  TIM8_UP_TIM13_IRQHandler   0x080001e3   Wk    1  Code  Hi 
+    1044  UART4_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    1045  UART5_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    1046  UART7_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    1047  UART8_IRQHandler           0x080001e3   Wk    1  Code  Hi 
+    1048  USART1_IRQHandler          0x080001e3   Wk    1  Code  Hi 
+    1049  USART2_IRQHandler          0x080001e3   Wk    1  Code  Hi 
+    1050  USART3_IRQHandler          0x080001e3   Wk    1  Code  Hi 
+    1051  USART6_IRQHandler          0x080001e3   Wk    1  Code  Hi 
+    1052  WWDG_IRQHandler            0x080001e3   Wk    1  Code  Hi 
+    1053  xmp3_MULSHIFT32            0x080001ed   Gb    1  Code  Hi 
+    1054  xmp3_FASTABS               0x080001f3   Gb    1  Code  Hi 
+    1055  xmp3_PolyphaseStereo       0x080001f5   Gb    1  Code  Hi   0x51c
+    1056  xmp3_PolyphaseMono         0x08000711   Gb    1  Code  Hi   0x2f2
+    1057  __rt_ctype_table           0x08000a05   Gb    1  Code  Hi   0x4
+    1058  ___aeabi_memcpy8$move      0x08000a0d   Gb    1  Code  Hi 
+    1059  __aeabi_memcpy             0x08000a0d   Gb    1  Code  Hi   0x40
+    1060  __aeabi_memcpy4            0x08000a0d   Gb    1  Code  Hi 
+    1061  __aeabi_memmove            0x08000a0d   Gb    1  Code  Hi 
+    1062  __aeabi_memmove4           0x08000a0d   Gb    1  Code  Hi 
+    1063  __aeabi_memmove8           0x08000a0d   Gb    1  Code  Hi 
+    1064  __aeabi_memset             0x08000a4d   Gb    1  Code  Hi   0xe
+    1065  __aeabi_memset4            0x08000a4d   Gb    1  Code  Hi 
+    1066  __aeabi_memset8            0x08000a4d   Gb    1  Code  Hi 
+    1067  __aeabi_memclr             0x08000a5b   Gb    1  Code  Hi   0x4
+    1068  __aeabi_memclr4            0x08000a5b   Gb    1  Code  Hi 
+    1069  __aeabi_memclr8            0x08000a5b   Gb    1  Code  Hi 
+    1070  _memset$wrapper            0x08000a5f   Gb    1  Code  Hi   0x12
+    1071  strcat                     0x08000a71   Gb    1  Code  Hi   0x18
+    1072  strstr                     0x08000a89   Gb    1  Code  Hi   0x24
+    1073  strchr                     0x08000aad   Gb    1  Code  Hi   0x14
+    1074  strlen                     0x08000ac1   Gb    1  Code  Hi   0xe
+    1075  strcmp                     0x08000acf   Gb    1  Code  Hi   0x1c
+    1076  memcmp                     0x08000aeb   Gb    1  Code  Hi   0x1a
+    1077  strcpy                     0x08000b05   Gb    1  Code  Hi   0x12
+    1078  __aeabi_dadd               0x08000b17   Gb    1  Code  Hi   0x142
+    1079  __aeabi_dsub               0x08000c59   Gb    1  Code  Hi   0x6
+    1080  __aeabi_drsub              0x08000c5f   Gb    1  Code  Hi   0x6
+    1081  __aeabi_dmul               0x08000c65   Gb    1  Code  Hi   0xe4
+    1082  __aeabi_ddiv               0x08000d49   Gb    1  Code  Hi   0xde
+    1083  __aeabi_ui2d               0x08000e27   Gb    1  Code  Hi   0x1a
+    1084  __aeabi_d2f                0x08000e41   Gb    1  Code  Hi   0x38
+    1085  __aeabi_uidiv              0x08000e79   Gb    1  Code  Hi 
+    1086  __aeabi_uidivmod           0x08000e79   Gb    1  Code  Hi   0x2c
+    1087  __aeabi_uldivmod           0x08000ea5   Gb    1  Code  Hi   0x62
+    1088  __aeabi_llsl               0x08000f07   Gb    1  Code  Hi   0x1e
+    1089  _ll_shift_l                0x08000f07   Gb    1  Code  Hi 
+    1090  __aeabi_llsr               0x08000f25   Gb    1  Code  Hi   0x20
+    1091  _ll_ushift_r               0x08000f25   Gb    1  Code  Hi 
+    1092  __aeabi_lasr               0x08000f45   Gb    1  Code  Hi   0x24
+    1093  _ll_sshift_r               0x08000f45   Gb    1  Code  Hi 
+    1094  __I$use$fp                 0x08000f69   Gb    1  Code  Hi 
+    1095  _float_round               0x08000f69   Gb    1  Code  Hi   0x12
+    1096  _float_epilogue            0x08000f7b   Gb    1  Code  Hi   0x5c
+    1097  _double_round              0x08000fd7   Gb    1  Code  Hi   0x1e
+    1098  _double_epilogue           0x08000ff5   Gb    1  Code  Hi   0x9c
+    1099  __aeabi_d2ulz              0x08001091   Gb    1  Code  Hi   0x30
+    1100  __aeabi_cdrcmple           0x080010c1   Gb    1  Code  Hi   0x30
+    1101  __scatterload              0x080010f1   Gb    1  Code  Hi   0x26
+    1102  __scatterload_rt2          0x080010f1   Gb    1  Code  Hi 
+    1103  __decompress               0x08001121   Gb    1  Code  Hi 
+    1104  __decompress1              0x08001121   Gb    1  Code  Hi   0x56
+    1105  AUDIO_GetWavObjectNumber   0x08001471   Gb    1  Code  Hi   0xc
+    1106  AUDIO_IO_DeInit            0x0800147d   Gb    1  Code  Hi   0x2
+    1107  AUDIO_IO_Init              0x08001481   Gb    1  Code  Hi   0x8
+    1108  AUDIO_IO_Read              0x08001489   Gb    1  Code  Hi   0x30
+    1109  AUDIO_IO_Write             0x080014b9   Gb    1  Code  Hi   0x2a
+    1110  AUDIO_PLAYER_Init          0x080014e5   Gb    1  Code  Hi   0x36
+    1111  AUDIO_PLAYER_Process       0x0800151d   Gb    1  Code  Hi   0x416
+    1112  AUDIO_PLAYER_Start         0x08001935   Gb    1  Code  Hi   0x1a0
+    1113  AUDIO_ShowWavFiles         0x08001bad   Gb    1  Code  Hi   0x4e
+    1114  BSP_AUDIO_OUT_ClockConfig  0x08001f55   Wk    1  Code  Hi   0x6a
+    1115  BSP_AUDIO_OUT_Error_CallBack
+                                    0x08001fc1   Wk    1  Code  Hi   0x2
+    1116  BSP_AUDIO_OUT_HalfTransfer_CallBack
+                                    0x08001fc5   Gb    1  Code  Hi   0x3a
+    1117  BSP_AUDIO_OUT_Init         0x08002001   Gb    1  Code  Hi   0xda
+    1118  BSP_AUDIO_OUT_MspInit      0x080020dd   Wk    1  Code  Hi   0x1d0
+    1119  BSP_AUDIO_OUT_Pause        0x080022ad   Gb    1  Code  Hi   0x50
+    1120  BSP_AUDIO_OUT_Play         0x080022fd   Gb    1  Code  Hi   0x80
+    1121  BSP_AUDIO_OUT_Resume       0x0800237d   Gb    1  Code  Hi   0x50
+    1122  BSP_AUDIO_OUT_SetAudioFrameSlot
+                                    0x080023cd   Gb    1  Code  Hi   0x32
+    1123  BSP_AUDIO_OUT_SetVolume    0x08002401   Gb    1  Code  Hi   0x36
+    1124  BSP_AUDIO_OUT_Stop         0x08002439   Gb    1  Code  Hi   0x64
+    1125  BSP_AUDIO_OUT_TransferComplete_CallBack
+                                    0x0800249d   Gb    1  Code  Hi   0x3a
+    1126  BSP_LCD_Clear              0x080024d9   Gb    1  Code  Hi   0x50
+    1127  BSP_LCD_ClearStringLine    0x08002529   Gb    1  Code  Hi   0x8e
+    1128  BSP_LCD_DisplayChar        0x080025b9   Gb    1  Code  Hi   0x58
+    1129  BSP_LCD_DisplayOn          0x08002611   Gb    1  Code  Hi   0x28
+    1130  BSP_LCD_DisplayStringAt    0x08002639   Gb    1  Code  Hi   0x1b4
+    1131  BSP_LCD_DrawHLine          0x080027ed   Gb    1  Code  Hi   0x7e
+    1132  BSP_LCD_DrawLine           0x0800286d   Gb    1  Code  Hi   0x234
+    1133  BSP_LCD_DrawPixel          0x08002aa1   Gb    1  Code  Hi   0x50
+    1134  BSP_LCD_DrawRect           0x08002af1   Gb    1  Code  Hi   0x68
+    1135  BSP_LCD_DrawVLine          0x08002b59   Gb    1  Code  Hi   0x96
+    1136  BSP_LCD_FillPolygon        0x08002bf1   Gb    1  Code  Hi   0x266
+    1137  BSP_LCD_FillRect           0x08002e59   Gb    1  Code  Hi   0xb0
+    1138  BSP_LCD_GetXSize           0x08002f09   Gb    1  Code  Hi   0xc
+    1139  BSP_LCD_GetYSize           0x08002f15   Gb    1  Code  Hi   0xc
+    1140  BSP_LCD_Init               0x08002f21   Gb    1  Code  Hi   0xa
+    1141  BSP_LCD_InitEx             0x08002f2d   Gb    1  Code  Hi   0x274
+    1142  BSP_LCD_LayerDefaultInit   0x080031a1   Gb    1  Code  Hi   0xaa
+    1143  BSP_LCD_MspInit            0x0800324d   Wk    1  Code  Hi   0xf0
+    1144  BSP_LCD_Reset              0x0800333d   Gb    1  Code  Hi   0x6e
+    1145  BSP_LCD_SelectLayer        0x080033ad   Gb    1  Code  Hi   0x14
+    1146  BSP_LCD_SetBackColor       0x080033c1   Gb    1  Code  Hi   0x26
+    1147  BSP_LCD_SetFont            0x080033e9   Gb    1  Code  Hi   0x26
+    1148  BSP_LCD_SetTextColor       0x08003411   Gb    1  Code  Hi   0x24
+    1149  BSP_LED_Init               0x08003435   Gb    1  Code  Hi   0x112
+    1150  BSP_LED_Toggle             0x08003549   Gb    1  Code  Hi   0x38
+    1151  BSP_QSPI_Init              0x08003581   Gb    1  Code  Hi   0xba
+    1152  BSP_QSPI_MspInit           0x0800363d   Wk    1  Code  Hi   0x106
+    1153  BSP_QSPI_Read              0x08003745   Gb    1  Code  Hi   0x88
+    1154  BSP_SDRAM_Init             0x080037cd   Gb    1  Code  Hi   0xa2
+    1155  BSP_SDRAM_Initialization_sequence
+                                    0x08003871   Gb    1  Code  Hi   0xbe
+    1156  BSP_SDRAM_MspInit          0x08003931   Wk    1  Code  Hi   0x262
+    1157  BSP_SD_DMA_Rx_IRQHandler   0x08003b95   Gb    1  Code  Hi   0x12
+    1158  BSP_SD_DMA_Tx_IRQHandler   0x08003ba9   Gb    1  Code  Hi   0x12
+    1159  BSP_SD_Detect_MspInit      0x08003bbd   Wk    1  Code  Hi   0x4c
+    1160  BSP_SD_GetCardInfo         0x08003c09   Gb    1  Code  Hi   0x18
+    1161  BSP_SD_GetStatus           0x08003c21   Gb    1  Code  Hi   0x10
+    1162  BSP_SD_IRQHandler          0x08003c31   Gb    1  Code  Hi   0x10
+    1163  BSP_SD_Init                0x08003c41   Gb    1  Code  Hi   0xae
+    1164  BSP_SD_IsDetected          0x08003cf1   Gb    1  Code  Hi   0x2e
+    1165  BSP_SD_MspInit             0x08003d21   Wk    1  Code  Hi   0x200
+    1166  BSP_SD_ReadBlocks          0x08003f21   Gb    1  Code  Hi   0x4c
+    1167  BSP_SD_ReadBlocks_DMA      0x08003f6d   Gb    1  Code  Hi   0x7c
+    1168  BSP_SD_WriteBlocks         0x08003fe9   Gb    1  Code  Hi   0x4c
+    1169  BSP_SD_WriteBlocks_DMA     0x08004035   Gb    1  Code  Hi   0x7c
+    1170  BSP_TS_GetState            0x080040b1   Gb    1  Code  Hi   0x214
+    1171  BSP_TS_Init                0x080042c5   Gb    1  Code  Hi   0xc4
+    1172  BusFault_Handler           0x08004389   Gb    1  Code  Hi   0x12
+    1173  ClearBuffer                0x0800447d   Gb    1  Code  Hi   0x30
+    1174  Convert_Mono               0x080044ad   Gb    1  Code  Hi   0x3c
+    1175  DMA1_Stream2_IRQHandler    0x080044e9   Gb    1  Code  Hi   0x12
+    1176  DMA2_Stream1_IRQHandler    0x08004661   Gb    1  Code  Hi   0x12
+    1177  DMA2_Stream3_IRQHandler    0x08004675   Gb    1  Code  Hi   0x8
+    1178  DMA2_Stream6_IRQHandler    0x0800467d   Gb    1  Code  Hi   0x8
+    1179  DSI_IO_WriteCmd            0x08004869   Gb    1  Code  Hi   0x4e
+    1180  DebugMon_Handler           0x080048b9   Gb    1  Code  Hi   0x12
+    1181  Demo_Mp3Parsing            0x080051c1   Gb    1  Code  Hi   0xee
+    1182  EXTI0_IRQHandler           0x080056d1   Gb    1  Code  Hi   0x18
+    1183  EXTI2_IRQHandler           0x080056e9   Gb    1  Code  Hi   0x16
+    1184  Error_Handler              0x0800575d   Gb    1  Code  Hi   0x20
+    1185  FATFS_Init                 0x0800577d   Gb    1  Code  Hi   0x22
+    1186  FATFS_LinkDriver           0x080057a1   Gb    1  Code  Hi   0x16
+    1187  FATFS_LinkDriverEx         0x080057b9   Gb    1  Code  Hi   0x7c
+    1188  FMC_SDRAM_Init             0x08005835   Gb    1  Code  Hi   0xc4
+    1189  FMC_SDRAM_ProgramRefreshRate
+                                    0x080058f9   Gb    1  Code  Hi   0x18
+    1190  FMC_SDRAM_SendCommand      0x08005911   Gb    1  Code  Hi   0x80
+    1191  FMC_SDRAM_Timing_Init      0x08005991   Gb    1  Code  Hi   0x122
+    1192  GBK2Unicode                0x0800604d   Gb    1  Code  Hi   0x14a
+    1193  GetFontAddress             0x0800635d   Gb    1  Code  Hi   0x42
+    1194  Get_MusicCoverJpeg         0x080063a1   Gb    1  Code  Hi   0x2f4
+    1195  Get_MusicFilePos           0x08006695   Gb    1  Code  Hi   0xe
+    1196  HAL_DMA2D_ConfigLayer      0x08006701   Gb    1  Code  Hi   0x192
+    1197  HAL_DMA2D_Init             0x08006895   Gb    1  Code  Hi   0x90
+    1198  HAL_DMA2D_MspInit          0x08006925   Wk    1  Code  Hi   0x8
+    1199  HAL_DMA2D_PollForTransfer  0x0800692d   Gb    1  Code  Hi   0x1fa
+    1200  HAL_DMA2D_Start            0x08006b29   Gb    1  Code  Hi   0x6c
+    1201  HAL_DMA_Abort              0x08006b95   Gb    1  Code  Hi   0xea
+    1202  HAL_DMA_DeInit             0x08006c81   Gb    1  Code  Hi   0x9c
+    1203  HAL_DMA_IRQHandler         0x08006d1d   Gb    1  Code  Hi   0x330
+    1204  HAL_DMA_Init               0x0800704d   Gb    1  Code  Hi   0x164
+    1205  HAL_DMA_Start_IT           0x080071b1   Gb    1  Code  Hi   0xce
+    1206  HAL_DSI_ConfigPhyTimer     0x08007281   Gb    1  Code  Hi   0xd4
+    1207  HAL_DSI_ConfigVideoMode    0x08007355   Gb    1  Code  Hi   0x338
+    1208  HAL_DSI_DeInit             0x0800768d   Gb    1  Code  Hi   0x90
+    1209  HAL_DSI_Init               0x0800771d   Gb    1  Code  Hi   0x1e6
+    1210  HAL_DSI_LongWrite          0x08007905   Gb    1  Code  Hi   0xfe
+    1211  HAL_DSI_MspDeInit          0x08007a05   Wk    1  Code  Hi   0x8
+    1212  HAL_DSI_MspInit            0x08007a0d   Wk    1  Code  Hi   0x8
+    1213  HAL_DSI_ShortWrite         0x08007a15   Gb    1  Code  Hi   0x9c
+    1214  HAL_DSI_Start              0x08007ab1   Gb    1  Code  Hi   0x58
+    1215  HAL_Delay                  0x08007b09   Wk    1  Code  Hi   0x28
+    1216  HAL_GPIO_EXTI_Callback     0x08007b31   Gb    1  Code  Hi   0x20
+    1217  HAL_GPIO_EXTI_IRQHandler   0x08007b51   Gb    1  Code  Hi   0x38
+    1218  HAL_GPIO_Init              0x08007b89   Gb    1  Code  Hi   0x3f0
+    1219  HAL_GPIO_ReadPin           0x08007f79   Gb    1  Code  Hi   0x2e
+    1220  HAL_GPIO_TogglePin         0x08007fa9   Gb    1  Code  Hi   0x18
+    1221  HAL_GPIO_WritePin          0x08007fc1   Gb    1  Code  Hi   0x2e
+    1222  HAL_GetTick                0x08007ff1   Wk    1  Code  Hi   0xc
+    1223  HAL_I2C_DeInit             0x08007ffd   Gb    1  Code  Hi   0x60
+    1224  HAL_I2C_GetState           0x0800805d   Gb    1  Code  Hi   0xe
+    1225  HAL_I2C_Init               0x0800806d   Gb    1  Code  Hi   0x1c8
+    1226  HAL_I2C_Mem_Read           0x08008235   Gb    1  Code  Hi   0x462
+    1227  HAL_I2C_Mem_Write          0x08008699   Gb    1  Code  Hi   0x24a
+    1228  HAL_I2C_MspDeInit          0x080088e5   Wk    1  Code  Hi   0x8
+    1229  HAL_I2C_MspInit            0x080088ed   Wk    1  Code  Hi   0x8
+    1230  HAL_IncTick                0x080088f5   Wk    1  Code  Hi   0x10
+    1231  HAL_Init                   0x08008905   Gb    1  Code  Hi   0x3c
+    1232  HAL_InitTick               0x08008941   Wk    1  Code  Hi   0x36
+    1233  HAL_LTDC_ConfigLayer       0x08008979   Gb    1  Code  Hi   0xbc
+    1234  HAL_LTDC_Init              0x08008a35   Gb    1  Code  Hi   0x16c
+    1235  HAL_LTDC_MspInit           0x08008ba1   Wk    1  Code  Hi   0x8
+    1236  HAL_LTDC_StructInitFromVideoConfig
+                                    0x08008ba9   Gb    1  Code  Hi   0x7c
+    1237  HAL_MspInit                0x08008c25   Gb    1  Code  Hi   0x64
+    1238  HAL_NVIC_EnableIRQ         0x08008c89   Gb    1  Code  Hi   0x14
+    1239  HAL_NVIC_SetPriority       0x08008c9d   Gb    1  Code  Hi   0x32
+    1240  HAL_NVIC_SetPriorityGrouping
+                                    0x08008cd1   Gb    1  Code  Hi   0x10
+    1241  HAL_PCDEx_ActivateLPM      0x08008ce1   Gb    1  Code  Hi   0x36
+    1242  HAL_PCDEx_LPM_Callback     0x08008d19   Wk    1  Code  Hi   0xc
+    1243  HAL_PCDEx_SetRxFiFo        0x08008d25   Gb    1  Code  Hi   0x18
+    1244  HAL_PCDEx_SetTxFiFo        0x08008d3d   Gb    1  Code  Hi   0xa4
+    1245  HAL_PCD_ConnectCallback    0x08008de1   Gb    1  Code  Hi   0x14
+    1246  HAL_PCD_DataInStageCallback
+                                    0x08008df5   Gb    1  Code  Hi   0x26
+    1247  HAL_PCD_DataOutStageCallback
+                                    0x08008e1d   Gb    1  Code  Hi   0x28
+    1248  HAL_PCD_DisconnectCallback 0x08008e45   Gb    1  Code  Hi   0x14
+    1249  HAL_PCD_EP_Close           0x08008e59   Gb    1  Code  Hi   0xa6
+    1250  HAL_PCD_EP_ClrStall        0x08008f01   Gb    1  Code  Hi   0xa8
+    1251  HAL_PCD_EP_Flush           0x08008fa9   Gb    1  Code  Hi   0x70
+    1252  HAL_PCD_EP_GetRxCount      0x08009019   Gb    1  Code  Hi   0x22
+    1253  HAL_PCD_EP_Open            0x0800903d   Gb    1  Code  Hi   0xe8
+    1254  HAL_PCD_EP_Receive         0x08009125   Gb    1  Code  Hi   0xbe
+    1255  HAL_PCD_EP_SetStall        0x080091e5   Gb    1  Code  Hi   0xc2
+    1256  HAL_PCD_EP_Transmit        0x080092a9   Gb    1  Code  Hi   0xbe
+    1257  HAL_PCD_IRQHandler         0x08009369   Gb    1  Code  Hi   0x8c4
+    1258  HAL_PCD_ISOINIncompleteCallback
+                                    0x08009c2d   Gb    1  Code  Hi   0x1c
+    1259  HAL_PCD_ISOOUTIncompleteCallback
+                                    0x08009c49   Gb    1  Code  Hi   0x1c
+    1260  HAL_PCD_Init               0x08009c65   Gb    1  Code  Hi   0x252
+    1261  HAL_PCD_MspInit            0x08009eb9   Gb    1  Code  Hi   0xcc
+    1262  HAL_PCD_ResetCallback      0x08009f85   Gb    1  Code  Hi   0x52
+    1263  HAL_PCD_ResumeCallback     0x08009fd9   Gb    1  Code  Hi   0x14
+    1264  HAL_PCD_SOFCallback        0x08009fed   Gb    1  Code  Hi   0x14
+    1265  HAL_PCD_SetAddress         0x0800a001   Gb    1  Code  Hi   0x54
+    1266  HAL_PCD_SetupStageCallback 0x0800a055   Gb    1  Code  Hi   0x18
+    1267  HAL_PCD_Start              0x0800a06d   Gb    1  Code  Hi   0x54
+    1268  HAL_PCD_SuspendCallback    0x0800a0c1   Gb    1  Code  Hi   0x14
+    1269  HAL_PWREx_EnableOverDrive  0x0800a0d5   Gb    1  Code  Hi   0xea
+    1270  HAL_PWR_EnableBkUpAccess   0x0800a1c1   Gb    1  Code  Hi   0x26
+    1271  HAL_QSPI_Abort             0x0800a1e9   Gb    1  Code  Hi   0xce
+    1272  HAL_QSPI_AutoPolling       0x0800a2b9   Gb    1  Code  Hi   0x138
+    1273  HAL_QSPI_Command           0x0800a3f1   Gb    1  Code  Hi   0x106
+    1274  HAL_QSPI_DeInit            0x0800a4f9   Gb    1  Code  Hi   0x70
+    1275  HAL_QSPI_Init              0x0800a569   Gb    1  Code  Hi   0x13a
+    1276  HAL_QSPI_MspDeInit         0x0800a6a5   Wk    1  Code  Hi   0x8
+    1277  HAL_QSPI_MspInit           0x0800a6ad   Wk    1  Code  Hi   0x8
+    1278  HAL_QSPI_Receive           0x0800a6b5   Gb    1  Code  Hi   0x166
+    1279  HAL_QSPI_SetTimeout        0x0800a81d   Gb    1  Code  Hi   0x10
+    1280  HAL_QSPI_Transmit          0x0800a82d   Gb    1  Code  Hi   0x154
+    1281  HAL_RCCEx_GetPeriphCLKConfig
+                                    0x0800a981   Gb    1  Code  Hi   0x18c
+    1282  HAL_RCCEx_PeriphCLKConfig  0x0800ab0d   Gb    1  Code  Hi   0x6f8
+    1283  HAL_RCC_ClockConfig        0x0800b205   Gb    1  Code  Hi   0x2e6
+    1284  HAL_RCC_GetHCLKFreq        0x0800b4ed   Gb    1  Code  Hi   0xc
+    1285  HAL_RCC_GetPCLK1Freq       0x0800b4f9   Gb    1  Code  Hi   0x3e
+    1286  HAL_RCC_GetPCLK2Freq       0x0800b539   Gb    1  Code  Hi   0x3e
+    1287  HAL_RCC_GetSysClockFreq    0x0800b579   Wk    1  Code  Hi   0x11c
+    1288  HAL_RCC_OscConfig          0x0800b695   Gb    1  Code  Hi   0x652
+    1289  HAL_RTC_Init               0x0800bce9   Gb    1  Code  Hi   0xea
+    1290  HAL_RTC_MspInit            0x0800bdd5   Gb    1  Code  Hi   0x86
+    1291  HAL_RTC_SetDate            0x0800be5d   Gb    1  Code  Hi   0x188
+    1292  HAL_RTC_SetTime            0x0800bfe5   Gb    1  Code  Hi   0x1ae
+    1293  HAL_RTC_WaitForSynchro     0x0800c195   Gb    1  Code  Hi   0x56
+    1294  HAL_SAI_DMAPause           0x0800c1ed   Gb    1  Code  Hi   0x4e
+    1295  HAL_SAI_DMAResume          0x0800c23d   Gb    1  Code  Hi   0x6a
+    1296  HAL_SAI_DMAStop            0x0800c2a9   Gb    1  Code  Hi   0x9a
+    1297  HAL_SAI_DeInit             0x0800c345   Gb    1  Code  Hi   0x72
+    1298  HAL_SAI_ErrorCallback      0x0800c3b9   Gb    1  Code  Hi   0xe
+    1299  HAL_SAI_GetState           0x0800c3c9   Gb    1  Code  Hi   0xe
+    1300  HAL_SAI_Init               0x0800c3d9   Gb    1  Code  Hi   0x238
+    1301  HAL_SAI_MspDeInit          0x0800c611   Wk    1  Code  Hi   0x8
+    1302  HAL_SAI_MspInit            0x0800c619   Wk    1  Code  Hi   0x8
+    1303  HAL_SAI_Transmit_DMA       0x0800c621   Gb    1  Code  Hi   0x134
+    1304  HAL_SAI_TxCpltCallback     0x0800c755   Gb    1  Code  Hi   0xe
+    1305  HAL_SAI_TxHalfCpltCallback 0x0800c765   Gb    1  Code  Hi   0xe
+    1306  HAL_SDRAM_Init             0x0800c775   Gb    1  Code  Hi   0x66
+    1307  HAL_SDRAM_MspInit          0x0800c7dd   Wk    1  Code  Hi   0x8
+    1308  HAL_SDRAM_ProgramRefreshRate
+                                    0x0800c7e5   Gb    1  Code  Hi   0x46
+    1309  HAL_SDRAM_SendCommand      0x0800c82d   Gb    1  Code  Hi   0x60
+    1310  HAL_SD_CheckReadOperation  0x0800c88d   Gb    1  Code  Hi   0x106
+    1311  HAL_SD_CheckWriteOperation 0x0800c995   Gb    1  Code  Hi   0x114
+    1312  HAL_SD_DMA_RxCpltCallback  0x0800caa9   Wk    1  Code  Hi   0x8
+    1313  HAL_SD_DMA_RxErrorCallback 0x0800cab1   Wk    1  Code  Hi   0x8
+    1314  HAL_SD_DMA_TxCpltCallback  0x0800cab9   Wk    1  Code  Hi   0x8
+    1315  HAL_SD_DMA_TxErrorCallback 0x0800cac1   Wk    1  Code  Hi   0x8
+    1316  HAL_SD_GetStatus           0x0800cac9   Gb    1  Code  Hi   0x4a
+    1317  HAL_SD_Get_CardInfo        0x0800cb15   Gb    1  Code  Hi   0x480
+    1318  HAL_SD_IRQHandler          0x0800cf95   Gb    1  Code  Hi   0xdc
+    1319  HAL_SD_Init                0x0800d071   Gb    1  Code  Hi   0xf4
+    1320  HAL_SD_MspInit             0x0800d165   Wk    1  Code  Hi   0x8
+    1321  HAL_SD_ReadBlocks          0x0800d16d   Gb    1  Code  Hi   0x2d6
+    1322  HAL_SD_ReadBlocks_DMA      0x0800d445   Gb    1  Code  Hi   0x17c
+    1323  HAL_SD_StopTransfer        0x0800d5c1   Gb    1  Code  Hi   0x3e
+    1324  HAL_SD_WideBusOperation_Config
+                                    0x0800d601   Gb    1  Code  Hi   0xf0
+    1325  HAL_SD_WriteBlocks         0x0800d6f1   Gb    1  Code  Hi   0x3d4
+    1326  HAL_SD_WriteBlocks_DMA     0x0800dac5   Gb    1  Code  Hi   0x18c
+    1327  HAL_SD_XferCpltCallback    0x0800dc51   Wk    1  Code  Hi   0x8
+    1328  HAL_SD_XferErrorCallback   0x0800dc59   Wk    1  Code  Hi   0x8
+    1329  HAL_SYSTICK_Config         0x0800dc61   Gb    1  Code  Hi   0x10
+    1330  HAL_UART_Init              0x0800dc71   Gb    1  Code  Hi   0x9a
+    1331  HAL_UART_MspInit           0x0800dd0d   Gb    1  Code  Hi   0xac
+    1332  HAL_UART_Transmit          0x0800ddb9   Gb    1  Code  Hi   0x160
+    1333  HardFault_Handler          0x0800df19   Gb    1  Code  Hi   0x20
+    1334  InitMp3                    0x0800f325   Gb    1  Code  Hi   0x2e
+    1335  LCD_AppInit                0x0800f49d   Gb    1  Code  Hi   0x30
+    1336  LCD_ClearZone              0x0800f505   Gb    1  Code  Hi   0x36
+    1337  LCD_DisplayChar            0x0800f53d   Gb    1  Code  Hi   0x8a
+    1338  LCD_DisplayMusicInfo       0x0800f5c9   Gb    1  Code  Hi   0x74
+    1339  LCD_DisplayMusicName       0x0800f63d   Gb    1  Code  Hi   0x134
+    1340  LCD_DisplayMusicTimeRate   0x0800f771   Gb    1  Code  Hi   0x1ba
+    1341  LCD_DisplayPlayButton      0x0800f92d   Gb    1  Code  Hi   0x74
+    1342  LCD_DisplayPlayerStatus    0x0800f9a1   Gb    1  Code  Hi   0xae
+    1343  LCD_DisplayRTCTime         0x0800fa51   Gb    1  Code  Hi   0x2
+    1344  LCD_DisplayStringAt        0x0800fa55   Gb    1  Code  Hi   0x130
+    1345  LCD_DisplayStringRollAt    0x0800fb85   Gb    1  Code  Hi   0xa6
+    1346  LCD_DisplayUSB             0x0800fc2d   Gb    1  Code  Hi   0x4a
+    1347  LCD_DrawChar               0x0800fc79   Gb    1  Code  Hi   0x134
+    1348  LED_All_Init               0x0800fdad   Gb    1  Code  Hi   0x1c
+    1349  Lrc_Parse                  0x080100c5   Gb    1  Code  Hi   0x266
+    1350  MP3Decode                  0x08010339   Gb    1  Code  Hi   0x436
+    1351  MP3FindSyncWord            0x08010815   Gb    1  Code  Hi   0x54
+    1352  MP3GetLastFrameInfo        0x08010869   Gb    1  Code  Hi   0xa6
+    1353  MP3InitDecoder             0x08010911   Gb    1  Code  Hi   0x10
+    1354  MSC_BOT_CplClrFeature      0x08010a91   Gb    1  Code  Hi   0x52
+    1355  MSC_BOT_DataIn             0x08010ae5   Gb    1  Code  Hi   0x5e
+    1356  MSC_BOT_DataOut            0x08010b45   Gb    1  Code  Hi   0x58
+    1357  MSC_BOT_DeInit             0x08010b9d   Gb    1  Code  Hi   0x16
+    1358  MSC_BOT_Init               0x08010bb5   Gb    1  Code  Hi   0x54
+    1359  MSC_BOT_Reset              0x08010c09   Gb    1  Code  Hi   0x2c
+    1360  MSC_BOT_SendCSW            0x08010c35   Gb    1  Code  Hi   0x54
+    1361  MemManage_Handler          0x08010cf5   Gb    1  Code  Hi   0x12
+    1362  Menu_prase                 0x08010d09   Gb    1  Code  Hi   0x2ae
+    1363  MonitorUSBOperation        0x08010fb9   Gb    1  Code  Hi   0x58
+    1364  MountFat32FileSystem       0x08011011   Gb    1  Code  Hi   0x50
+    1365  Mp3Play_init               0x08011061   Gb    1  Code  Hi   0xdc
+    1366  Mp3_GetID3V2               0x0801113d   Gb    1  Code  Hi   0xc4
+    1367  Mp3_PlayStart              0x08011201   Gb    1  Code  Hi   0x90
+    1368  Mp3_SubDecode              0x08011291   Gb    1  Code  Hi   0x198
+    1369  NMI_Handler                0x08011429   Gb    1  Code  Hi   0x12
+    1370  OTG_FS_IRQHandler          0x080114a9   Gb    1  Code  Hi   0x10
+    1371  OTM8009A_IO_Delay          0x080114b9   Gb    1  Code  Hi   0x10
+    1372  OTM8009A_Init              0x080114c9   Gb    1  Code  Hi   0x554
+    1373  PendSV_Handler             0x08011b29   Gb    1  Code  Hi   0x12
+    1374  RTC_Bcd2ToByte             0x08012141   Gb    1  Code  Hi   0x2a
+    1375  RTC_ByteToBcd2             0x0801216d   Gb    1  Code  Hi   0x3a
+    1376  RTC_EnterInitMode          0x080121a9   Gb    1  Code  Hi   0x64
+    1377  RTC_Init                   0x0801220d   Gb    1  Code  Hi   0x50
+    1378  ReadStrUnit                0x0801225d   Gb    1  Code  Hi   0x56
+    1379  SAI_BlockSynchroConfig     0x08012375   Gb    1  Code  Hi   0x46
+    1380  SAI_GetInputClock          0x0801250d   Gb    1  Code  Hi   0x156
+    1381  SCSI_ProcessCmd            0x08012929   Gb    1  Code  Hi   0x1cc
+    1382  SCSI_SenseCode             0x08013041   Gb    1  Code  Hi   0x64
+    1383  SDIO_DataConfig            0x08013329   Gb    1  Code  Hi   0x48
+    1384  SDIO_GetCommandResponse    0x08013371   Gb    1  Code  Hi   0xe
+    1385  SDIO_GetPowerState         0x08013381   Gb    1  Code  Hi   0x10
+    1386  SDIO_GetResponse           0x08013391   Gb    1  Code  Hi   0x1e
+    1387  SDIO_IRQHandler            0x080133b1   Gb    1  Code  Hi   0x8
+    1388  SDIO_Init                  0x080133b9   Gb    1  Code  Hi   0x5a
+    1389  SDIO_PowerState_ON         0x08013415   Gb    1  Code  Hi   0x10
+    1390  SDIO_ReadFIFO              0x08013425   Gb    1  Code  Hi   0xe
+    1391  SDIO_SendCommand           0x08013435   Gb    1  Code  Hi   0x42
+    1392  SDIO_WriteFIFO             0x08013479   Gb    1  Code  Hi   0x16
+    1393  SD_Error_Handler           0x08013aa1   Gb    1  Code  Hi   0x20
+    1394  SD_initialize              0x0801451d   Gb    1  Code  Hi   0x3c
+    1395  SD_ioctl                   0x08014559   Gb    1  Code  Hi   0x9a
+    1396  SD_read                    0x080145f5   Gb    1  Code  Hi   0x42
+    1397  SD_status                  0x08014639   Gb    1  Code  Hi   0x3c
+    1398  SD_write                   0x08014675   Gb    1  Code  Hi   0x42
+    1399  STORAGE_GetCapacity        0x080146b9   Gb    1  Code  Hi   0x48
+    1400  STORAGE_GetMaxLun          0x08014701   Gb    1  Code  Hi   0x4
+    1401  STORAGE_Init               0x08014705   Gb    1  Code  Hi   0x28
+    1402  STORAGE_IsReady            0x0801472d   Gb    1  Code  Hi   0x76
+    1403  STORAGE_IsWriteProtected   0x080147a5   Gb    1  Code  Hi   0xc
+    1404  STORAGE_Read               0x080147b1   Gb    1  Code  Hi   0x4a
+    1405  STORAGE_Write              0x080147fd   Gb    1  Code  Hi   0x4a
+    1406  SVC_Handler                0x08014849   Gb    1  Code  Hi   0x12
+    1407  Scan_MusicFile             0x0801485d   Gb    1  Code  Hi   0x182
+    1408  Set_Time                   0x080149e1   Gb    1  Code  Hi   0x72
+    1409  Show_MusicJPEG             0x08014a55   Gb    1  Code  Hi   0xac
+    1410  SysTick_Handler            0x08014b55   Gb    1  Code  Hi   0xc
+    1411  SystemInit                 0x08014c39   Gb    1  Code  Hi   0x6e
+    1412  System_Init                0x08014cf9   Gb    1  Code  Hi   0x30
+    1413  System_Timercnt            0x08014d29   Gb    1  Code  Hi   0x8c
+    1414  TS_IO_Init                 0x08014db5   Gb    1  Code  Hi   0x8
+    1415  TS_IO_Read                 0x08014dbd   Gb    1  Code  Hi   0x1c
+    1416  TS_IO_ReadMultiple         0x08014dd9   Gb    1  Code  Hi   0x30
+    1417  TS_IO_Write                0x08014e09   Gb    1  Code  Hi   0x24
+    1418  USART3_UART_Init           0x080152f9   Gb    1  Code  Hi   0x40
+    1419  USBD_ClrClassConfig        0x08015339   Gb    1  Code  Hi   0x1e
+    1420  USBD_CtlContinueRx         0x080153a5   Gb    1  Code  Hi   0x22
+    1421  USBD_CtlContinueSendData   0x080153c9   Gb    1  Code  Hi   0x22
+    1422  USBD_CtlError              0x080153ed   Gb    1  Code  Hi   0x1c
+    1423  USBD_CtlReceiveStatus      0x08015409   Gb    1  Code  Hi   0x22
+    1424  USBD_CtlSendData           0x0801542d   Gb    1  Code  Hi   0x3a
+    1425  USBD_CtlSendStatus         0x08015469   Gb    1  Code  Hi   0x22
+    1426  USBD_GetString             0x08015721   Gb    1  Code  Hi   0x82
+    1427  USBD_Init                  0x080157a5   Gb    1  Code  Hi   0x88
+    1428  USBD_LL_ClearStallEP       0x0801582d   Gb    1  Code  Hi   0x1e
+    1429  USBD_LL_CloseEP            0x0801584d   Gb    1  Code  Hi   0x1e
+    1430  USBD_LL_DataInStage        0x0801586d   Gb    1  Code  Hi   0x124
+    1431  USBD_LL_DataOutStage       0x08015991   Gb    1  Code  Hi   0xd2
+    1432  USBD_LL_DevConnected       0x08015a65   Gb    1  Code  Hi   0xa
+    1433  USBD_LL_DevDisconnected    0x08015a71   Gb    1  Code  Hi   0x20
+    1434  USBD_LL_FlushEP            0x08015a91   Gb    1  Code  Hi   0x1e
+    1435  USBD_LL_GetRxDataSize      0x08015ab1   Gb    1  Code  Hi   0x1c
+    1436  USBD_LL_Init               0x08015acd   Gb    1  Code  Hi   0x6e
+    1437  USBD_LL_IsStallEP          0x08015b3d   Gb    1  Code  Hi   0x5c
+    1438  USBD_LL_IsoINIncomplete    0x08015b99   Gb    1  Code  Hi   0xe
+    1439  USBD_LL_IsoOUTIncomplete   0x08015ba9   Gb    1  Code  Hi   0xe
+    1440  USBD_LL_OpenEP             0x08015bb9   Gb    1  Code  Hi   0x2e
+    1441  USBD_LL_PrepareReceive     0x08015be9   Gb    1  Code  Hi   0x2a
+    1442  USBD_LL_Reset              0x08015c15   Gb    1  Code  Hi   0x54
+    1443  USBD_LL_Resume             0x08015c69   Gb    1  Code  Hi   0x14
+    1444  USBD_LL_SOF                0x08015c7d   Gb    1  Code  Hi   0x32
+    1445  USBD_LL_SetSpeed           0x08015cb1   Gb    1  Code  Hi   0x16
+    1446  USBD_LL_SetUSBAddress      0x08015cc9   Gb    1  Code  Hi   0x1e
+    1447  USBD_LL_SetupStage         0x08015ce9   Gb    1  Code  Hi   0x82
+    1448  USBD_LL_StallEP            0x08015d6d   Gb    1  Code  Hi   0x1e
+    1449  USBD_LL_Start              0x08015d8d   Gb    1  Code  Hi   0x16
+    1450  USBD_LL_Suspend            0x08015da5   Gb    1  Code  Hi   0x1c
+    1451  USBD_LL_Transmit           0x08015dc1   Gb    1  Code  Hi   0x2a
+    1452  USBD_MSC_ConfigStrDescriptor
+                                    0x08015ded   Gb    1  Code  Hi   0x4e
+    1453  USBD_MSC_DataIn            0x08015e3d   Gb    1  Code  Hi   0x1a
+    1454  USBD_MSC_DataOut           0x08015e59   Gb    1  Code  Hi   0x1a
+    1455  USBD_MSC_DeInit            0x08015e75   Gb    1  Code  Hi   0x44
+    1456  USBD_MSC_DeviceDescriptor  0x08015eb9   Gb    1  Code  Hi   0x1a
+    1457  USBD_MSC_GetDeviceQualifierDescriptor
+                                    0x08015ed5   Gb    1  Code  Hi   0x16
+    1458  USBD_MSC_GetFSCfgDesc      0x08015eed   Gb    1  Code  Hi   0x16
+    1459  USBD_MSC_GetHSCfgDesc      0x08015f05   Gb    1  Code  Hi   0x16
+    1460  USBD_MSC_GetOtherSpeedCfgDesc
+                                    0x08015f1d   Gb    1  Code  Hi   0x16
+    1461  USBD_MSC_Init              0x08015f35   Gb    1  Code  Hi   0x8c
+    1462  USBD_MSC_InterfaceStrDescriptor
+                                    0x08015fc1   Gb    1  Code  Hi   0x4e
+    1463  USBD_MSC_LangIDStrDescriptor
+                                    0x08016011   Gb    1  Code  Hi   0x1a
+    1464  USBD_MSC_ManufacturerStrDescriptor
+                                    0x0801602d   Gb    1  Code  Hi   0x28
+    1465  USBD_MSC_ProductStrDescriptor
+                                    0x08016055   Gb    1  Code  Hi   0x4e
+    1466  USBD_MSC_RegisterStorage   0x080160a5   Gb    1  Code  Hi   0x1c
+    1467  USBD_MSC_SerialStrDescriptor
+                                    0x080160c1   Gb    1  Code  Hi   0x20
+    1468  USBD_MSC_Setup             0x080160e1   Gb    1  Code  Hi   0x19c
+    1469  USBD_ParseSetupRequest     0x0801627d   Gb    1  Code  Hi   0x44
+    1470  USBD_RegisterClass         0x080162c1   Gb    1  Code  Hi   0x58
+    1471  USBD_RunTestMode           0x08016319   Gb    1  Code  Hi   0xa
+    1472  USBD_SetClassConfig        0x080163a9   Gb    1  Code  Hi   0x3e
+    1473  USBD_Start                 0x08016545   Gb    1  Code  Hi   0x12
+    1474  USBD_StdDevReq             0x08016559   Gb    1  Code  Hi   0x82
+    1475  USBD_StdEPReq              0x080165dd   Gb    1  Code  Hi   0x206
+    1476  USBD_StdItfReq             0x080167e5   Gb    1  Code  Hi   0x66
+    1477  USB_ActivateEndpoint       0x0801684d   Gb    1  Code  Hi   0xd0
+    1478  USB_ActivateSetup          0x0801691d   Gb    1  Code  Hi   0x48
+    1479  USB_CoreInit               0x08016965   Gb    1  Code  Hi   0xd2
+    1480  USB_DeactivateEndpoint     0x08016ab9   Gb    1  Code  Hi   0xac
+    1481  USB_Debug                  0x08016b65   Gb    1  Code  Hi   0x1c
+    1482  USB_DevConnect             0x08016b81   Gb    1  Code  Hi   0x20
+    1483  USB_DevDisconnect          0x08016ba1   Gb    1  Code  Hi   0x20
+    1484  USB_DevInit                0x08016bc1   Gb    1  Code  Hi   0x268
+    1485  USB_DisableGlobalInt       0x08016e29   Gb    1  Code  Hi   0x14
+    1486  USB_EP0StartXfer           0x08016e3d   Gb    1  Code  Hi   0x1d0
+    1487  USB_EP0_OutStart           0x0801700d   Gb    1  Code  Hi   0x60
+    1488  USB_EPClearStall           0x0801706d   Gb    1  Code  Hi   0x9e
+    1489  USB_EPSetStall             0x0801710d   Gb    1  Code  Hi   0x9e
+    1490  USB_EPStartXfer            0x080171ad   Gb    1  Code  Hi   0x324
+    1491  USB_EnableGlobalInt        0x080174d1   Gb    1  Code  Hi   0x14
+    1492  USB_FlushRxFifo            0x080174e5   Gb    1  Code  Hi   0x4c
+    1493  USB_FlushTxFifo            0x08017531   Gb    1  Code  Hi   0x52
+    1494  USB_GetDevSpeed            0x08017585   Gb    1  Code  Hi   0x6c
+    1495  USB_GetMode                0x080175f1   Gb    1  Code  Hi   0x10
+    1496  USB_Init                   0x08017601   Gb    1  Code  Hi   0xb2
+    1497  USB_ReadDevAllInEpInterrupt
+                                    0x080176b5   Gb    1  Code  Hi   0x20
+    1498  USB_ReadDevAllOutEpInterrupt
+                                    0x080176d5   Gb    1  Code  Hi   0x20
+    1499  USB_ReadDevInEPInterrupt   0x080176f5   Gb    1  Code  Hi   0x46
+    1500  USB_ReadDevOutEPInterrupt  0x0801773d   Gb    1  Code  Hi   0x2a
+    1501  USB_ReadInterrupts         0x08017769   Gb    1  Code  Hi   0x1e
+    1502  USB_ReadPacket             0x08017789   Gb    1  Code  Hi   0x48
+    1503  USB_SetCurrentMode         0x080177d1   Gb    1  Code  Hi   0x4c
+    1504  USB_SetDevAddress          0x0801781d   Gb    1  Code  Hi   0x32
+    1505  USB_SetDevSpeed            0x08017851   Gb    1  Code  Hi   0x1e
+    1506  USB_WritePacket            0x08017871   Gb    1  Code  Hi   0x6e
+    1507  UTF8ToUnicode              0x080178e1   Gb    1  Code  Hi   0x216
+    1508  UsageFault_Handler         0x080181dd   Gb    1  Code  Hi   0x12
+    1509  chartoint                  0x08019115   Gb    1  Code  Hi   0x10
+    1510  clear_Lrc_buff             0x0801921d   Gb    1  Code  Hi   0x3c
+    1511  clust2sect                 0x080192d1   Gb    1  Code  Hi   0x42
+    1512  cs43l22_DeInit             0x0801a105   Gb    1  Code  Hi   0x8
+    1513  cs43l22_Init               0x0801a10d   Gb    1  Code  Hi   0x1b2
+    1514  cs43l22_Pause              0x0801a2c1   Gb    1  Code  Hi   0x3a
+    1515  cs43l22_Play               0x0801a2fd   Gb    1  Code  Hi   0x72
+    1516  cs43l22_ReadID             0x0801a371   Gb    1  Code  Hi   0x2e
+    1517  cs43l22_Reset              0x0801a3a1   Gb    1  Code  Hi   0xc
+    1518  cs43l22_Resume             0x0801a3ad   Gb    1  Code  Hi   0x6e
+    1519  cs43l22_SetFrequency       0x0801a41d   Gb    1  Code  Hi   0xe
+    1520  cs43l22_SetMute            0x0801a42d   Gb    1  Code  Hi   0xa4
+    1521  cs43l22_SetOutputMode      0x0801a4d1   Gb    1  Code  Hi   0xe2
+    1522  cs43l22_SetVolume          0x0801a5b5   Gb    1  Code  Hi   0xbc
+    1523  cs43l22_Stop               0x0801a671   Gb    1  Code  Hi   0x5c
+    1524  disk_initialize            0x0801d529   Gb    1  Code  Hi   0x50
+    1525  disk_ioctl                 0x0801d579   Gb    1  Code  Hi   0x3a
+    1526  disk_read                  0x0801d5b5   Gb    1  Code  Hi   0x3c
+    1527  disk_status                0x0801d5f1   Gb    1  Code  Hi   0x2e
+    1528  disk_write                 0x0801d621   Gb    1  Code  Hi   0x3c
+    1529  f_close                    0x0801dc85   Gb    1  Code  Hi   0x40
+    1530  f_closedir                 0x0801dcc5   Gb    1  Code  Hi   0x2c
+    1531  f_gets                     0x0801dcf1   Gb    1  Code  Hi   0x8a
+    1532  f_lseek                    0x0801dd7d   Gb    1  Code  Hi   0x5cc
+    1533  f_mount                    0x0801e349   Gb    1  Code  Hi   0xa6
+    1534  f_open                     0x0801e3f1   Gb    1  Code  Hi   0x3c6
+    1535  f_opendir                  0x0801e7b9   Gb    1  Code  Hi   0x108
+    1536  f_read                     0x0801e8c1   Gb    1  Code  Hi   0x3a8
+    1537  f_readdir                  0x0801ec69   Gb    1  Code  Hi   0xb6
+    1538  f_sync                     0x0801ed21   Gb    1  Code  Hi   0x154
+    1539  ff_convert                 0x0801ee75   Gb    1  Code  Hi   0xcc
+    1540  ff_wtoupper                0x0801ef41   Gb    1  Code  Hi   0x84
+    1541  fputc                      0x080201ad   Gb    1  Code  Hi   0x28
+    1542  ft6x06_Init                0x08020385   Gb    1  Code  Hi   0x50
+    1543  ft6x06_ReadID              0x080203d5   Gb    1  Code  Hi   0x1a
+    1544  ft6x06_Reset               0x080203f1   Gb    1  Code  Hi   0xa
+    1545  ft6x06_TS_ClearIT          0x080203fd   Gb    1  Code  Hi   0xa
+    1546  ft6x06_TS_DetectTouch      0x08020419   Gb    1  Code  Hi   0x54
+    1547  ft6x06_TS_DisableIT        0x0802046d   Gb    1  Code  Hi   0x24
+    1548  ft6x06_TS_EnableIT         0x08020491   Gb    1  Code  Hi   0x26
+    1549  ft6x06_TS_GetXY            0x080204b9   Gb    1  Code  Hi   0x9e
+    1550  ft6x06_TS_ITStatus         0x08020559   Gb    1  Code  Hi   0xc
+    1551  ft6x06_TS_Start            0x08020565   Gb    1  Code  Hi   0x1c
+    1552  get_fat                    0x08021271   Gb    1  Code  Hi   0x18e
+    1553  get_fattime                0x08021401   Wk    1  Code  Hi   0x4
+    1554  jcopy_sample_rows          0x080231dd   Gb    1  Code  Hi   0x66
+    1555  jdiv_round_up              0x08023245   Gb    1  Code  Hi   0x16
+    1556  jinit_1pass_quantizer      0x0802325d   Gb    1  Code  Hi   0xba
+    1557  jinit_2pass_quantizer      0x08023319   Gb    1  Code  Hi   0x160
+    1558  jinit_arith_decoder        0x08023479   Gb    1  Code  Hi   0xca
+    1559  jinit_color_deconverter    0x08023545   Gb    1  Code  Hi   0x292
+    1560  jinit_d_coef_controller    0x080237d9   Gb    1  Code  Hi   0xc0
+    1561  jinit_d_main_controller    0x08023899   Gb    1  Code  Hi   0xee
+    1562  jinit_d_post_controller    0x08023989   Gb    1  Code  Hi   0xae
+    1563  jinit_huff_decoder         0x08023a39   Gb    1  Code  Hi   0xea
+    1564  jinit_input_controller     0x08023b25   Gb    1  Code  Hi   0x64
+    1565  jinit_inverse_dct          0x08023b89   Gb    1  Code  Hi   0x82
+    1566  jinit_marker_reader        0x08023c0d   Gb    1  Code  Hi   0xa4
+    1567  jinit_master_decompress    0x08023cb1   Gb    1  Code  Hi   0x44
+    1568  jinit_memory_mgr           0x08023cf5   Gb    1  Code  Hi   0x140
+    1569  jinit_merged_upsampler     0x08023e35   Gb    1  Code  Hi   0x9c
+    1570  jinit_upsampler            0x08023ed1   Gb    1  Code  Hi   0x21a
+    1571  jpeg_CreateDecompress      0x080240ed   Gb    1  Code  Hi   0x114
+    1572  jpeg_abort                 0x08024201   Gb    1  Code  Hi   0x56
+    1573  jpeg_alloc_huff_table      0x08024259   Gb    1  Code  Hi   0x28
+    1574  jpeg_alloc_quant_table     0x08024281   Gb    1  Code  Hi   0x26
+    1575  jpeg_calc_output_dimensions
+                                    0x080242a9   Gb    1  Code  Hi   0xb4
+    1576  jpeg_consume_input         0x0802435d   Gb    1  Code  Hi   0x9c
+    1577  jpeg_core_output_dimensions
+                                    0x080243f9   Gb    1  Code  Hi   0x14
+    1578  jpeg_destroy               0x0802440d   Gb    1  Code  Hi   0x26
+    1579  jpeg_destroy_decompress    0x08024435   Gb    1  Code  Hi   0x10
+    1580  jpeg_finish_decompress     0x0802459d   Gb    1  Code  Hi   0xcc
+    1581  jpeg_free_large            0x08024669   Gb    1  Code  Hi   0x14
+    1582  jpeg_free_small            0x0802467d   Gb    1  Code  Hi   0x14
+    1583  jpeg_get_large             0x08024691   Gb    1  Code  Hi   0x12
+    1584  jpeg_get_small             0x080246a5   Gb    1  Code  Hi   0x12
+    1585  jpeg_idct_float            0x080247d9   Gb    1  Code  Hi   0x6ac
+    1586  jpeg_idct_ifast            0x08024e99   Gb    1  Code  Hi   0x4c6
+    1587  jpeg_idct_islow            0x08025361   Gb    1  Code  Hi   0x5c0
+    1588  jpeg_mem_available         0x08025d11   Gb    1  Code  Hi   0x10
+    1589  jpeg_mem_init              0x08025d21   Gb    1  Code  Hi   0xa
+    1590  jpeg_mem_src               0x08025d2d   Gb    1  Code  Hi   0x94
+    1591  jpeg_mem_term              0x08025dc1   Gb    1  Code  Hi   0x8
+    1592  jpeg_open_backing_store    0x08025dc9   Gb    1  Code  Hi   0x1e
+    1593  jpeg_read_header           0x08025de9   Gb    1  Code  Hi   0x88
+    1594  jpeg_read_scanlines        0x08025e71   Gb    1  Code  Hi   0xaa
+    1595  jpeg_resync_to_restart     0x08025f1d   Gb    1  Code  Hi   0x130
+    1596  jpeg_start_decompress      0x0802604d   Gb    1  Code  Hi   0x9c
+    1597  jpeg_std_error             0x080260e9   Gb    1  Code  Hi   0x74
+    1598  jpeg_stdio_src             0x0802615d   Gb    1  Code  Hi   0x92
+    1599  jround_up                  0x080261f1   Gb    1  Code  Hi   0x1e
+    1600  main                       0x08026315   Gb    1  Code  Hi   0x46
+    1601  praseLRC                   0x08027715   Gb    1  Code  Hi   0xba
+    1602  put_fat                    0x08027e39   Gb    1  Code  Hi   0x23c
+    1603  show_filename              0x08029401   Gb    1  Code  Hi   0x76
+    1604  show_jepg                  0x08029479   Gb    1  Code  Hi   0x1aa
+    1605  str_replace                0x0802aa85   Gb    1  Code  Hi   0xa6
+    1606  strtoint                   0x0802ab2d   Gb    1  Code  Hi   0xd2
+    1607  xmp3_AllocateBuffers       0x0802b3fd   Gb    1  Code  Hi   0xb4
+    1608  xmp3_CalcBitsUsed          0x0802b4b1   Gb    1  Code  Hi   0x2c
+    1609  xmp3_CheckPadBit           0x0802b4dd   Gb    1  Code  Hi   0x34
+    1610  xmp3_DecodeHuffman         0x0802b511   Gb    1  Code  Hi   0x2f6
+    1611  xmp3_DequantChannel        0x0802b809   Gb    1  Code  Hi   0x33e
+    1612  xmp3_Dequantize            0x0802bb49   Gb    1  Code  Hi   0x3b8
+    1613  xmp3_FDCT32                0x0802bf01   Gb    1  Code  Hi   0xc4c
+    1614  xmp3_GetBits               0x0802cb4d   Gb    1  Code  Hi   0x82
+    1615  xmp3_IMDCT                 0x0802cbd1   Gb    1  Code  Hi   0x2d0
+    1616  xmp3_IntensityProcMPEG1    0x0802cea1   Gb    1  Code  Hi   0x424
+    1617  xmp3_IntensityProcMPEG2    0x0802d2c5   Gb    1  Code  Hi   0x3ea
+    1618  xmp3_MidSideProc           0x0802d6b1   Gb    1  Code  Hi   0xa4
+    1619  xmp3_SetBitstreamPointer   0x0802d755   Gb    1  Code  Hi   0x22
+    1620  xmp3_Subband               0x0802d779   Gb    1  Code  Hi   0x18c
+    1621  xmp3_UnpackFrameHeader     0x0802d905   Gb    1  Code  Hi   0x27c
+    1622  xmp3_UnpackScaleFactors    0x0802db81   Gb    1  Code  Hi   0x17e
+    1623  xmp3_UnpackSideInfo        0x0802dd01   Gb    1  Code  Hi   0x2f2
+    1624  __0printf                  0x0802e225   Gb    1  Code  Hi   0x16
+    1625  __1printf                  0x0802e225   Gb    1  Code  Hi 
+    1626  __2printf                  0x0802e225   Gb    1  Code  Hi 
+    1627  __c89printf                0x0802e225   Gb    1  Code  Hi 
+    1628  printf                     0x0802e225   Gb    1  Code  Hi 
+    1629  __0sprintf                 0x0802e245   Gb    1  Code  Hi   0x22
+    1630  __1sprintf                 0x0802e245   Gb    1  Code  Hi 
+    1631  __2sprintf                 0x0802e245   Gb    1  Code  Hi 
+    1632  __c89sprintf               0x0802e245   Gb    1  Code  Hi 
+    1633  sprintf                    0x0802e245   Gb    1  Code  Hi 
+    1634  __scatterload_copy         0x0802e26d   Gb    1  Code  Hi   0xe
+    1635  __scatterload_null         0x0802e27b   Gb    1  Code  Hi   0x2
+    1636  __scatterload_zeroinit     0x0802e27d   Gb    1  Code  Hi   0xe
+    1637  free                       0x0802eb49   Gb    1  Code  Hi   0x4c
+    1638  malloc                     0x0802eb99   Gb    1  Code  Hi   0x5c
+    1639  __ctype_table              0x0802ec04   Gb    1  Data  Hi   0x81
+    1640  APBAHBPrescTable           0x0802ec8c   Gb    1  Data  Hi   0x10
+    1641  Font20_Table               0x0802eca4   Gb    1  Data  Hi   0xed8
+    1642  Font24_Table               0x0802fb7c   Gb    1  Data  Hi   0x1ab8
+    1643  Jpeg_Cover_Flash           0x08031634   Gb    1  Data  Hi   0x50ff
+    1644  MSC_Mode_Sense10_data      0x08036740   Gb    1  Data  Hi   0x8
+    1645  MSC_Mode_Sense6_data       0x08036748   Gb    1  Data  Hi   0x8
+    1646  MSC_Page00_Inquiry_Data    0x08036750   Gb    1  Data  Hi   0x7
+    1647  SD_Driver                  0x080367a0   Gb    1  Data  Hi   0x14
+    1648  ShortRegData1              0x080367d4   Gb    1  Data  Hi   0x2
+    1649  ShortRegData10             0x080367d6   Gb    1  Data  Hi   0x2
+    1650  ShortRegData11             0x080367d8   Gb    1  Data  Hi   0x2
+    1651  ShortRegData12             0x080367da   Gb    1  Data  Hi   0x2
+    1652  ShortRegData13             0x080367dc   Gb    1  Data  Hi   0x2
+    1653  ShortRegData14             0x080367de   Gb    1  Data  Hi   0x2
+    1654  ShortRegData15             0x080367e0   Gb    1  Data  Hi   0x2
+    1655  ShortRegData16             0x080367e2   Gb    1  Data  Hi   0x2
+    1656  ShortRegData17             0x080367e4   Gb    1  Data  Hi   0x2
+    1657  ShortRegData18             0x080367e6   Gb    1  Data  Hi   0x2
+    1658  ShortRegData19             0x080367e8   Gb    1  Data  Hi   0x2
+    1659  ShortRegData2              0x080367ea   Gb    1  Data  Hi   0x2
+    1660  ShortRegData20             0x080367ec   Gb    1  Data  Hi   0x2
+    1661  ShortRegData21             0x080367ee   Gb    1  Data  Hi   0x2
+    1662  ShortRegData22             0x080367f0   Gb    1  Data  Hi   0x2
+    1663  ShortRegData23             0x080367f2   Gb    1  Data  Hi   0x2
+    1664  ShortRegData24             0x080367f4   Gb    1  Data  Hi   0x2
+    1665  ShortRegData25             0x080367f6   Gb    1  Data  Hi   0x2
+    1666  ShortRegData26             0x080367f8   Gb    1  Data  Hi   0x2
+    1667  ShortRegData27             0x080367fa   Gb    1  Data  Hi   0x2
+    1668  ShortRegData28             0x080367fc   Gb    1  Data  Hi   0x2
+    1669  ShortRegData29             0x080367fe   Gb    1  Data  Hi   0x2
+    1670  ShortRegData3              0x08036800   Gb    1  Data  Hi   0x2
+    1671  ShortRegData30             0x08036802   Gb    1  Data  Hi   0x2
+    1672  ShortRegData31             0x08036804   Gb    1  Data  Hi   0x2
+    1673  ShortRegData32             0x08036806   Gb    1  Data  Hi   0x2
+    1674  ShortRegData33             0x08036808   Gb    1  Data  Hi   0x2
+    1675  ShortRegData34             0x0803680a   Gb    1  Data  Hi   0x2
+    1676  ShortRegData35             0x0803680c   Gb    1  Data  Hi   0x2
+    1677  ShortRegData36             0x0803680e   Gb    1  Data  Hi   0x2
+    1678  ShortRegData37             0x08036810   Gb    1  Data  Hi   0x2
+    1679  ShortRegData38             0x08036812   Gb    1  Data  Hi   0x2
+    1680  ShortRegData39             0x08036814   Gb    1  Data  Hi   0x2
+    1681  ShortRegData4              0x08036816   Gb    1  Data  Hi   0x2
+    1682  ShortRegData40             0x08036818   Gb    1  Data  Hi   0x2
+    1683  ShortRegData41             0x0803681a   Gb    1  Data  Hi   0x2
+    1684  ShortRegData42             0x0803681c   Gb    1  Data  Hi   0x2
+    1685  ShortRegData43             0x0803681e   Gb    1  Data  Hi   0x2
+    1686  ShortRegData44             0x08036820   Gb    1  Data  Hi   0x2
+    1687  ShortRegData45             0x08036822   Gb    1  Data  Hi   0x2
+    1688  ShortRegData46             0x08036824   Gb    1  Data  Hi   0x2
+    1689  ShortRegData47             0x08036826   Gb    1  Data  Hi   0x2
+    1690  ShortRegData48             0x08036828   Gb    1  Data  Hi   0x2
+    1691  ShortRegData49             0x0803682a   Gb    1  Data  Hi   0x2
+    1692  ShortRegData5              0x0803682c   Gb    1  Data  Hi   0x2
+    1693  ShortRegData6              0x0803682e   Gb    1  Data  Hi   0x2
+    1694  ShortRegData7              0x08036830   Gb    1  Data  Hi   0x2
+    1695  ShortRegData8              0x08036832   Gb    1  Data  Hi   0x2
+    1696  ShortRegData9              0x08036834   Gb    1  Data  Hi   0x2
+    1697  jpeg_aritab                0x08036e84   Gb    1  Data  Hi   0x1c8
+    1698  jpeg_natural_order         0x0803704c   Gb    1  Data  Hi   0x140
+    1699  jpeg_natural_order2        0x0803718c   Gb    1  Data  Hi   0x50
+    1700  jpeg_natural_order3        0x080371dc   Gb    1  Data  Hi   0x64
+    1701  jpeg_natural_order4        0x08037240   Gb    1  Data  Hi   0x80
+    1702  jpeg_natural_order5        0x080372c0   Gb    1  Data  Hi   0xa4
+    1703  jpeg_natural_order6        0x08037364   Gb    1  Data  Hi   0xd0
+    1704  jpeg_natural_order7        0x08037434   Gb    1  Data  Hi   0x104
+    1705  jpeg_std_message_table     0x08037538   Gb    1  Data  Hi   0x200
+    1706  lcdRegData1                0x08037a64   Gb    1  Data  Hi   0x4
+    1707  lcdRegData10               0x08037a68   Gb    1  Data  Hi   0xb
+    1708  lcdRegData11               0x08037a73   Gb    1  Data  Hi   0xb
+    1709  lcdRegData12               0x08037a7e   Gb    1  Data  Hi   0x10
+    1710  lcdRegData13               0x08037a8e   Gb    1  Data  Hi   0x10
+    1711  lcdRegData14               0x08037a9e   Gb    1  Data  Hi   0xb
+    1712  lcdRegData15               0x08037aa9   Gb    1  Data  Hi   0x10
+    1713  lcdRegData16               0x08037ab9   Gb    1  Data  Hi   0x10
+    1714  lcdRegData17               0x08037ac9   Gb    1  Data  Hi   0xb
+    1715  lcdRegData18               0x08037ad4   Gb    1  Data  Hi   0xb
+    1716  lcdRegData19               0x08037adf   Gb    1  Data  Hi   0xb
+    1717  lcdRegData2                0x08037aea   Gb    1  Data  Hi   0x3
+    1718  lcdRegData20               0x08037aed   Gb    1  Data  Hi   0x10
+    1719  lcdRegData21               0x08037afd   Gb    1  Data  Hi   0x10
+    1720  lcdRegData22               0x08037b0d   Gb    1  Data  Hi   0xb
+    1721  lcdRegData23               0x08037b18   Gb    1  Data  Hi   0x10
+    1722  lcdRegData24               0x08037b28   Gb    1  Data  Hi   0x10
+    1723  lcdRegData25               0x08037b38   Gb    1  Data  Hi   0x4
+    1724  lcdRegData27               0x08037b3c   Gb    1  Data  Hi   0x5
+    1725  lcdRegData28               0x08037b41   Gb    1  Data  Hi   0x5
+    1726  lcdRegData3                0x08037b46   Gb    1  Data  Hi   0x11
+    1727  lcdRegData4                0x08037b57   Gb    1  Data  Hi   0x11
+    1728  lcdRegData5                0x08037b68   Gb    1  Data  Hi   0x3
+    1729  lcdRegData6                0x08037b6b   Gb    1  Data  Hi   0x3
+    1730  lcdRegData7                0x08037b6e   Gb    1  Data  Hi   0x7
+    1731  lcdRegData8                0x08037b75   Gb    1  Data  Hi   0xf
+    1732  lcdRegData9                0x08037b84   Gb    1  Data  Hi   0xf
+    1733  xmp3_ISFIIP                0x08064554   Gb    1  Data  Hi   0x10
+    1734  xmp3_ISFMpeg1              0x08064564   Gb    1  Data  Hi   0x38
+    1735  xmp3_ISFMpeg2              0x0806459c   Gb    1  Data  Hi   0x100
+    1736  xmp3_bitrateTab            0x0806469c   Gb    1  Data  Hi   0x10e
+    1737  xmp3_csa                   0x080647ac   Gb    1  Data  Hi   0x40
+    1738  xmp3_huffTabLookup         0x080647ec   Gb    1  Data  Hi   0x100
+    1739  xmp3_huffTabOffset         0x080648ec   Gb    1  Data  Hi   0x80
+    1740  xmp3_huffTable             0x0806496c   Gb    1  Data  Hi   0x2124
+    1741  xmp3_imdctWin              0x08066a90   Gb    1  Data  Hi   0x240
+    1742  xmp3_polyCoef              0x08066cd0   Gb    1  Data  Hi   0x420
+    1743  xmp3_quadTabMaxBits        0x080670f0   Gb    1  Data  Hi   0x8
+    1744  xmp3_quadTabOffset         0x080670f8   Gb    1  Data  Hi   0x8
+    1745  xmp3_quadTable             0x08067100   Gb    1  Data  Hi   0x50
+    1746  xmp3_samplerateTab         0x08067150   Gb    1  Data  Hi   0x24
+    1747  xmp3_samplesPerFrameTab    0x08067174   Gb    1  Data  Hi   0x12
+    1748  xmp3_sfBandTable           0x08067186   Gb    1  Data  Hi   0x29a
+    1749  xmp3_sideBytesTab          0x08067420   Gb    1  Data  Hi   0xc
+    1750  xmp3_slotTab               0x0806742c   Gb    1  Data  Hi   0x10e
+    1751  Region$$Table$$Base        0x0806753c   Gb    1   --   Hi 
+    1752  Region$$Table$$Limit       0x0806755c   Gb    1   --   Hi 
+    1753  __stdout                   0xc0000000   Gb    2  Data  Hi   0x4
+    1754  __microlib_freelist        0xc0000004   Gb    2  Data  Hi   0x4
+    1755  __microlib_freelist_initialised
+                                    0xc0000008   Gb    2  Data  Hi   0x4
+    1756  AppliState                 0xc000000c   Gb    2  Data  Hi   0x1
+    1757  Font20                     0xc0000010   Gb    2  Data  Hi   0x8
+    1758  Font24                     0xc0000018   Gb    2  Data  Hi   0x8
+    1759  GPIO_PIN                   0xc0000020   Gb    2  Data  Hi   0x10
+    1760  GPIO_PORT                  0xc0000030   Gb    2  Data  Hi   0x10
+    1761  MSC_Desc                   0xc0000044   Gb    2  Data  Hi   0x1c
+    1762  SD_Path                    0xc0000078   Gb    2  Data  Hi   0x4
+    1763  STORAGE_Inquirydata        0xc000007c   Gb    2  Data  Hi   0x24
+    1764  SystemCoreClock            0xc00000a4   Gb    2  Data  Hi   0x4
+    1765  USBD_DISK_fops             0xc00000a8   Gb    2  Data  Hi   0x20
+    1766  USBD_DeviceDesc            0xc00000c8   Gb    2  Data  Hi   0x12
+    1767  USBD_LangIDDesc            0xc00000dc   Gb    2  Data  Hi   0x4
+    1768  USBD_MSC                   0xc00000e0   Gb    2  Data  Hi   0x38
+    1769  USBD_MSC_CfgFSDesc         0xc0000118   Gb    2  Data  Hi   0x20
+    1770  USBD_MSC_CfgHSDesc         0xc0000138   Gb    2  Data  Hi   0x20
+    1771  USBD_MSC_DeviceQualifierDesc
+                                    0xc0000158   Gb    2  Data  Hi   0xa
+    1772  USBD_MSC_OtherSpeedCfgDesc 0xc0000164   Gb    2  Data  Hi   0x20
+    1773  USBD_StringSerial          0xc0000184   Gb    2  Data  Hi   0x1a
+    1774  Xpos                       0xc000019e   Gb    2  Data  Hi   0x2
+    1775  Ypos                       0xc00001a0   Gb    2  Data  Hi   0x2
+    1776  buffer_switch              0xc00001a2   Gb    2  Data  Hi   0x1
+    1777  cs43l22_drv                0xc00001a4   Gb    2  Data  Hi   0x30
+    1778  ft6x06_ts_drv              0xc00001d4   Gb    2  Data  Hi   0x28
+    1779  lcd_x_size                 0xc00001fc   Gb    2  Data  Hi   0x4
+    1780  lcd_y_size                 0xc0000200   Gb    2  Data  Hi   0x4
+    1781  uwVolume                   0xc0000204   Gb    2  Data  Hi   0x4
+    1782  AudioDemo                  0xc0000218   Gb    3  Data  Hi   0x2
+    1783  AudioState                 0xc000021a   Gb    3  Data  Hi   0x1
+    1784  BufferCtl                  0xc00003e8   Gb    3  Data  Hi   0x2008
+    1785  CoverJpeg                  0xc0002400   Gb    3  Data  Hi   0xc
+    1786  Decbuf                     0xc000240c   Gb    3  Data  Hi   0x4
+    1787  FileList                   0xc000242c   Gb    3  Data  Hi   0x75fa
+    1788  File_path                  0xc0009a28   Gb    3  Data  Hi   0x64
+    1789  GlobalPtr                  0xc0009a90   Gb    3  Data  Hi   0x4
+    1790  Jpeg_Cover_Ram             0xc0009a95   Gb    3  Data  Hi   0x57800
+    1791  LRC_Ram                    0xc00612a0   Gb    3  Data  Hi   0x1000
+    1792  Mp3Format                  0xc006236c   Gb    3  Data  Hi   0x1c
+    1793  MusicFile                  0xc0062388   Gb    3  Data  Hi   0x1028
+    1794  MusicLrcFile               0xc00633b0   Gb    3  Data  Hi   0x1028
+    1795  MusicWavFile               0xc00643d8   Gb    3  Data  Hi   0x1028
+    1796  NumObs                     0xc0065400   Gb    3  Data  Hi   0x2
+    1797  OutputDev                  0xc0065402   Gb    3  Data  Hi   0x1
+    1798  PA9_Status                 0xc0065403   Gb    3  Data  Hi   0x1
+    1799  PicFile                    0xc0065404   Gb    3  Data  Hi   0x1028
+    1800  QSPIHandle                 0xc006642c   Gb    3  Data  Hi   0x44
+    1801  RGB_matrix                 0xc0066470   Gb    3  Data  Hi   0x4
+    1802  RTC_Set_Date               0xc0066474   Gb    3  Data  Hi   0x4
+    1803  RTC_Set_Time               0xc0066478   Gb    3  Data  Hi   0x14
+    1804  SDFatFs                    0xc006648c   Gb    3  Data  Hi   0x1030
+    1805  SystemTimerCount           0xc00674c0   Gb    3  Data  Hi   0x4
+    1806  Timing1000ms               0xc00674e0   Gb    3  Data  Hi   0x4
+    1807  USBD_Device                0xc00674ec   Gb    3  Data  Hi   0x224
+    1808  USBD_StrDesc               0xc0067714   Gb    3  Data  Hi   0x100
+    1809  UnicodeCharSize            0xc0067814   Gb    3  Data  Hi   0x1
+    1810  Unicodebuf                 0xc0067815   Gb    3  Data  Hi   0xaa
+    1811  WaveFormat                 0xc00678c0   Gb    3  Data  Hi   0x2c
+    1812  _aucLine                   0xc00678ec   Gb    3  Data  Hi   0x800
+    1813  audio_drv                  0xc00680ec   Gb    3  Data  Hi   0x4
+    1814  bFirstDisplayMusicName     0xc00680f0   Gb    3  Data  Hi   0x1
+    1815  bFirstDisplayMusicTime     0xc00680f1   Gb    3  Data  Hi   0x1
+    1816  bFirstDisplayRTCTime       0xc00680f2   Gb    3  Data  Hi   0x1
+    1817  bFirstDisplay_USB_Connect  0xc00680f3   Gb    3  Data  Hi   0x1
+    1818  bMusicNameFlash            0xc00680f4   Gb    3  Data  Hi   0x1
+    1819  bMusicRateUpdate           0xc00680f5   Gb    3  Data  Hi   0x1
+    1820  bRTCTimeUpdate             0xc00680f6   Gb    3  Data  Hi   0x1
+    1821  bSystemsecond              0xc00680f7   Gb    3  Data  Hi   0x1
+    1822  bUSB_Connect               0xc00680f8   Gb    3  Data  Hi   0x1
+    1823  bUSB_DisConnect_Enable     0xc00680f9   Gb    3  Data  Hi   0x1
+    1824  bytesLeft                  0xc00680fc   Gb    3  Data  Hi   0x4
+    1825  cinfo                      0xc0068100   Gb    3  Data  Hi   0x1e8
+    1826  di                         0xc00682e8   Gb    3  Data  Hi   0x348
+    1827  disk                       0xc0068630   Gb    3  Data  Hi   0xc
+    1828  fh                         0xc006863c   Gb    3  Data  Hi   0x38
+    1829  ft6x06                     0xc0068674   Gb    3  Data  Hi   0x2
+    1830  gId3v1                     0xc006867c   Gb    3  Data  Hi   0x88
+    1831  gId3v2                     0xc0068704   Gb    3  Data  Hi   0x60
+    1832  hMP3Decoder                0xc0068764   Gb    3  Data  Hi   0x4
+    1833  haudio_in_i2s              0xc0068768   Gb    3  Data  Hi   0x44
+    1834  haudio_out_sai             0xc00687ac   Gb    3  Data  Hi   0x88
+    1835  hdma2d_eval                0xc0068834   Gb    3  Data  Hi   0x40
+    1836  hdsi_eval                  0xc0068874   Gb    3  Data  Hi   0x1c
+    1837  hi                         0xc00689a4   Gb    3  Data  Hi   0x1210
+    1838  hltdc_eval                 0xc0069bb4   Gb    3  Data  Hi   0xa8
+    1839  hpcd                       0xc0069c5c   Gb    3  Data  Hi   0x3fc
+    1840  hrtc                       0xc006a058   Gb    3  Data  Hi   0x20
+    1841  huart3                     0xc006a078   Gb    3  Data  Hi   0x40
+    1842  jerr                       0xc006a0b8   Gb    3  Data  Hi   0x84
+    1843  line_counter               0xc006a1a0   Gb    3  Data  Hi   0x4
+    1844  lrc                        0xc006a1a4   Gb    3  Data  Hi   0x4718
+    1845  mi                         0xc006e8bc   Gb    3  Data  Hi   0x1b20
+    1846  mp3DecInfo                 0xc00703dc   Gb    3  Data  Hi   0x7f0
+    1847  mp3FrameInfo               0xc0070bcc   Gb    3  Data  Hi   0x1c
+    1848  mp3_buff                   0xc0070be8   Gb    3  Data  Hi   0x2400
+    1849  musicFilePos               0xc0072fe8   Gb    3  Data  Hi   0x14
+    1850  musicFullTime              0xc0072ffc   Gb    3  Data  Hi   0x14
+    1851  musicRateTime              0xc0073010   Gb    3  Data  Hi   0x14
+    1852  offset                     0xc0073024   Gb    3  Data  Hi   0x4
+    1853  readBuf                    0xc0073028   Gb    3  Data  Hi   0xfa0
+    1854  readPtr                    0xc0073fc8   Gb    3  Data  Hi   0x4
+    1855  retSD                      0xc0073fd0   Gb    3  Data  Hi   0x1
+    1856  sbi                        0xc0073fd4   Gb    3  Data  Hi   0x2204
+    1857  sfi                        0xc007620c   Gb    3  Data  Hi   0x11c
+    1858  si                         0xc0076328   Gb    3  Data  Hi   0x148
+    1859  str                        0xc0076470   Gb    3  Data  Hi   0x20
+    1860  tmp                        0xc0076490   Gb    3  Data  Hi   0x4
+    1861  uwTick                     0xc0076558   Gb    3  Data  Hi   0x4
+    1862  waitflag                   0xc007655c   Gb    3  Data  Hi   0x1
+    1863  __heap_base                0xc0076560   Gb    3  Data  Hi 
+    1864  __heap_limit               0xc0088560   Gb    3  Data  Hi 
+    1865  __initial_sp               0xc008a560   Gb    3  Data  Hi 
+
+
+** Section #11 '.strtab' (SHT_STRTAB)
+    Size   : 26308 bytes
+
+
+** Section #12 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #13 '.comment' (SHT_PROGBITS)
+    Size   : 5084 bytes
+
+
+** Section #14 '.shstrtab' (SHT_STRTAB)
+    Size   : 148 bytes
+
+

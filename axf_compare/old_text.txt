@@ -1,0 +1,9 @@
+﻿
+========================================================================
+
+** Object/Image Component Sizes
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+    353248     353248          0        408     570640          0   D:\github\Stm32_Mp3Player\Old_STM32469I_DISCO.axf
+    353248     353248          0        408          0          0   ROM Totals for D:\github\Stm32_Mp3Player\Old_STM32469I_DISCO.axf

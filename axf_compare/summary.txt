@@ -1,0 +1,9 @@
+﻿old_axf=D:\github\Stm32_Mp3Player\Old_STM32469I_DISCO.axf
+new_axf=D:\github\Stm32_Mp3Player\New_STM32469I_DISCO.axf
+fromelf=C:\Users\cyang\AppData\Local\Keil_v5\ARM\ARMCLANG\bin\fromelf.exe
+old_bin_size=353656
+new_bin_size=423608
+old_bin_sha256=4EBD7203932BE7E1210DC01626135E94A618746C923448AD550B6B42C9406896
+new_bin_sha256=C1610F4D294D5AA77F6430FA5EC89114513B718A33A8DF2B320CEA64CB4EB508
+first_binary_diff_offset=0
+same_binary=False

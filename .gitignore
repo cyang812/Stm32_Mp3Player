@@ -2,4 +2,12 @@
 *.o
 *.bin
 *.html
+*.htm
 *.d
+*.map
+*.lst
+*.hex
+*.axf
+*.dep
+build.log
+*.uvguix.*

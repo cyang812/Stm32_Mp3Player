@@ -1,151 +1,153 @@
 #include "main.h"
 
-extern __IO uint32_t uwVolume;   
+extern __IO uint32_t uwVolume;
 
 uint8_t Mp3FileInfo[40] = {0};
 uint8_t readBuf[READBUF_SIZE];
-int32_t offset; 
-int bytesLeft; 
+int32_t offset;
+int bytesLeft;
 uint8_t *readPtr;
-short 	*Decbuf;
+short *Decbuf;
 uint8_t Decode_state;
-uint8_t buffer_switch=1;
+uint8_t buffer_switch = 1;
 uint8_t init;
 
-MP3_BUFF mp3_buff;    //½âÂëºóµÄÒôÆµÊý¾Ý buff
+MP3_BUFF mp3_buff; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½ï¿½ buff
 
 ID3V1 gId3v1;
 ID3V2 gId3v2;
 
 HMP3Decoder hMP3Decoder;
-MP3FrameInfo mp3FrameInfo; 
+MP3FrameInfo mp3FrameInfo;
 
-uint8_t waitflag = 0;    // wait for update mp3 to PCM data buff
+uint8_t waitflag = 0; // wait for update mp3 to PCM data buff
 
-void InitMp3(void)							
+void InitMp3(void)
 {
-	hMP3Decoder=MP3InitDecoder();
-	ClearBuffer((void *)&gId3v1,sizeof(ID3V1));
-	ClearBuffer((void *)&gId3v2,sizeof(ID3V2));
+	hMP3Decoder = MP3InitDecoder();
+	ClearBuffer((void *)&gId3v1, sizeof(ID3V1));
+	ClearBuffer((void *)&gId3v2, sizeof(ID3V2));
 }
 
-uint8_t Mp3_GetID3V2(void)  //to get mp3 audio Frame start address store in labelSize
+uint8_t Mp3_GetID3V2(void) // to get mp3 audio Frame start address store in labelSize
 {
-	uint32_t br,labelSize; 
+	uint32_t br, labelSize;
 	ID3V2_HEADER *pLabel;
-	f_read(&MusicFile,readBuf,READBUF_SIZE,(void *)&br);
-	if(br==0)
+	f_read(&MusicFile, readBuf, READBUF_SIZE, (void *)&br);
+	if (br == 0)
 	{
 		return false;
 	}
-	
-	pLabel = (ID3V2_HEADER*)readBuf;
-	//Parsing ID3V2
+
+	pLabel = (ID3V2_HEADER *)readBuf;
+	// Parsing ID3V2
 	if (memcmp(pLabel->Header, "ID3", 3) != 0)
 	{
-		f_lseek(&MusicFile,0);
+		f_lseek(&MusicFile, 0);
 		printf("No ID3\n");
 		return false;
 	}
-	labelSize = (((pLabel->Size)[0] & 0x7F) * 0x200000UL)		//»ñÈ¡±êÇ©´óÐ¡£¬
-		   		+ (((pLabel->Size)[1] & 0x7F) * 0x4000UL)				//Ò»¹²ËÄ¸ö×Ö½Ú£¬µ«ÊÇÃ¿¸ö×Ö½Ú×î¸ßÎ»Îª0
-		   		+ (((pLabel->Size)[2] & 0x7F) * 0x80UL)	        //Òò´Ë¹²28Î»£¬±êÇ©´óÐ¡µÄ¼ÆËã¹«Ê½Èç×ó±ßËùÊ¾
-		   		+ ((pLabel->Size)[3] & 0x7F)
-					+ 10;					//ÓÉÓÚ±êÇ©Í·ÖÐµÄÏÔÊ¾µÄ±êÇ©´óÐ¡²»°üº¬±êÇ©Í·×ÔÉíµÄ´óÐ¡£¬ËùÒÔÒª¼ÓÉÏ±êÇ©Í·µÄ10¸ö×Ö½Ú							
-	printf("labelSize: %d\n",labelSize);
-	f_lseek(&MusicFile,labelSize);  //ÒÆ¶¯ÎÄ¼þÖ¸Õëµ½ÒôÆµÊý¾Ý´¦
+	labelSize = (((pLabel->Size)[0] & 0x7F) * 0x200000UL) // ï¿½ï¿½È¡ï¿½ï¿½Ç©ï¿½ï¿½Ð¡ï¿½ï¿½
+				+ (((pLabel->Size)[1] & 0x7F) * 0x4000UL) // Ò»ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½Ö½Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½Ö½ï¿½ï¿½ï¿½ï¿½Î»Îª0
+				+ (((pLabel->Size)[2] & 0x7F) * 0x80UL)	  // ï¿½ï¿½Ë¹ï¿½28Î»ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½Ð¡ï¿½Ä¼ï¿½ï¿½ã¹«Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
+				+ ((pLabel->Size)[3] & 0x7F) + 10;		  // ï¿½ï¿½ï¿½Ú±ï¿½Ç©Í·ï¿½Ðµï¿½ï¿½ï¿½Ê¾ï¿½Ä±ï¿½Ç©ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç©Í·ï¿½ï¿½ï¿½ï¿½ï¿½Ä´ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ï±ï¿½Ç©Í·ï¿½ï¿½10ï¿½ï¿½ï¿½Ö½ï¿½
+	printf("labelSize: %d\n", labelSize);
+	f_lseek(&MusicFile, labelSize); // ï¿½Æ¶ï¿½ï¿½Ä¼ï¿½Ö¸ï¿½ëµ½ï¿½ï¿½Æµï¿½ï¿½ï¿½Ý´ï¿½
 	return true;
 }
 
 void Mp3Play_init(void)
-{	
+{
 	uint8_t ret;
 	uint32_t duration;
-	//if(init==0)//¸ù¾ÝMP3Ö¡ÐÅÏ¢³õÊ¼»¯ÒôÆµ½Ó¿Ú
+	// if(init==0)//ï¿½ï¿½ï¿½ï¿½MP3Ö¡ï¿½ï¿½Ï¢ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Æµï¿½Ó¿ï¿½
 	{
-	if(BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, uwVolume, mp3FrameInfo.samprate/2) == 0)//init sai /2
-	{
-		printf("bsp_audio_out init succ\n");
-		ret = BSP_AUDIO_OUT_Play((uint16_t*)&mp3_buff.buffer1[0], 4*BUFF_SIZE);//init dma
-		//ret = BSP_AUDIO_OUT_Play((uint16_t*)&mp3_buff.twobuff, BUFF_SIZE);//init dma
-    printf("bsp_out ret: %d\n",ret);
-	}
-	printf("play start the bitrate: %d\n",mp3FrameInfo.bitrate);
+		if (BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, uwVolume, mp3FrameInfo.samprate / 2) == 0) // init sai /2
+		{
+			printf("bsp_audio_out init succ\n");
+			ret = BSP_AUDIO_OUT_Play((uint16_t *)&mp3_buff.buffer1[0], 4 * BUFF_SIZE); // init dma
+			// ret = BSP_AUDIO_OUT_Play((uint16_t*)&mp3_buff.twobuff, BUFF_SIZE);//init dma
+			printf("bsp_out ret: %d\n", ret);
+		}
+		printf("play start the bitrate: %d\n", mp3FrameInfo.bitrate);
 
-	duration = MusicFile.fsize * 8 / mp3FrameInfo.bitrate; //¼ÆËã¸èÇú×ÜÊ±³¤£¬ÎÄ¼þ´óÐ¡(Byte) * 8 / ±ÈÌØÂÊ£¨bps£©
-	sprintf((char *)musicFullTime,"/%02d:%02d",(int)(duration/60), (int)(duration%60));
-	printf(musicFullTime);printf("\n");
-	}	
+		duration = MusicFile.fsize * 8 / mp3FrameInfo.bitrate; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ð¡(Byte) * 8 / ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½bpsï¿½ï¿½
+		sprintf((char *)musicFullTime, "/%02d:%02d", (int)(duration / 60), (int)(duration % 60));
+		printf("%s", (char *)musicFullTime);
+		printf("\n");
+	}
 }
 /*
-	-1¡¢ÏÈ¶Ô¶ÁÈë»º´æÖÐµÄÊý¾Ý½øÐÐ½âÂëµ½Êä³ö»º´æs
-	-2¡¢½âÂëÍê³Éºó´ÓÎÄ¼þÖÐ¶ÁÈ¡Êý¾Ý¸üÐÂ»º´æ
+	-1ï¿½ï¿½ï¿½È¶Ô¶ï¿½ï¿½ë»ºï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½Ð½ï¿½ï¿½ëµ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½s
+	-2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éºï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð¶ï¿½È¡ï¿½ï¿½ï¿½Ý¸ï¿½ï¿½Â»ï¿½ï¿½ï¿½
 */
-mp3_play_status Mp3_SubDecode(void)  
+mp3_play_status Mp3_SubDecode(void)
 {
 	uint32_t br;
 	int res;
-	offset=MP3FindSyncWord(readPtr, bytesLeft);//Ñ°ÕÒÏÂÒ»Ö¡Í·	assume EOF if no sync found
-	//printf("offset:");printfhex32(offset);printf("\n");
-	if(offset<0)
-	{	
-		//PlayDataLength=0;
-		printf("sub decode mp3 file error\n");
-		return MP3_PLAY_END; 
-	}
-	readPtr+=offset; //data start point
-	bytesLeft-=offset; //number of valid bytes remaining in inbuf
-	res=MP3Decode(hMP3Decoder,&readPtr,&bytesLeft,Decbuf,0);
-	//sprintf((char *) Unicodebuf,"res=%d  bytesLeft=%d\n",(int)res,(int)bytesLeft);
-	//printf(Unicodebuf);
-	if(bytesLeft<READBUF_SIZE) // update data in the read buff
+	offset = MP3FindSyncWord(readPtr, bytesLeft); // Ñ°ï¿½ï¿½ï¿½ï¿½Ò»Ö¡Í·	assume EOF if no sync found
+	// printf("offset:");printfhex32(offset);printf("\n");
+	if (offset < 0)
 	{
-		memmove(readBuf,readPtr,bytesLeft);  // ½«readPtr ÖÐµÄÄÚÈÝ°áÒÆµ½ readBuf ÖÐ£¬¼´½«Í¬²½Í·Ö®ºóµÄÄÚÈÝ°áÒÆµ½buffÍ·²¿
-		//br=Read_file((readBuf+bytesLeft), (READBUF_SIZE-bytesLeft));
-		res=f_read(&MusicFile,(readBuf+bytesLeft),(READBUF_SIZE-bytesLeft),(void *)&br);
-		if(br==0)
-		{ 
+		// PlayDataLength=0;
+		printf("sub decode mp3 file error\n");
+		return MP3_PLAY_END;
+	}
+	readPtr += offset;	 // data start point
+	bytesLeft -= offset; // number of valid bytes remaining in inbuf
+	res = MP3Decode(hMP3Decoder, &readPtr, &bytesLeft, Decbuf, 0);
+	// sprintf((char *) Unicodebuf,"res=%d  bytesLeft=%d\n",(int)res,(int)bytesLeft);
+	// printf(Unicodebuf);
+	if (bytesLeft < READBUF_SIZE) // update data in the read buff
+	{
+		memmove(readBuf, readPtr, bytesLeft); // ï¿½ï¿½readPtr ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ý°ï¿½ï¿½Æµï¿½ readBuf ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½Í·Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý°ï¿½ï¿½Æµï¿½buffÍ·ï¿½ï¿½
+		// br=Read_file((readBuf+bytesLeft), (READBUF_SIZE-bytesLeft));
+		res = f_read(&MusicFile, (readBuf + bytesLeft), (READBUF_SIZE - bytesLeft), (void *)&br);
+		if (br == 0)
+		{
 			printf("mp3 play end\n");
-			//while(1){}
-			return MP3_PLAY_END; 					
-		} 
-		if(br<READBUF_SIZE-bytesLeft)
-			memset(readBuf+bytesLeft+br,0,READBUF_SIZE-bytesLeft-br);
-		bytesLeft=READBUF_SIZE;
-		readPtr=readBuf;                
+			// while(1){}
+			return MP3_PLAY_END;
+		}
+		if (br < READBUF_SIZE - bytesLeft)
+			memset(readBuf + bytesLeft + br, 0, READBUF_SIZE - bytesLeft - br);
+		bytesLeft = READBUF_SIZE;
+		readPtr = readBuf;
 	}
 	MP3GetLastFrameInfo(hMP3Decoder, &mp3FrameInfo);
 
-	//printf("mp3 sub decode-> mmp3 bitrate:%d\n",mp3FrameInfo.bitrate);
-	
-	if(mp3FrameInfo.nChans==1)Convert_Mono(Decbuf);
-	//else Convert_Stereo(Decbuf);
+	// printf("mp3 sub decode-> mmp3 bitrate:%d\n",mp3FrameInfo.bitrate);
+
+	if (mp3FrameInfo.nChans == 1)
+		Convert_Mono(Decbuf);
+	// else Convert_Stereo(Decbuf);
 	return MP3_PLAY_PLAYING;
 }
 
 uint8_t Demo_Mp3Parsing(void)
 {
 	uint32_t br;
-	Mp3_GetID3V2();  //to change file ptr pointer to real mp3 music data
-	//init=0;
-	//XferCplt = 0;
+	Mp3_GetID3V2(); // to change file ptr pointer to real mp3 music data
+	// init=0;
+	// XferCplt = 0;
 	buffer_switch = 1;
-	
-	bytesLeft=0;
-	readPtr=readBuf;	
-	f_read(&MusicFile,readBuf,READBUF_SIZE,(void *)&br);
-	bytesLeft += br;	
-	sprintf((char *) Unicodebuf,"bytesLeft=%d\n",(int)bytesLeft);
-	printf(Unicodebuf);
-	if(br==0) return false;
-	
-	Decbuf=(short *)mp3_buff.buffer1;
+
+	bytesLeft = 0;
+	readPtr = readBuf;
+	f_read(&MusicFile, readBuf, READBUF_SIZE, (void *)&br);
+	bytesLeft += br;
+	sprintf((char *)Unicodebuf, "bytesLeft=%d\n", (int)bytesLeft);
+	printf("%s", (char *)Unicodebuf);
+	if (br == 0)
+		return false;
+
+	Decbuf = (short *)mp3_buff.buffer1;
 	Mp3_SubDecode();
-	Decbuf=(short *)mp3_buff.buffer2;
+	Decbuf = (short *)mp3_buff.buffer2;
 	Mp3_SubDecode();
 	Mp3Play_init();
-	sprintf((char *) Unicodebuf,"bytesLeft::::%d\n",(int)bytesLeft);
-	printf(Unicodebuf);
+	sprintf((char *)Unicodebuf, "bytesLeft::::%d\n", (int)bytesLeft);
+	printf("%s", (char *)Unicodebuf);
 	return true;
 }
 
@@ -153,63 +155,62 @@ mp3_play_status Mp3_PlayStart(void)
 {
 	mp3_play_status status;
 	if (waitflag)
-	{			
-		if(buffer_switch == 2)
+	{
+		if (buffer_switch == 2)
 		{
-				//printf("update buff1\n");
-				waitflag = 0;
-				Decbuf=(short *)mp3_buff.buffer1;
-				//Decbuf=(short *)mp3_buff.twobuff;
-				status = Mp3_SubDecode();
+			// printf("update buff1\n");
+			waitflag = 0;
+			Decbuf = (short *)mp3_buff.buffer1;
+			// Decbuf=(short *)mp3_buff.twobuff;
+			status = Mp3_SubDecode();
 		}
 
-		if(buffer_switch == 1)
+		if (buffer_switch == 1)
 		{
-				//printf("update buff2\n");
-				waitflag = 0;			
-				Decbuf=(short *)mp3_buff.buffer2;
-				//Decbuf=(short *)mp3_buff.twobuff[BUFF_SIZE];
-				status = Mp3_SubDecode();
+			// printf("update buff2\n");
+			waitflag = 0;
+			Decbuf = (short *)mp3_buff.buffer2;
+			// Decbuf=(short *)mp3_buff.twobuff[BUFF_SIZE];
+			status = Mp3_SubDecode();
 		}
 	}
 
-	return status; 
+	return status;
 }
-
 
 void MP3_Debug()
 {
-	uint8_t ret,bytesread;
-	
-	printf("MP3_Debug\n");
-	
-	strcpy((char *)File_path,(char *)"0:/mp3/");  //change file path
-	strcat((char *)File_path,(char *)FileList.file[0].name);
+	uint8_t ret, bytesread;
 
-	ret = f_open(&MusicFile, File_path, FA_OPEN_EXISTING | FA_READ);
-	if(ret != 0) //error
+	printf("MP3_Debug\n");
+
+	strcpy((char *)File_path, (char *)"0:/mp3/"); // change file path
+	strcat((char *)File_path, (char *)FileList.file[0].name);
+
+	ret = f_open(&MusicFile, (const TCHAR *)File_path, FA_OPEN_EXISTING | FA_READ);
+	if (ret != 0) // error
 	{
-		printf("open mp3 file error ,ret: %d\n",ret);
+		printf("open mp3 file error ,ret: %d\n", ret);
 	}
 	else
 	{
-//		 if((ret = f_read(&Mp3File, Mp3FileInfo, sizeof(ID3V2_HEADER), (void *)&bytesread)) != FR_OK)
-//		 {
-//				printf("read mp3 file error ,ret: %d\n",ret);		
-//		 }
-//		 else
-//		 {
-//				LCD_DisplayMusicName(0);
-//				for(uint8_t xx=0; xx<sizeof(ID3V2_HEADER); xx++)printf("0x%02x ",Mp3FileInfo[xx]);
-//		 }
+		//		 if((ret = f_read(&Mp3File, Mp3FileInfo, sizeof(ID3V2_HEADER), (void *)&bytesread)) != FR_OK)
+		//		 {
+		//				printf("read mp3 file error ,ret: %d\n",ret);
+		//		 }
+		//		 else
+		//		 {
+		//				LCD_DisplayMusicName(0);
+		//				for(uint8_t xx=0; xx<sizeof(ID3V2_HEADER); xx++)printf("0x%02x ",Mp3FileInfo[xx]);
+		//		 }
 
-			//Mp3_GetID3V2();
-			InitMp3();
-			Demo_Mp3Parsing();
-			while (1)
-				{
-					Mp3_PlayStart();
-				}
+		// Mp3_GetID3V2();
+		InitMp3();
+		Demo_Mp3Parsing();
+		while (1)
+		{
+			Mp3_PlayStart();
+		}
 	}
 }
 #if 0
@@ -236,9 +237,9 @@ void BSP_AUDIO_OUT_TransferComplete_CallBack(void)
   * @retval None
   */
 void BSP_AUDIO_OUT_HalfTransfer_CallBack(void)
-{ 
+{
 	//printf("change to buff2\n");
-	
+
 	waitflag = 1;
 	//Decbuf=(short *)buffer1;
 	buffer_switch = 2;
@@ -246,4 +247,3 @@ void BSP_AUDIO_OUT_HalfTransfer_CallBack(void)
 	//Mp3_SubDecode();
 }
 #endif
-

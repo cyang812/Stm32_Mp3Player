@@ -1,20 +1,20 @@
 #include "main.h"
 #include "decode.h"
 
-//#define SWAP_RB //
+// #define SWAP_RB //
 
-#define IMAGE_HEIGHT 640//320       // ¸ß
-#define IMAGE_WIDTH  640//320//320//227  // ¿í
+#define IMAGE_HEIGHT 640 // 320       // ï¿½ï¿½
+#define IMAGE_WIDTH 640	 // 320//320//227  // ï¿½ï¿½
 
-FIL PicFile;     /* Pic File object */
+FIL PicFile; /* Pic File object */
 FIL MusicWavFile;
 FIL MusicJpegFile;
 
 RGB_typedef *RGB_matrix;
-uint8_t _aucLine[2048];  // Í¼Æ¬ÖÐÒ»ÐÐµÄÊý¾Ý
-uint32_t line_counter = 0;  // ÐÐÊý
-uint16_t Xpos = 240;  // jpeg µÚÒ»¸öµãµÄ×ø±ê
-uint16_t Ypos = 60;  // jpeg µÚÒ»¸öµãµÄ×ø±ê
+uint8_t _aucLine[2048];	   // Í¼Æ¬ï¿½ï¿½Ò»ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½
+uint32_t line_counter = 0; // ï¿½ï¿½ï¿½ï¿½
+uint16_t Xpos = 240;	   // jpeg ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+uint16_t Ypos = 60;		   // jpeg ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 /* This struct contains the JPEG decompression parameters */
 struct jpeg_decompress_struct cinfo;
@@ -27,39 +27,39 @@ extern unsigned char Jpeg_Cover_Flash[5764];
 extern unsigned char Jpeg_Cover_Ram[NumByte2ShowJpeg];
 
 /**
-  * @brief  Jpeg Decode
-  * @param  callback: line decoding callback
-  * @param  file1:    pointer to the jpg file
-  * @param  width:    image width
-  * @param  buff:     pointer to the image line    
-  * @retval None
-  */
-void show_jepg(FIL *file,uint32_t width, uint8_t * buff, uint8_t (*callback)(uint8_t*, uint32_t), uint8_t datafrom)
-{		
+ * @brief  Jpeg Decode
+ * @param  callback: line decoding callback
+ * @param  file1:    pointer to the jpg file
+ * @param  width:    image width
+ * @param  buff:     pointer to the image line
+ * @retval None
+ */
+void show_jepg(FIL *file, uint32_t width, uint8_t *buff, uint8_t (*callback)(uint8_t *, uint32_t), uint8_t datafrom)
+{
 	printf("enter in show_jpeg\n");
 	/* Decode JPEG Image */
 	JSAMPROW buffer[2] = {0}; /* Output row buffer */
-	uint32_t row_stride = 0; /* physical row width in image buffer */
+	uint32_t row_stride = 0;  /* physical row width in image buffer */
 
 	buffer[0] = buff;
 
 	/* Step 1: allocate and initialize JPEG decompression object */
 	cinfo.err = jpeg_std_error(&jerr);
-	//printf("enter in show_jpeg step 1\n");
+	// printf("enter in show_jpeg step 1\n");
 
-	/* Initialize the JPEG decompression object */	
+	/* Initialize the JPEG decompression object */
 	jpeg_create_decompress(&cinfo);
 	printf("enter in show_jpeg step 2\n");
 
-	if(datafrom ==  JPEG_From_Buff)
-		jpeg_mem_src(&cinfo, Jpeg_Cover_Ram,CoverJpeg.Jpeg_Size);	// ´ÓÄÚ´æ´ò¿ª
-	else if(datafrom == JPEG_From_FLASH)
-		jpeg_mem_src(&cinfo, Jpeg_Cover_Flash, 20735);  // ´ÓÄÚÖÃflash´ò¿ª
-	else if(datafrom == JPEG_From_SD)
-	{	
-		jpeg_stdio_src (&cinfo, file);    // ´ÓÎÄ¼þ´ò¿ª
+	if (datafrom == JPEG_From_Buff)
+		jpeg_mem_src(&cinfo, Jpeg_Cover_Ram, CoverJpeg.Jpeg_Size); // ï¿½ï¿½ï¿½Ú´ï¿½ï¿½
+	else if (datafrom == JPEG_From_FLASH)
+		jpeg_mem_src(&cinfo, Jpeg_Cover_Flash, 20735); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½flashï¿½ï¿½
+	else if (datafrom == JPEG_From_SD)
+	{
+		jpeg_stdio_src(&cinfo, file); // ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
 	}
-	//jpeg_stdio_buffer_src(&cinfo, Jpeg_Cover_Ram, 5764);
+	// jpeg_stdio_buffer_src(&cinfo, Jpeg_Cover_Ram, 5764);
 	printf("enter in show_jpeg step 3\n");
 
 	/* Step 3: read image parameters with jpeg_read_header() */
@@ -77,16 +77,16 @@ void show_jepg(FIL *file,uint32_t width, uint8_t * buff, uint8_t (*callback)(uin
 	row_stride = width * 3;
 	while (cinfo.output_scanline < cinfo.output_height)
 	{
-	
-		(void) jpeg_read_scanlines(&cinfo, buffer, 1);   
-		//printf("enter in show_jpeg step 7 in while() \n");
-		if (cinfo.output_scanline%2 != 0)       // ÆæÊýÐÐÏÔÊ¾ 1,3,5 640->320
+
+		(void)jpeg_read_scanlines(&cinfo, buffer, 1);
+		// printf("enter in show_jpeg step 7 in while() \n");
+		if (cinfo.output_scanline % 2 != 0) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ 1,3,5 640->320
+		{
+			if (callback(buffer[0], row_stride) != 0)
 			{
-				if (callback(buffer[0], row_stride) != 0)
-				{
-					break;
-				}
+				break;
 			}
+		}
 	}
 
 	/* Step 6: Finish decompression */
@@ -97,84 +97,78 @@ void show_jepg(FIL *file,uint32_t width, uint8_t * buff, uint8_t (*callback)(uin
 	jpeg_destroy_decompress(&cinfo);
 	printf("enter in show_jpeg step 9\n");
 
-	/* Step 8: Çå¿ÕÐÐ¼ÆÊýÆ÷£¬ÒÔ±ãÏÂÒ»´ÎÏÔÊ¾*/  
+	/* Step 8: ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ê¾*/
 	line_counter = 0;
 	printf("out of show_jpeg\n");
 }
 
 /**
-  * @brief  Copy decompressed data to display buffer.
-  * @param  Row: Output row buffer
-  * @param  DataLength: Row width in output buffer
-  * @retval None
-  */
-  // ÏÔÊ¾Ò»ÐÐ
-static uint8_t Jpeg_CallbackFunction(uint8_t* Row, uint32_t DataLength)  
+ * @brief  Copy decompressed data to display buffer.
+ * @param  Row: Output row buffer
+ * @param  DataLength: Row width in output buffer
+ * @retval None
+ */
+// ï¿½ï¿½Ê¾Ò»ï¿½ï¿½
+static uint8_t Jpeg_CallbackFunction(uint8_t *Row, uint32_t DataLength)
 {
-	//printf("enter in jpeg callback \n");
-	uint32_t i = 0,j = 0;
-  RGB_matrix =  (RGB_typedef*)Row;
-  uint32_t  ARGB8888Buffer[IMAGE_WIDTH];
+	// printf("enter in jpeg callback \n");
+	uint32_t i = 0, j = 0;
+	RGB_matrix = (RGB_typedef *)Row;
+	uint32_t ARGB8888Buffer[IMAGE_WIDTH];
 
 #ifdef SWAP_RB
-  for(i = 0; i < IMAGE_WIDTH; i++)
-  {
-    ARGB8888Buffer[i]  = (uint32_t)
-      (
-        0xFF000000                                       |
-       (((uint32_t)(RGB_matrix[i].B) & 0x000000FF) >> 0) |
-       (((uint32_t)(RGB_matrix[i].G) & 0x000000FF) << 8) |
-       (((uint32_t)(RGB_matrix[i].R) & 0x000000FF) << 16)
-      );
+	for (i = 0; i < IMAGE_WIDTH; i++)
+	{
+		ARGB8888Buffer[i] = (uint32_t)(0xFF000000 |
+									   (((uint32_t)(RGB_matrix[i].B) & 0x000000FF) >> 0) |
+									   (((uint32_t)(RGB_matrix[i].G) & 0x000000FF) << 8) |
+									   (((uint32_t)(RGB_matrix[i].R) & 0x000000FF) << 16));
 
-    BSP_LCD_DrawPixel((i + Xpos), (line_counter + Ypos), ARGB8888Buffer[i]);
-  }
+		BSP_LCD_DrawPixel((i + Xpos), (line_counter + Ypos), ARGB8888Buffer[i]);
+	}
 #else
-  for(i = 0,j = 0; j < IMAGE_WIDTH; i++)
-  {
-    ARGB8888Buffer[j]  = (uint32_t)
-      (
-        0xFF000000                                       |
-       (((uint32_t)(RGB_matrix[j].R) & 0x000000FF) >> 0) |
-       (((uint32_t)(RGB_matrix[j].G) & 0x000000FF) << 8) |
-       (((uint32_t)(RGB_matrix[j].B) & 0x000000FF) << 16)
-      );
+	for (i = 0, j = 0; j < IMAGE_WIDTH; i++)
+	{
+		ARGB8888Buffer[j] = (uint32_t)(0xFF000000 |
+									   (((uint32_t)(RGB_matrix[j].R) & 0x000000FF) >> 0) |
+									   (((uint32_t)(RGB_matrix[j].G) & 0x000000FF) << 8) |
+									   (((uint32_t)(RGB_matrix[j].B) & 0x000000FF) << 16));
 
-    BSP_LCD_DrawPixel((i + Xpos), (line_counter + Ypos), ARGB8888Buffer[j]);
-		j+=2;//2  // Å¼ÊýÁÐÏÔÊ¾ 2,4,6 640->320
-  }
+		BSP_LCD_DrawPixel((i + Xpos), (line_counter + Ypos), ARGB8888Buffer[j]);
+		j += 2; // 2  // Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ 2,4,6 640->320
+	}
 #endif
-  line_counter++;
-  return 0;
+	line_counter++;
+	return 0;
 }
 #if 1
-void ReadStrUnit(uint8_t *src,uint8_t *desc, uint16_t idx, uint8_t NbrOfBytes)
+void ReadStrUnit(uint8_t *src, uint8_t *desc, uint16_t idx, uint8_t NbrOfBytes)
 {
 	uint16_t index = 0;
 	for (index = 0; index < NbrOfBytes; index++)
 	{
-		desc[index] = src[idx + index] ;
+		desc[index] = src[idx + index];
 	}
-	desc[index]='\0';
+	desc[index] = '\0';
 }
 
 Jpeg_Error Get_MusicCoverJpeg(uint8_t idx)
 {
 	uint32_t HeadTabIdx;
-	uint8_t ret,bytesread;
-				
-	printf("Get_MusicCoverJpeg\n");
-	
-	//strcpy((char *)File_path,(char *)"0:/music/test.mp3");  //change file path
-	//strcat((char *)File_path,(char *)FileList.file[0].name);
-	strcpy((char *)File_path,(char *)"0:/music/");  //change file path
-	strcat((char *)File_path,(const TCHAR *)FileList.file[idx].name);
+	uint8_t ret, bytesread;
 
-	ret = f_open(&MusicWavFile, (const char *)File_path, FA_READ);   
-	if(ret != 0) //error
+	printf("Get_MusicCoverJpeg\n");
+
+	// strcpy((char *)File_path,(char *)"0:/music/test.mp3");  //change file path
+	// strcat((char *)File_path,(char *)FileList.file[0].name);
+	strcpy((char *)File_path, (char *)"0:/music/"); // change file path
+	strcat((char *)File_path, (const TCHAR *)FileList.file[idx].name);
+
+	ret = f_open(&MusicWavFile, (const char *)File_path, FA_READ);
+	if (ret != 0) // error
 	{
-		printf("file_path:%s\n",File_path);
-		printf("open music jpeg file error ,ret: %d\n",ret);
+		printf("file_path:%s\n", File_path);
+		printf("open music jpeg file error ,ret: %d\n", ret);
 		f_close(&MusicWavFile);
 		return NOT_FIND_APIC;
 	}
@@ -182,62 +176,63 @@ Jpeg_Error Get_MusicCoverJpeg(uint8_t idx)
 	{
 		printf("open music jpeg file succ \n");
 		GlobalPtr = (uint8_t *)Jpeg_Cover_Ram;
-		//f_lseek(&MusicWavFile,0x31d);
-		ret = f_read(&MusicWavFile,GlobalPtr,NumByte2FindAPIC, (void *)&bytesread); // read first 2048 bytes
-		printf("f_read_ret: %d,read music file byte num:%d\n",ret,bytesread);
-		//for(uint32_t xx=0; xx < NumByte2FindAPIC; xx++)printf("readBUff[%d]:%#x\n",xx,GlobalPtr[xx]);
-		strcpy((char *)Unicodebuf,"APIC"); // Í¼ÏñÊý¾Ý
-		HeadTabIdx=0;
+		// f_lseek(&MusicWavFile,0x31d);
+		ret = f_read(&MusicWavFile, GlobalPtr, NumByte2FindAPIC, (void *)&bytesread); // read first 2048 bytes
+		printf("f_read_ret: %d,read music file byte num:%d\n", ret, bytesread);
+		// for(uint32_t xx=0; xx < NumByte2FindAPIC; xx++)printf("readBUff[%d]:%#x\n",xx,GlobalPtr[xx]);
+		strcpy((char *)Unicodebuf, "APIC"); // Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		HeadTabIdx = 0;
 		while (1)
 		{
-			ReadStrUnit(GlobalPtr,str,HeadTabIdx,strlen((char *)Unicodebuf));
-			//printf("substr :%s\n",str);
-			if(strcmp((char *)str,(char *)Unicodebuf)==0)break;
+			ReadStrUnit(GlobalPtr, str, HeadTabIdx, strlen((char *)Unicodebuf));
+			// printf("substr :%s\n",str);
+			if (strcmp((char *)str, (char *)Unicodebuf) == 0)
+				break;
 			HeadTabIdx++;
-			if(HeadTabIdx>=NumByte2FindAPIC)
+			if (HeadTabIdx >= NumByte2FindAPIC)
 			{
 				f_close(&MusicWavFile);
-				printf("not find jpeg ,return and close music file,headTabIdx:%d\n",HeadTabIdx);
+				printf("not find jpeg ,return and close music file,headTabIdx:%d\n", HeadTabIdx);
 				return NOT_FIND_APIC;
 			}
-		}			
-		printf("find APIC in pos: %#x\n",HeadTabIdx);
-		HeadTabIdx+=strlen(Unicodebuf);   // +4
-		CoverJpeg.Tag_Size = MAKE_DWORD(GlobalPtr[HeadTabIdx],GlobalPtr[HeadTabIdx+1],GlobalPtr[HeadTabIdx+2],GlobalPtr[HeadTabIdx+3]);
-		printf("CoverJpeg.Tag_Szie:%#x\n",CoverJpeg.Tag_Size);
+		}
+		printf("find APIC in pos: %#x\n", HeadTabIdx);
+		HeadTabIdx += strlen((char *)Unicodebuf); // +4
+		CoverJpeg.Tag_Size = MAKE_DWORD(GlobalPtr[HeadTabIdx], GlobalPtr[HeadTabIdx + 1], GlobalPtr[HeadTabIdx + 2], GlobalPtr[HeadTabIdx + 3]);
+		printf("CoverJpeg.Tag_Szie:%#x\n", CoverJpeg.Tag_Size);
 
-		f_lseek(&MusicWavFile,HeadTabIdx+6+14);		// ÒÆ¶¯ÎÄ¼þÖ¸Õëµ½ ff d8
-		
+		f_lseek(&MusicWavFile, HeadTabIdx + 6 + 14); // ï¿½Æ¶ï¿½ï¿½Ä¼ï¿½Ö¸ï¿½ëµ½ ff d8
+
 		CoverJpeg.Jpeg_Size = CoverJpeg.Tag_Size - 14;
-		printf("CoverJpeg.Jpeg_Szie:%#x, file size:%d KB\n",CoverJpeg.Jpeg_Size,CoverJpeg.Jpeg_Size/1024);
+		printf("CoverJpeg.Jpeg_Szie:%#x, file size:%d KB\n", CoverJpeg.Jpeg_Size, CoverJpeg.Jpeg_Size / 1024);
 
 		if (CoverJpeg.Jpeg_Size > NumByte2ShowJpeg)
 		{
 			printf("jpeg is to big\n");
-			f_close(&MusicWavFile);			
+			f_close(&MusicWavFile);
 			return JPEG_TOO_BIG;
 		}
-		else f_read(&MusicWavFile,GlobalPtr,CoverJpeg.Jpeg_Size,(void *)&bytesread); // copy jpeg file from sd to ram
+		else
+			f_read(&MusicWavFile, GlobalPtr, CoverJpeg.Jpeg_Size, (void *)&bytesread); // copy jpeg file from sd to ram
 
-		printf("Jpeg_Cover_buff[%d]:%#x\n",0,GlobalPtr[0]);  // ff
-		printf("Jpeg_Cover_buff[%d]:%#x\n",1,GlobalPtr[1]);  // d8
-		if(GlobalPtr[0] != 0xff || GlobalPtr[1] != 0xd8)
+		printf("Jpeg_Cover_buff[%d]:%#x\n", 0, GlobalPtr[0]); // ff
+		printf("Jpeg_Cover_buff[%d]:%#x\n", 1, GlobalPtr[1]); // d8
+		if (GlobalPtr[0] != 0xff || GlobalPtr[1] != 0xd8)
 		{
-			if(GlobalPtr[0] == 0x89 || GlobalPtr[1] == 0x50)
+			if (GlobalPtr[0] == 0x89 || GlobalPtr[1] == 0x50)
 			{
 				printf("Jpeg is PNG type\n");
-				return JPEG_PNG_TYPE;				
+				return JPEG_PNG_TYPE;
 			}
-			else 
+			else
 			{
 				printf("Jpeg is unknow type\n");
-				return JPEG_UNKNOW_TYPE;				
+				return JPEG_UNKNOW_TYPE;
 			}
 		}
-			
-		//printf("Jpeg_Cover_buff[%d]:%#x\n",83735,GlobalPtr[83735]);  // ff 
-		//printf("Jpeg_Cover_buff[%d]:%#x\n",83736,GlobalPtr[83736]);  // d9
 
+		// printf("Jpeg_Cover_buff[%d]:%#x\n",83735,GlobalPtr[83735]);  // ff
+		// printf("Jpeg_Cover_buff[%d]:%#x\n",83736,GlobalPtr[83736]);  // d9
 	}
 	f_close(&MusicWavFile);
 	return JPEG_NO_ERROR;
@@ -246,51 +241,52 @@ Jpeg_Error Get_MusicCoverJpeg(uint8_t idx)
 
 void Show_MusicJPEG(uint8_t idx)
 {
-	//LCD_ClearZone(240,50,320,320,LCD_COLOR_WHITE);  // clear lcd for display next cover
-	
-	int8_t flag,datafrom = JPEG_From_Buff;	
-	if(idx == 0xff)  // music file is wav type
+	// LCD_ClearZone(240,50,320,320,LCD_COLOR_WHITE);  // clear lcd for display next cover
+
+	int8_t flag, datafrom = JPEG_From_Buff;
+	if (idx == 0xff) // music file is wav type
 	{
-		flag = 1;	  //  load cover from flash
+		flag = 1; //  load cover from flash
 	}
-	else flag = Get_MusicCoverJpeg(idx);
-	if(flag != 0)  // read jpeg error
+	else
+		flag = Get_MusicCoverJpeg(idx);
+	if (flag != 0) // read jpeg error
 	{
 		datafrom = JPEG_From_FLASH;
-		f_open(&PicFile,DEFAULT_COVER_JPEG_PATH,FA_READ);
-		show_jepg(&PicFile,IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, datafrom);		
+		f_open(&PicFile, DEFAULT_COVER_JPEG_PATH, FA_READ);
+		show_jepg(&PicFile, IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, datafrom);
 		f_close(&PicFile);
 	}
-	else show_jepg(&PicFile,IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, datafrom);		
+	else
+		show_jepg(&PicFile, IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, datafrom);
 }
 
 void JPEG_Debug(void)
 {
-	uint8_t ret,bytesread;
-	
-	printf("JPEG_Debug\n");
-	
-	strcpy((char *)File_path,(char *)"0:/image.jpg");  //change file path
-	//strcat((char *)File_path,(char *)FileList.file[0].name);
+	uint8_t ret, bytesread;
 
-	ret = f_open(&PicFile, File_path, FA_READ);
-	if(ret != 0) //error
+	printf("JPEG_Debug\n");
+
+	strcpy((char *)File_path, (char *)"0:/image.jpg"); // change file path
+	// strcat((char *)File_path,(char *)FileList.file[0].name);
+
+	ret = f_open(&PicFile, (const TCHAR *)File_path, FA_READ);
+	if (ret != 0) // error
 	{
-		printf("open jpeg file error ,ret: %d\n",ret);
+		printf("open jpeg file error ,ret: %d\n", ret);
 	}
 	else
 	{
 		printf("show the jpeg pic in lcd\n");
-		show_jepg(&PicFile, IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, JPEG_From_SD);		
+		show_jepg(&PicFile, IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, JPEG_From_SD);
 		f_close(&PicFile);
 	}
 
 	HAL_Delay(5000);
 
 	show_jepg(&PicFile, IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, JPEG_From_FLASH);
-		
+
 	HAL_Delay(5000);
 
 	Show_MusicJPEG(2);
 }
-

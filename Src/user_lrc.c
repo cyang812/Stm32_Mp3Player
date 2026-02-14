@@ -126,7 +126,7 @@ uint16_t strtoint(char *str)
 	return -1;
 }
 
-uint8_t *praseLRC(uint8_t *str, uint16_t *time)
+char *praseLRC(char *str, uint16_t *time)
 {
 
 	// printf("parse lrc\n");
@@ -212,9 +212,9 @@ void Lrc_Parse(uint8_t idx)
 		// ret = f_read(&MusicLrcFile,LRC_Ram,MusicLrcFile.fsize, (void *)&bytesread); // read first 2048 bytes
 		// printf("f_read_ret: %d,read lrc file byte num:%d\n",ret,bytesread);
 
-		while ((f_gets(LRC_Ram, MAXUTF8, &MusicLrcFile) != NULL) && line < MAXBUF)
+		while ((f_gets((char *)LRC_Ram, MAXUTF8, &MusicLrcFile) != NULL) && line < MAXBUF)
 		{ //&& line<2
-			if ((GlobalPtr = praseLRC(LRC_Ram, &lrc.str_time[line])) != NULL)
+			if ((GlobalPtr = (uint8_t *)praseLRC((char *)LRC_Ram, &lrc.str_time[line])) != NULL)
 			{
 
 				//						for(uint8_t xx=0; xx<MAXLINE; xx++)
@@ -236,7 +236,7 @@ void Lrc_Parse(uint8_t idx)
 				//						}
 
 				UTF8ToUnicode(lrc.lrc_sub_str[line].str_utf8, lrc.lrc_sub_str[line].str_unicode);
-				printf("\n unicode -> %d\t%s \n", lrc.str_time[line], lrc.lrc_sub_str[line].str_unicode);
+				printf("\n unicode -> %d\t0x%04x \n", lrc.str_time[line], lrc.lrc_sub_str[line].str_unicode[0]);
 
 				//						for(uint8_t xx=0; xx<MAXUNICODE; xx++)
 				//						{

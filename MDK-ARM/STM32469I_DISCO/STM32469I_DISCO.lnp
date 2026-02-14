@@ -174,7 +174,7 @@
 ".\stm32469i_disco\usbd_msc_bot.o"
 ".\stm32469i_disco\usbd_msc_data.o"
 ".\stm32469i_disco\usbd_msc_scsi.o"
---library_type=microlib --strict --scatter ".\STM32469I_DISCO\STM32469I_DISCO.sct"
+--library_type=microlib --strict --scatter ".\STM32469I_DISCO\STM32469I_DISCO_custom.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "STM32469I_DISCO.map" -o .\STM32469I_DISCO\STM32469I_DISCO.axf
