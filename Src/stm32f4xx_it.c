@@ -1,11 +1,11 @@
-/**
+1/**
   ******************************************************************************
-  * @file    Templates/Src/stm32f4xx_it.c 
+  * @file    Templates/Src/stm32f4xx_it.c
   * @author  MCD Application Team
   * @version V1.0.3
   * @date    06-May-2016
   * @brief   Main Interrupt Service Routines.
-  *          This file provides template for all exceptions handler and 
+  *          This file provides template for all exceptions handler and
   *          peripherals interrupt service routine.
   ******************************************************************************
   * @attention
@@ -77,7 +77,7 @@ extern PCD_HandleTypeDef hpcd;
 void NMI_Handler(void)
 {
 	while(1)
-	{	
+	{
 		printf("NMI error\n");
 	}
 }
@@ -211,7 +211,7 @@ void EXTI0_IRQHandler(void)
 	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_9);
 	printf("usb disconnect\n");
 }
- 
+
 /**
   * @brief  This function handles External line 2 interrupt request.
   * @param  None
@@ -268,7 +268,7 @@ void SDMMC1_IRQHandler(void)
 	//printf("SDMMC1_IRQHandler\n");
 }
 
-#if 1   // ºÍBSPÄ¬ÈÏµÄÒôÆµÊä³öÊ¹ÓÃÁËÏàÍ¬µÄDMAÍ¨µÀ£¬ÒÑÐÞ¸ÄÒôÆµÊä³öÍ¨µÀ
+#if 1   // ï¿½ï¿½BSPÄ¬ï¿½Ïµï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½DMAÍ¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½Æµï¿½ï¿½ï¿½Í¨ï¿½ï¿½
 /**
   * @brief  This function handles DMA2 Stream 3 interrupt request.
   * @param  None
@@ -287,7 +287,7 @@ void DMA2_Stream3_IRQHandler(void)
   */
 void DMA2_Stream6_IRQHandler(void)
 {
-  BSP_SD_DMA_Tx_IRQHandler(); 
+  BSP_SD_DMA_Tx_IRQHandler();
 	//printf("DMA2_Stream6_IRQHandler\n");
 }
 
@@ -302,7 +302,7 @@ void DMA2_Stream6_IRQHandler(void)
 
 /**
   * @}
-  */ 
+  */
 
 /**
   * @}

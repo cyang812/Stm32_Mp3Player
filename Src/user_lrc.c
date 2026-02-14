@@ -1,257 +1,266 @@
 #include "main.h"
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <string.h>  
-#include <ctype.h>  
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 FIL MusicLrcFile;
 LRC_struct lrc;
 
-#define DLS_LEN		(uint8_t)129
+#define DLS_LEN (uint8_t)129
 
-uint8_t *tmp;  
+char *tmp;
 
-/******************************************************************** 
-*  Function£∫  str_replace() 
-*  Description: ‘⁄“ª∏ˆ◊÷∑˚¥Æ÷–≤È’““ª∏ˆ◊”¥Æ£¨≤¢«“∞—À˘”–∑˚∫œµƒ◊”¥Æ”√ 
-¡Ì“ª∏ˆÃÊªª◊÷∑˚¥ÆÃÊªª°£ 
-*  Input£∫      p_source:“™≤È’“µƒƒ∏◊÷∑˚¥Æ£ª p_seach“™≤È’“µƒ◊”◊÷∑˚¥Æ; 
-p_repstr£∫ÃÊªªµƒ◊÷∑˚¥Æ; 
-*  Output£∫      p_result:¥Ê∑≈Ω·π˚; 
-*  Return :      ∑µªÿÃÊªª≥…π¶µƒ◊”¥Æ ˝¡ø; 
-*  Others:      p_result“™◊„πª¥Ûµƒø’º‰¥Ê∑≈Ω·π˚£¨À˘“‘ ‰»Î≤Œ ˝∂º“™“‘\0Ω· ¯; 
-*********************************************************************/  
-int str_replace(char *p_result, const char* p_source, char* p_seach, char *p_repstr)  
-{  
-    int c = 0;  
-    int repstr_leng = 0;  
-    int searchstr_leng = 0;  
-    char *p1;  
-    char *presult = p_result;  
-    const char *psource = p_source;  
-    char *prep = p_repstr;  
-    char *pseach = p_seach;  
-    int nLen = 0;  
-    repstr_leng = strlen(prep);  
-    searchstr_leng = strlen(pseach);  
-  
-    do {  
-        p1 = strstr(psource, p_seach);  
-        if (p1 == 0)  
-        {  
-            strcpy(presult, psource);  
-            return c;  
-        }  
-        c++;  //∆•≈‰◊”¥Æº∆ ˝º”1;  
-        //printf("Ω·π˚:%s\r\n", p_result);  
-        //printf("‘¥◊÷∑˚:%s\r\n", p_source);  
-        // øΩ±¥…œ“ª∏ˆÃÊªªµ„∫Õœ¬“ª∏ˆÃÊªªµ„÷–º‰µƒ◊÷∑˚¥Æ  
-        nLen = p1 - psource;  
-        memcpy(presult, psource, nLen);  
-        // øΩ±¥–Ë“™ÃÊªªµƒ◊÷∑˚¥Æ  
-        memcpy(presult + nLen, p_repstr, repstr_leng);  
-        psource = p1 + searchstr_leng;  
-        presult = presult + nLen + repstr_leng;  
-    } while (p1);  
-  
-    return c;  
-}  
-
-
-void UTF8ToUnicode(uint8_t *UTF8,uint16_t *Unicode)
+/********************************************************************
+*  FunctionÔºö  str_replace()
+*  Description: Âú®‰∏Ä‰∏™Â≠óÁ¨¶‰∏≤‰∏≠Êü•Êâæ‰∏Ä‰∏™Â≠ê‰∏≤ÔºåÂπ∂‰∏îÊääÊâÄÊúâÁ¨¶ÂêàÁöÑÂ≠ê‰∏≤Áî®
+Âè¶‰∏Ä‰∏™ÊõøÊç¢Â≠óÁ¨¶‰∏≤ÊõøÊç¢„ÄÇ
+*  InputÔºö      p_source:Ë¶ÅÊü•ÊâæÁöÑÊØçÂ≠óÁ¨¶‰∏≤Ôºõ p_seachË¶ÅÊü•ÊâæÁöÑÂ≠êÂ≠óÁ¨¶‰∏≤;
+p_repstrÔºöÊõøÊç¢ÁöÑÂ≠óÁ¨¶‰∏≤;
+*  OutputÔºö      p_result:Â≠òÊîæÁªìÊûú;
+*  Return :      ËøîÂõûÊõøÊç¢ÊàêÂäüÁöÑÂ≠ê‰∏≤Êï∞Èáè;
+*  Others:      p_resultË¶ÅË∂≥Â§üÂ§ßÁöÑÁ©∫Èó¥Â≠òÊîæÁªìÊûúÔºåÊâÄ‰ª•ËæìÂÖ•ÂèÇÊï∞ÈÉΩË¶Å‰ª•\0ÁªìÊùü;
+*********************************************************************/
+int str_replace(char *p_result, const char *p_source, char *p_seach, char *p_repstr)
 {
-	uint16_t i=0,j=0;
-	uint8_t buf[4];
-	
-	while(UTF8[i])
+	int c = 0;
+	int repstr_leng = 0;
+	int searchstr_leng = 0;
+	char *p1;
+	char *presult = p_result;
+	const char *psource = p_source;
+	char *prep = p_repstr;
+	char *pseach = p_seach;
+	int nLen = 0;
+	repstr_leng = strlen(prep);
+	searchstr_leng = strlen(pseach);
+
+	do
 	{
-		if((UTF8[i]&0x80)==0x00)
+		p1 = strstr(psource, p_seach);
+		if (p1 == 0)
 		{
-			Unicode[j]=(uint16_t)DWBYTE(0,0,0,UTF8[i]);
-			i+=1;
+			strcpy(presult, psource);
+			return c;
 		}
-		else if((UTF8[i]&0xe0)==0xc0)
+		c++; // ÂåπÈÖçÂ≠ê‰∏≤ËÆ°Êï∞Âä†1;
+		// printf("ÁªìÊûú:%s\r\n", p_result);
+		// printf("Ê∫êÂ≠óÁ¨¶:%s\r\n", p_source);
+		//  Êã∑Ë¥ù‰∏ä‰∏Ä‰∏™ÊõøÊç¢ÁÇπÂíå‰∏ã‰∏Ä‰∏™ÊõøÊç¢ÁÇπ‰∏≠Èó¥ÁöÑÂ≠óÁ¨¶‰∏≤
+		nLen = p1 - psource;
+		memcpy(presult, psource, nLen);
+		// Êã∑Ë¥ùÈúÄË¶ÅÊõøÊç¢ÁöÑÂ≠óÁ¨¶‰∏≤
+		memcpy(presult + nLen, p_repstr, repstr_leng);
+		psource = p1 + searchstr_leng;
+		presult = presult + nLen + repstr_leng;
+	} while (p1);
+
+	return c;
+}
+
+void UTF8ToUnicode(uint8_t *UTF8, uint16_t *Unicode)
+{
+	uint16_t i = 0, j = 0;
+	uint8_t buf[4];
+
+	while (UTF8[i])
+	{
+		if ((UTF8[i] & 0x80) == 0x00)
 		{
-			buf[1]=(UTF8[i]&0x1c)>>2;
-			buf[0]=(UTF8[i]<<6)|(UTF8[i+1]&0x3f);
-			Unicode[j]=(uint16_t)DWBYTE(0,0,buf[1],buf[0]);
-			i+=2;
+			Unicode[j] = (uint16_t)DWBYTE(0, 0, 0, UTF8[i]);
+			i += 1;
 		}
-		else if((UTF8[i]&0xf0)==0xe0)
+		else if ((UTF8[i] & 0xe0) == 0xc0)
 		{
-			buf[1]=(UTF8[i]<<4)|((UTF8[i+1]&0x3c)>>2);
-			buf[0]=(UTF8[i+1]<<6)|(UTF8[i+2]&0x3f);
-			Unicode[j]=(uint16_t)DWBYTE(0,0,buf[1],buf[0]);
-			i+=3;
+			buf[1] = (UTF8[i] & 0x1c) >> 2;
+			buf[0] = (UTF8[i] << 6) | (UTF8[i + 1] & 0x3f);
+			Unicode[j] = (uint16_t)DWBYTE(0, 0, buf[1], buf[0]);
+			i += 2;
 		}
-		else if((UTF8[i]&0xf8)==0xf0)
+		else if ((UTF8[i] & 0xf0) == 0xe0)
 		{
-			buf[2]=((UTF8[i]&0x07)<<2)|((UTF8[i+1]&0x30)>>4);
-			buf[1]=((UTF8[i+1]&0x0f)<<4)|((UTF8[i+2]&0x3c)>>2);
-			buf[0]=(UTF8[i+2]<<6)|(UTF8[i+3]&0x3f);
-			Unicode[j]=(uint16_t)DWBYTE(0,buf[2],buf[1],buf[0]);
-			i+=4;
+			buf[1] = (UTF8[i] << 4) | ((UTF8[i + 1] & 0x3c) >> 2);
+			buf[0] = (UTF8[i + 1] << 6) | (UTF8[i + 2] & 0x3f);
+			Unicode[j] = (uint16_t)DWBYTE(0, 0, buf[1], buf[0]);
+			i += 3;
+		}
+		else if ((UTF8[i] & 0xf8) == 0xf0)
+		{
+			buf[2] = ((UTF8[i] & 0x07) << 2) | ((UTF8[i + 1] & 0x30) >> 4);
+			buf[1] = ((UTF8[i + 1] & 0x0f) << 4) | ((UTF8[i + 2] & 0x3c) >> 2);
+			buf[0] = (UTF8[i + 2] << 6) | (UTF8[i + 3] & 0x3f);
+			Unicode[j] = (uint16_t)DWBYTE(0, buf[2], buf[1], buf[0]);
+			i += 4;
 		}
 		else
 		{
 			Unicode[j] = (uint16_t)UTF8[i];
 			i++;
 		}
-		if(Unicode[j]<0x20)
-			Unicode[j]=0x20;
+		if (Unicode[j] < 0x20)
+			Unicode[j] = 0x20;
 		j++;
-		if(i>=(DLS_LEN-1))
+		if (i >= (DLS_LEN - 1))
 			break;
 	}
-	if(j>=(DLS_LEN-1))
-		Unicode[DLS_LEN-1]=0x00;
+	if (j >= (DLS_LEN - 1))
+		Unicode[DLS_LEN - 1] = 0x00;
 	else
-		Unicode[j]=0x00;
+		Unicode[j] = 0x00;
 }
-  
-int chartoint(char ch){  
-    return ch - '0';  
-}  
-  
-uint16_t strtoint(char *str){//º∆À„ ±º‰£¨∑µªÿ√Î   
-    if(isdigit(str[0]) && isdigit(str[1])  
-        && isdigit(str[0]) && isdigit(str[0])  
-        && isdigit(str[0]) && isdigit(str[0])){  
-            int mintue = chartoint(str[0]) * 10 + chartoint(str[1]);  
-            int second = chartoint(str[3]) * 10 + chartoint(str[4]);  
-            //int microsecond = chartoint(str[6]) * 10 + chartoint(str[7]);  
-            return (mintue * 60 + second);  
-        }  
-    return -1;  
-}  
-  
-uint8_t * praseLRC(uint8_t *str, uint16_t *time){  
 
-		//printf("parse lrc\n");
-	      
-    if(strlen(str) == 0){//ø’µƒ––   
-        return NULL;  
-    }else{  
-        char *p, *temp;  
-           
-        p = strchr(str, '[');  
-        if(p != NULL)   
-            if(isdigit(*(p + 1))){  
-                temp = p + 1;  
-                p = strchr(str, ']');  
-                temp[p - temp] = '\0';  
-                //printf("%s\n", temp);  
-                if((*time = strtoint(temp)) < 0){  
-                    printf("error time");  
-                    exit(1);  
-                }  
-                tmp = p + 1;  
-                while(*p != '\n'){  
-                    p++;  
-                }  
-                tmp[p - tmp] = '\0';  
-                //printf("%s", lrc);  
-                return tmp;  
-            }  
-        return NULL;  
-    }  
-    return NULL;  
-}   
-  
+int chartoint(char ch)
+{
+	return ch - '0';
+}
+
+uint16_t strtoint(char *str)
+{ // ËÆ°ÁÆóÊó∂Èó¥ÔºåËøîÂõûÁßí
+	if (isdigit(str[0]) && isdigit(str[1]) && isdigit(str[0]) && isdigit(str[0]) && isdigit(str[0]) && isdigit(str[0]))
+	{
+		int mintue = chartoint(str[0]) * 10 + chartoint(str[1]);
+		int second = chartoint(str[3]) * 10 + chartoint(str[4]);
+		// int microsecond = chartoint(str[6]) * 10 + chartoint(str[7]);
+		return (mintue * 60 + second);
+	}
+	return -1;
+}
+
+uint8_t *praseLRC(uint8_t *str, uint16_t *time)
+{
+
+	// printf("parse lrc\n");
+
+	if (strlen(str) == 0)
+	{ // Á©∫ÁöÑË°å
+		return NULL;
+	}
+	else
+	{
+		char *p, *temp;
+
+		p = strchr(str, '[');
+		if (p != NULL)
+			if (isdigit(*(p + 1)))
+			{
+				temp = p + 1;
+				p = strchr(str, ']');
+				temp[p - temp] = '\0';
+				// printf("%s\n", temp);
+				if ((*time = strtoint(temp)) < 0)
+				{
+					printf("error time");
+					// exit(1);
+					return NULL;
+				}
+				tmp = p + 1;
+				while (*p != '\n')
+				{
+					p++;
+				}
+				tmp[p - tmp] = '\0';
+				// printf("%s", lrc);
+				return tmp;
+			}
+		return NULL;
+	}
+	return NULL;
+}
+
 void Lrc_Parse(uint8_t idx)
 {
-	uint16_t ret,bytesread;
-	uint8_t ret_sum;			
-	char result_a[100] = { 0 };//¥Ê∑≈ÃÊªªΩ·π˚;
+	uint16_t ret, bytesread;
+	uint8_t ret_sum;
+	char result_a[100] = {0}; // Â≠òÊîæÊõøÊç¢ÁªìÊûú;
 	printf("Lrc_Parse\n");
-	
-	strcpy((char *)File_path,(char *)"0:/music/");  //change file path
-	ret_sum =	str_replace(result_a, (const char *)FileList.file[idx].name,".mp3", ".lrc");
 
-	if(ret_sum != 1)
+	strcpy((char *)File_path, (char *)"0:/music/"); // change file path
+	ret_sum = str_replace(result_a, (const char *)FileList.file[idx].name, ".mp3", ".lrc");
+
+	if (ret_sum != 1)
 	{
 		printf("@@@@ replace lrc str error\n");
-		return; // √ª’“µΩ∏Ë¥ 
+		return; // Ê≤°ÊâæÂà∞Ê≠åËØç
 	}
 	else
 	{
-		strcat((char *)File_path,(const TCHAR *)result_a);
+		strcat((char *)File_path, (const TCHAR *)result_a);
 	}
 
-	//strcat((char *)File_path,(const TCHAR *)FileList.file[idx].name);
-	//strcat((char *)File_path,(const TCHAR *)"1.lrc");
-	
-	ret = f_open(&MusicLrcFile, (const char *)File_path, FA_READ);   
-	if(ret != 0) //error
+	// strcat((char *)File_path,(const TCHAR *)FileList.file[idx].name);
+	// strcat((char *)File_path,(const TCHAR *)"1.lrc");
+
+	ret = f_open(&MusicLrcFile, (const char *)File_path, FA_READ);
+	if (ret != 0) // error
 	{
-		printf("file_path:%s\n",File_path);
-		printf("open music lrc file error ,ret: %d\n",ret);
+		printf("file_path:%s\n", File_path);
+		printf("open music lrc file error ,ret: %d\n", ret);
 		f_close(&MusicLrcFile);
 	}
 	else
 	{
 		uint16_t line = 0;
-		
-    tmp = (char *)malloc(sizeof(char) * MAXUTF8);  
-    if(tmp == NULL){  
-        printf("malloc buf err");   
-    }
+
+		tmp = (char *)malloc(sizeof(char) * MAXUTF8);
+		if (tmp == NULL)
+		{
+			printf("malloc buf err");
+		}
 
 		printf("open **lrc** file succ \n");
-		//GlobalPtr = (uint8_t *)LRC_Ram;
-		//ret = f_read(&MusicLrcFile,LRC_Ram,MusicLrcFile.fsize, (void *)&bytesread); // read first 2048 bytes
-		//printf("f_read_ret: %d,read lrc file byte num:%d\n",ret,bytesread);
-		
-		
-    while((f_gets(LRC_Ram, MAXUTF8, &MusicLrcFile) != NULL) && line<MAXBUF){  //&& line<2
-        if((GlobalPtr = praseLRC(LRC_Ram, &lrc.str_time[line])) != NULL){  
+		// GlobalPtr = (uint8_t *)LRC_Ram;
+		// ret = f_read(&MusicLrcFile,LRC_Ram,MusicLrcFile.fsize, (void *)&bytesread); // read first 2048 bytes
+		// printf("f_read_ret: %d,read lrc file byte num:%d\n",ret,bytesread);
 
-//						for(uint8_t xx=0; xx<MAXLINE; xx++)
-//						{
-//							printf("0x%x ",GlobalPtr[xx]);
-//							if((xx%10==0)&&(xx!=0))printf("\n");
-//						}
+		while ((f_gets(LRC_Ram, MAXUTF8, &MusicLrcFile) != NULL) && line < MAXBUF)
+		{ //&& line<2
+			if ((GlobalPtr = praseLRC(LRC_Ram, &lrc.str_time[line])) != NULL)
+			{
 
-						for(uint8_t idx=0; idx<MAXUTF8; idx++)
-						{
-							lrc.lrc_sub_str[line].str_utf8[idx] = GlobalPtr[idx];
-						}
-            printf("\n utf-8 -> %d\t%s \n", lrc.str_time[line], lrc.lrc_sub_str[line].str_utf8);        
+				//						for(uint8_t xx=0; xx<MAXLINE; xx++)
+				//						{
+				//							printf("0x%x ",GlobalPtr[xx]);
+				//							if((xx%10==0)&&(xx!=0))printf("\n");
+				//						}
 
-//						for(uint8_t xx=0; xx<MAXUTF8; xx++)
-//						{
-//							printf("0x%x ",lrc.lrc_sub_str[line].str_utf8[xx]);
-//							if((xx%10==0)&&(xx!=0))printf("\n");
-//						}
+				for (uint8_t idx = 0; idx < MAXUTF8; idx++)
+				{
+					lrc.lrc_sub_str[line].str_utf8[idx] = GlobalPtr[idx];
+				}
+				printf("\n utf-8 -> %d\t%s \n", lrc.str_time[line], lrc.lrc_sub_str[line].str_utf8);
 
-						UTF8ToUnicode(lrc.lrc_sub_str[line].str_utf8, lrc.lrc_sub_str[line].str_unicode);
-						printf("\n unicode -> %d\t%s \n", lrc.str_time[line], lrc.lrc_sub_str[line].str_unicode);        
+				//						for(uint8_t xx=0; xx<MAXUTF8; xx++)
+				//						{
+				//							printf("0x%x ",lrc.lrc_sub_str[line].str_utf8[xx]);
+				//							if((xx%10==0)&&(xx!=0))printf("\n");
+				//						}
 
-//						for(uint8_t xx=0; xx<MAXUNICODE; xx++)
-//						{
-//							printf("0x%x ",lrc.lrc_sub_str[line].str_unicode[xx]);
-//							if((xx%10==0)&&(xx!=0))printf("\n");
-//						}
+				UTF8ToUnicode(lrc.lrc_sub_str[line].str_utf8, lrc.lrc_sub_str[line].str_unicode);
+				printf("\n unicode -> %d\t%s \n", lrc.str_time[line], lrc.lrc_sub_str[line].str_unicode);
 
-//						LCD_ClearZone(0,440,800,40,LCD_COLOR_BLACK); // lcd clear
-//						LCD_DisplayStringAt(0,440,lrc.lrc_sub_str[line].str_unicode, CENTER_MODE);
-//            HAL_Delay(3000);
+				//						for(uint8_t xx=0; xx<MAXUNICODE; xx++)
+				//						{
+				//							printf("0x%x ",lrc.lrc_sub_str[line].str_unicode[xx]);
+				//							if((xx%10==0)&&(xx!=0))printf("\n");
+				//						}
 
-						line++;  
-        }  
-    }   
+				//						LCD_ClearZone(0,440,800,40,LCD_COLOR_BLACK); // lcd clear
+				//						LCD_DisplayStringAt(0,440,lrc.lrc_sub_str[line].str_unicode, CENTER_MODE);
+				//            HAL_Delay(3000);
 
-		printf("line=%d ,%d\t%s\n",line,lrc.str_time[0],lrc.lrc_sub_str[0].str_utf8);
+				line++;
+			}
+		}
 
-		f_close(&MusicLrcFile);	
+		printf("line=%d ,%d\t%s\n", line, lrc.str_time[0], lrc.lrc_sub_str[0].str_utf8);
+
+		f_close(&MusicLrcFile);
 	}
 }
 
 void clear_Lrc_buff()
 {
-	LCD_ClearZone(0,440,800,40,LCD_COLOR_BLACK); // lcd display clear
-	memset(lrc.str_time,0,sizeof(lrc.str_time));
-	memset(lrc.lrc_sub_str,0,sizeof(lrc.lrc_sub_str));
+	LCD_ClearZone(0, 440, 800, 40, LCD_COLOR_BLACK); // lcd display clear
+	memset(lrc.str_time, 0, sizeof(lrc.str_time));
+	memset(lrc.lrc_sub_str, 0, sizeof(lrc.lrc_sub_str));
 }
-
-
