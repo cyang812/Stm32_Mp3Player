@@ -95,7 +95,7 @@ void LCD_DisplayRTCTime() // update when min change
 #endif
 }
 
-void LCD_DisplayMusicInfo() // ��ʱ��+file Pos
+void LCD_DisplayMusicInfo() // display full time + file position
 {
 	sprintf((char *)musicFilePos, "%02d/%02d", (int)(Get_MusicFilePos() + 1), (uint16_t)(NumObs));
 	printf("music file pos: %s\n", musicFilePos);
@@ -134,10 +134,10 @@ void LCD_DisplayMusicTimeRate()
 			LCD_DisplayStringAt(0, 440, lrc.lrc_sub_str[lrc_time_idx].str_unicode, CENTER_MODE);
 			lrc_time_idx++;
 			printf("lrc_time_idx=%d\n", lrc_time_idx);
-			if (time_second == lrc.str_time[lrc_time_idx]) // �����ͬ�����������
+			if (time_second == lrc.str_time[lrc_time_idx]) // handle duplicated timestamp entries
 			{
 				lrc_time_idx++;
-				if (time_second == lrc.str_time[lrc_time_idx]) // �����ͬ�����������
+				if (time_second == lrc.str_time[lrc_time_idx]) // handle duplicated timestamp entries
 				{
 					lrc_time_idx++;
 				}
@@ -179,7 +179,7 @@ void LCD_DisplayMusicName(uint8_t idx, uint8_t unicode_num)
 		{
 			if (bFirstDisplayMusicName)
 			{
-				unicode_idx = 0; // �л�����ʱ�������λ�ã����¹���
+				unicode_idx = 0; // reset scroll index when switching tracks
 				bFirstDisplayMusicName = false;
 			}
 			if (unicode_idx == 20)
@@ -213,16 +213,12 @@ void LCD_DisplayMusicName(uint8_t idx, uint8_t unicode_num)
 
 void LCD_DisplayStringRollAt(uint16_t Xpos, uint16_t Ypos, uint16_t *Text, uint8_t textsize, uint8_t LCD_char_num)
 {
+	(void)Xpos;
+	(void)textsize;
+
 	uint16_t i = 0;
-	uint32_t size = 0, xsize = 0;
-	uint16_t *ptr = Text;
 	uint16_t ret_xs;
 	uint16_t refcolumn = 160;
-
-	/* Get the text size */
-	while (*ptr++)
-		size++;
-	// printf("filename char size: %d \n",size);
 
 	/* Send the string character by character on LCD */
 	while ((*Text != 0) && i < LCD_char_num)
@@ -285,7 +281,7 @@ void LCD_DisplayStringAt(uint16_t Xpos, uint16_t Ypos, uint16_t *Text, Text_Alig
 	}
 #endif
 	/* Send the string character by character on LCD */
-	while ((*Text != 0) & (((BSP_LCD_GetXSize() - (i * LCD_FONT_WIDTH)) & 0xFFFF) >= LCD_FONT_WIDTH))
+	while ((*Text != 0) && (((BSP_LCD_GetXSize() - (i * LCD_FONT_WIDTH)) & 0xFFFF) >= LCD_FONT_WIDTH))
 	// while(size)
 	{
 		/* Display one character on LCD */
@@ -305,9 +301,8 @@ uint16_t LCD_DisplayChar(uint16_t Xpos, uint16_t Ypos, uint16_t unicode)
 	uint8_t fontUnicodeBuff[72];
 	uint8_t fontAsciiBuff[72]; // for font v1 32
 	uint32_t add;
-	uint8_t ret;
 	add = GetFontAddress(unicode);
-	//	if(add == 0xffffffff) // v1.6 ʹ������Unicode�ַ��� // �ǳ���Unicode���룬�������ķ���,������flash��ȡ
+	//	if(add == 0xffffffff) // v1.6 supports special Unicode fallback in flash
 	//	{
 	//		ret = Get_Special_font(fontUnicodeBuff,unicode);
 	//		if(ret == OK)
@@ -316,11 +311,11 @@ uint16_t LCD_DisplayChar(uint16_t Xpos, uint16_t Ypos, uint16_t unicode)
 	//			ret_xs = 24;
 	//			return ret_xs;
 	//		}
-	//		else  // δ�����õ� flash ���ҵ��ַ�������ʾһ��A
+	//		else  // if no matched font in flash, display fallback 'A'
 	//		{
-	//			add = (uint32_t)(0x21 * 3 *24); // �ַ�'A'�ĵ�ַ
+	//			add = (uint32_t)(0x21 * 3 *24); // glyph address of 'A'
 	//			BSP_QSPI_Read(fontUnicodeBuff,add,72);
-	//			//for(int i=0; i<72; i++)fontUnicodeBuff[i] = 0xff; // ��ʾ�ڿ�
+	//			//for(int i=0; i<72; i++)fontUnicodeBuff[i] = 0xff; // debug fill
 	//			LCD_DrawChar(Xpos, Ypos, fontUnicodeBuff,CHAR_TYPE_CH);
 	//			ret_xs = 24;
 	//			return ret_xs;
@@ -418,7 +413,7 @@ uint32_t LCD_DisplayUnicodeCharTest(uint16_t unicode)
 extern const uint8_t st_logo[];
 void LCD_DisplayBmp()
 {
-	BSP_LCD_DrawBitmap(200,200, (uint8_t *)st_logo);
+	BSP_LCD_DrawBitmap(200, 200, (uint8_t *)st_logo);
 }
 #endif
 void LCD_DisplayPlayButton(uint8_t ENABLE)

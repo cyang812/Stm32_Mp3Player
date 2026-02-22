@@ -3,18 +3,18 @@
 
 // #define SWAP_RB //
 
-#define IMAGE_HEIGHT 640 // 320       // ��
-#define IMAGE_WIDTH 640	 // 320//320//227  // ��
+#define IMAGE_HEIGHT 640 // 320 // 高
+#define IMAGE_WIDTH 640	 // 320 // 宽
 
 FIL PicFile; /* Pic File object */
 FIL MusicWavFile;
 FIL MusicJpegFile;
 
 RGB_typedef *RGB_matrix;
-uint8_t _aucLine[2048];	   // ͼƬ��һ�е�����
-uint32_t line_counter = 0; // ����
-uint16_t Xpos = 240;	   // jpeg ��һ���������
-uint16_t Ypos = 60;		   // jpeg ��һ���������
+uint8_t _aucLine[2048];	   // 图片中一行的数据
+uint32_t line_counter = 0; // 行数
+uint16_t Xpos = 240;	   // jpeg 第一个点的坐标
+uint16_t Ypos = 60;		   // jpeg 第一个点的坐标
 
 /* This struct contains the JPEG decompression parameters */
 struct jpeg_decompress_struct cinfo;
@@ -34,7 +34,11 @@ extern unsigned char Jpeg_Cover_Ram[NumByte2ShowJpeg];
  * @param  buff:     pointer to the image line
  * @retval None
  */
-void show_jepg(FIL *file, uint32_t width, uint8_t *buff, uint8_t (*callback)(uint8_t *, uint32_t), uint8_t datafrom)
+void show_jepg(FIL *file,
+			   uint32_t width,
+			   uint8_t *buff,
+			   uint8_t (*callback)(uint8_t *, uint32_t),
+			   uint8_t datafrom)
 {
 	printf("enter in show_jpeg\n");
 	/* Decode JPEG Image */
@@ -52,12 +56,16 @@ void show_jepg(FIL *file, uint32_t width, uint8_t *buff, uint8_t (*callback)(uin
 	printf("enter in show_jpeg step 2\n");
 
 	if (datafrom == JPEG_From_Buff)
-		jpeg_mem_src(&cinfo, Jpeg_Cover_Ram, CoverJpeg.Jpeg_Size); // ���ڴ��
+	{
+		jpeg_mem_src(&cinfo, Jpeg_Cover_Ram, CoverJpeg.Jpeg_Size); // 从内存打开
+	}
 	else if (datafrom == JPEG_From_FLASH)
-		jpeg_mem_src(&cinfo, Jpeg_Cover_Flash, 20735); // ������flash��
+	{
+		jpeg_mem_src(&cinfo, Jpeg_Cover_Flash, 20735); // 从内置flash打开
+	}
 	else if (datafrom == JPEG_From_SD)
 	{
-		jpeg_stdio_src(&cinfo, file); // ���ļ���
+		jpeg_stdio_src(&cinfo, file); // 从文件打开
 	}
 	// jpeg_stdio_buffer_src(&cinfo, Jpeg_Cover_Ram, 5764);
 	printf("enter in show_jpeg step 3\n");
@@ -80,7 +88,7 @@ void show_jepg(FIL *file, uint32_t width, uint8_t *buff, uint8_t (*callback)(uin
 
 		(void)jpeg_read_scanlines(&cinfo, buffer, 1);
 		// printf("enter in show_jpeg step 7 in while() \n");
-		if (cinfo.output_scanline % 2 != 0) // ��������ʾ 1,3,5 640->320
+		if (cinfo.output_scanline % 2 != 0) // 奇数行显示 1,3,5 640->320
 		{
 			if (callback(buffer[0], row_stride) != 0)
 			{
@@ -97,7 +105,7 @@ void show_jepg(FIL *file, uint32_t width, uint8_t *buff, uint8_t (*callback)(uin
 	jpeg_destroy_decompress(&cinfo);
 	printf("enter in show_jpeg step 9\n");
 
-	/* Step 8: ����м��������Ա���һ����ʾ*/
+	/* Step 8: 清空行计数器，以便下一次显示 */
 	line_counter = 0;
 	printf("out of show_jpeg\n");
 }
@@ -108,7 +116,7 @@ void show_jepg(FIL *file, uint32_t width, uint8_t *buff, uint8_t (*callback)(uin
  * @param  DataLength: Row width in output buffer
  * @retval None
  */
-// ��ʾһ��
+// 显示一行
 static uint8_t Jpeg_CallbackFunction(uint8_t *Row, uint32_t DataLength)
 {
 	// printf("enter in jpeg callback \n");
@@ -135,7 +143,7 @@ static uint8_t Jpeg_CallbackFunction(uint8_t *Row, uint32_t DataLength)
 									   (((uint32_t)(RGB_matrix[j].B) & 0x000000FF) << 16));
 
 		BSP_LCD_DrawPixel((i + Xpos), (line_counter + Ypos), ARGB8888Buffer[j]);
-		j += 2; // 2  // ż������ʾ 2,4,6 640->320
+		j += 2; // 2 // 偶数列显示 2,4,6 640->320
 	}
 #endif
 	line_counter++;
@@ -180,14 +188,16 @@ Jpeg_Error Get_MusicCoverJpeg(uint8_t idx)
 		ret = f_read(&MusicWavFile, GlobalPtr, NumByte2FindAPIC, (void *)&bytesread); // read first 2048 bytes
 		printf("f_read_ret: %d,read music file byte num:%d\n", ret, bytesread);
 		// for(uint32_t xx=0; xx < NumByte2FindAPIC; xx++)printf("readBUff[%d]:%#x\n",xx,GlobalPtr[xx]);
-		strcpy((char *)Unicodebuf, "APIC"); // ͼ������
+		strcpy((char *)Unicodebuf, "APIC"); // 图像数据
 		HeadTabIdx = 0;
 		while (1)
 		{
 			ReadStrUnit(GlobalPtr, str, HeadTabIdx, strlen((char *)Unicodebuf));
 			// printf("substr :%s\n",str);
 			if (strcmp((char *)str, (char *)Unicodebuf) == 0)
+			{
 				break;
+			}
 			HeadTabIdx++;
 			if (HeadTabIdx >= NumByte2FindAPIC)
 			{
@@ -197,11 +207,11 @@ Jpeg_Error Get_MusicCoverJpeg(uint8_t idx)
 			}
 		}
 		printf("find APIC in pos: %#x\n", HeadTabIdx);
-		HeadTabIdx += strlen((char *)Unicodebuf); // +4
+		HeadTabIdx += strlen(Unicodebuf); // +4
 		CoverJpeg.Tag_Size = MAKE_DWORD(GlobalPtr[HeadTabIdx], GlobalPtr[HeadTabIdx + 1], GlobalPtr[HeadTabIdx + 2], GlobalPtr[HeadTabIdx + 3]);
 		printf("CoverJpeg.Tag_Szie:%#x\n", CoverJpeg.Tag_Size);
 
-		f_lseek(&MusicWavFile, HeadTabIdx + 6 + 14); // �ƶ��ļ�ָ�뵽 ff d8
+		f_lseek(&MusicWavFile, HeadTabIdx + 6 + 14); // 移动文件指针到 ff d8
 
 		CoverJpeg.Jpeg_Size = CoverJpeg.Tag_Size - 14;
 		printf("CoverJpeg.Jpeg_Szie:%#x, file size:%d KB\n", CoverJpeg.Jpeg_Size, CoverJpeg.Jpeg_Size / 1024);
@@ -213,7 +223,9 @@ Jpeg_Error Get_MusicCoverJpeg(uint8_t idx)
 			return JPEG_TOO_BIG;
 		}
 		else
+		{
 			f_read(&MusicWavFile, GlobalPtr, CoverJpeg.Jpeg_Size, (void *)&bytesread); // copy jpeg file from sd to ram
+		}
 
 		printf("Jpeg_Cover_buff[%d]:%#x\n", 0, GlobalPtr[0]); // ff
 		printf("Jpeg_Cover_buff[%d]:%#x\n", 1, GlobalPtr[1]); // d8
@@ -249,7 +261,10 @@ void Show_MusicJPEG(uint8_t idx)
 		flag = 1; //  load cover from flash
 	}
 	else
+	{
 		flag = Get_MusicCoverJpeg(idx);
+	}
+
 	if (flag != 0) // read jpeg error
 	{
 		datafrom = JPEG_From_FLASH;
@@ -258,7 +273,9 @@ void Show_MusicJPEG(uint8_t idx)
 		f_close(&PicFile);
 	}
 	else
+	{
 		show_jepg(&PicFile, IMAGE_WIDTH, _aucLine, Jpeg_CallbackFunction, datafrom);
+	}
 }
 
 void JPEG_Debug(void)
@@ -270,7 +287,7 @@ void JPEG_Debug(void)
 	strcpy((char *)File_path, (char *)"0:/image.jpg"); // change file path
 	// strcat((char *)File_path,(char *)FileList.file[0].name);
 
-	ret = f_open(&PicFile, (const TCHAR *)File_path, FA_READ);
+	ret = f_open(&PicFile, File_path, FA_READ);
 	if (ret != 0) // error
 	{
 		printf("open jpeg file error ,ret: %d\n", ret);

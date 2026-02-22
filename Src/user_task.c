@@ -347,17 +347,17 @@ uint32_t GetFontAddress(uint16_t unicode)
 		add = (uint32_t)(idx * 3 * 24); // English font width 3x8, height 24 .raw 17x24
 										//  for font v1 idx * 2 * 16
 	}
-	else // complete unicode //(unicode>0x4e00 && unicode<0x9fff) //���ı��� 0x4e00~0x9fff
+	else // complete unicode //(unicode>0x4e00 && unicode<0x9fff) //??????? 0x4e00~0x9fff
 	{
 		// add = (CH_UNICODE_QSPI_OFFSET + (unicode - 0x4e00) * 3 * 24);   //chinese font width 3x8, height 24
 		add = (CH_UNICODE_QSPI_OFFSET + (unicode) * 3 * 24); // unicode font width 3x8, height 24
 
 		// printf("get font add -> unicode:%#x,add:%#x\n",unicode,add); // for test
 	}
-	//	else    // ������ŵĴ������������ĵ�����
+	//	else    // ??????????????????????????
 	//	{
-	//		//add = (uint32_t)(0x21 * 3 *24); // �ַ�'A'�ĵ�ַ
-	//		add = 0xffffffff; // �����ַ�����
+	//		//add = (uint32_t)(0x21 * 3 *24); // ???'A'????
+	//		add = 0xffffffff; // ???????????
 	//	}
 	return add;
 }
@@ -379,7 +379,7 @@ uint8_t GBK2Unicode(uint8_t ptr)
 		uint8_t ch = 0x00;
 		uint8_t cl;
 		uint16_t GBK;
-		if (FileList.file[ptr].name[j] > 0x80) // ˫�ֽڱ�ʾ
+		if (FileList.file[ptr].name[j] > 0x80) // ??????
 		{
 			ch = FileList.file[ptr].name[j];
 			cl = FileList.file[ptr].name[j + 1];
@@ -392,9 +392,9 @@ uint8_t GBK2Unicode(uint8_t ptr)
 			GBK = MAKE_WORD(ch, cl);
 		}
 
-		FileList.file[ptr].unicode[idx] = ff_convert(GBK, 1); // ���ת�� GBK to Unicode
+		FileList.file[ptr].unicode[idx] = ff_convert(GBK, 1); // ?????? GBK to Unicode
 															  // printfhex16(FileList.file[i].unicode[j]);
-		// printf("\n============\n");
+															  // printf("\n============\n");
 	}
 	// for(uint8_t x = 0; x<40;x++)
 	//{
